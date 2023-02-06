@@ -55,7 +55,7 @@ input[type="submit"]:hover {
         transform: scale(1.1);
         box-shadow: 0 0 10px #4CAF50;
 }
-input[type="login"] {
+button[type="login"] {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -65,11 +65,11 @@ input[type="login"] {
     transition: all 0.3s;
 }
   
-input[type="login"]:hover {
+button[type="login"]:hover {
     transform: scale(1.1);
     box-shadow: 0 0 10px #4CAF50;
 }
-input[type="sign"] {
+button[type="sign"] {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -79,7 +79,7 @@ input[type="sign"] {
     transition: all 0.3s;
 }
   
-input[type="sign"]:hover {
+button[type="sign"]:hover {
     transform: scale(1.1);
     box-shadow: 0 0 10px #4CAF50;
 }
