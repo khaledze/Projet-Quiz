@@ -5,7 +5,9 @@ body{
     margin: 0;
     padding: 0;
     justify-content: center;
-    align-items: center;}
+    align-items: center;
+    
+}
 #entete{
     background-color: #15273f;
     height: 50px;
@@ -23,7 +25,7 @@ body{
     display: flex;
 }
 .header{
-    background-color: #056a92;
+    background-color:#4b50d0;
     padding: 20px;
     text-align: start;
     border-bottom: 1px solid #ddd;
@@ -121,4 +123,10 @@ input[type="submit"] {
         border-color: cornflowerblue;
         background-color: aliceblue;
         outline: none;
+      }
+      .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
       }
