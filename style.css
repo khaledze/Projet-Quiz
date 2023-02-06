@@ -24,6 +24,10 @@ body{
 .header{
     background-color:#4b50d0;
     padding: 20px;
+    text-align: start;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
     color:#d6ed8b ;
     
 }
