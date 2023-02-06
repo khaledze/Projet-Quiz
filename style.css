@@ -6,7 +6,9 @@ body{
     padding: 0;
     justify-content: center;
     align-items: center;
-    
+    background-image: url(image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #entete{
     background-color: #15273f;
@@ -32,8 +34,6 @@ body{
     
 }
 .conteneur{
-    
-   background-color: #15273f;
    height: 700px;
    width: 400px;
    display: flex;
