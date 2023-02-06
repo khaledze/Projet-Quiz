@@ -1,15 +1,13 @@
 body{
-
+    
     font-size: 16px;
     margin: 0;
     padding: 0;
     justify-content: center;
-
-    
-}
+}   
 #entete{
     background-color: #15273f;
-    height: 50px;
+    height: 75px;
     display: flex;
     justify-content: flex-end; 
     border-radius: 10px;
@@ -28,6 +26,8 @@ body{
     padding: 20px;
     text-align: start;
     border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
     
 }
 .conteneur{
@@ -50,6 +50,7 @@ body{
         color: white;
         padding: 14px 20px;
         border: none;
+        margin :10px;
         border-radius: 4px;
         cursor: pointer;
         transition: all 0.3s;
@@ -64,6 +65,7 @@ body{
         color: white;
         padding: 14px 20px;
         border: none;
+        margin :10px;
         border-radius: 4px;
         cursor: pointer;
         transition: all 0.3s;
@@ -136,3 +138,14 @@ input[type="submit"] {
         align-items: center;
         
       }
+#logo{
+    width: 100px;
+    height: 75px;
+    display: flex;
+    justify-content: flex-start;
+}
+#btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
