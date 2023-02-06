@@ -75,6 +75,21 @@ body{
     transform: scale(1.1);
     box-shadow: 0 0 10px #09134f;
 }
+#inscription{
+    background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        border: none;
+        margin :10px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+        margin-right: 1%;
+}
+#inscription:hover{
+    transform: scale(1.1);
+        box-shadow: 0 0 10px #4CAF50;
+}
 input[type="submit"] {
     background-color: #4CAF50;
     color: white;
@@ -111,6 +126,7 @@ input[type="submit"] {
         transform: scale(1.1);
         box-shadow: 0 0 10px #4CAF50;
     }
+    
     select {
         padding: 10px;
         font-size: 16px;
@@ -158,11 +174,21 @@ input[type="submit"] {
     cursor: pointer;
     transition: all 0.3s;
 }
+
 .containers {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    
+    height: 100vh;
+    flex-direction: column;
+    
+  }
+  .containers2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
     height: 100vh;
     flex-direction: column;
     
@@ -196,7 +222,7 @@ input[type="submit"] {
     font-weight: bold;
     text-transform: uppercase;
     background-color:#bdac38;
-    color: #fff;
+    color: black;
     border: none;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
@@ -216,13 +242,13 @@ input[type="submit"] {
     font-weight: bold;
     text-transform: uppercase;
     background-color:#bdac38;
-    color: #fff;
+    color: yellowgreen;
     border: none;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     transition: all 0.2s ease-in-out;
     margin: 0;
-    background-image: url(image.png);
+    background-image: url(histoire.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -236,13 +262,93 @@ input[type="submit"] {
     font-weight: bold;
     text-transform: uppercase;
     background-color:#bdac38;
-    color: #fff;
+    color: black;
     border: none;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     transition: all 0.2s ease-in-out;
     margin: 0;
-    background-image: url(image.png);
+    background-image: url(musique.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .btn5 {
+    display: inline-block;
+    width: 500px;
+    height: 90px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color:#bdac38;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.2s ease-in-out;
+    margin: 0;
+    background-image: url(science.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .btn6 {
+    display: inline-block;
+    width: 500px;
+    height: 90px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color:#bdac38;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.2s ease-in-out;
+    margin: 0;
+    background-image: url(politique.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .btn7 {
+    display: inline-block;
+    width: 500px;
+    height: 90px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color:#bdac38;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.2s ease-in-out;
+    margin: 0;
+    background-image: url(la-culture-livre.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .btn8 {
+    display: inline-block;
+    width: 500px;
+    height: 90px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color:#bdac38;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.2s ease-in-out;
+    margin: 0;
+    background-image: url(animaux.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -271,6 +377,22 @@ input[type="submit"] {
     transform: translateY(-2px);
     box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
   }
+  .btn5:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  }
+  .btn6:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  }
+  .btn7:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  }
+  .btn8:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  }
   .message{
     color: #fff;
     font-size: 20px;
@@ -278,4 +400,9 @@ input[type="submit"] {
     text-transform: uppercase;
     text-align: center;
     margin: 0;
+  }
+  .Boutons{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
   }
