@@ -1,19 +1,16 @@
 body{
-
+    
     font-size: 16px;
-    background-image: url(image.jpg);
     margin: 0;
     padding: 0;
     justify-content: center;
-    align-items: center;
-    
-}
+}   
 #entete{
     background-color: #15273f;
-    height: 50px;
+    height: 75px;
     display: flex;
-    justify-content: space-around;
-    border-radius: 25px;
+    justify-content: flex-end; 
+    border-radius: 10px;
 }
 #corp{
     background-color: #469098;
@@ -52,6 +49,36 @@ body{
     align-items: center;
     color: azure;
 }
+#signup{
+    background-color: #09134f;
+        color: white;
+        padding: 14px 20px;
+        border: none;
+        margin :10px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+        margin-right: 3%;
+}
+#signup:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #09134f;
+}
+#login{
+    background-color: #09134f;
+        color: white;
+        padding: 14px 20px;
+        border: none;
+        margin :10px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+        margin-right: 1%;
+}
+#login:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #09134f;
+}
 input[type="submit"] {
     background-color: #4CAF50;
     color: white;
@@ -72,50 +99,7 @@ input[type="submit"]:hover {
         transform: scale(1.1);
         box-shadow: 0 0 10px #4CAF50;
 }
-.conteneur1{
-    background-color: #469098;
-    height: 300px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    border-radius: 25px;
-    justify-content: center;
-    align-items: center;
-    color: azure;
-}
-.conteneur2{
-    background-color: #469098;
-    height: 300px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    border-radius: 25px;
-    justify-content: center;
-    align-items: center;
-    color: azure;
-}
-.conteneur3{
-    background-color: #469098;
-    height: 300px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    border-radius: 25px;
-    justify-content: center;
-    align-items: center;
-    color: azure;
-}
-.conteneur4{
-    background-color: #469098;
-    height: 300px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    border-radius: 25px;
-    justify-content: center;
-    align-items: center;
-    color: azure;
-}
+
     
 input[type="submit"] {
         background-color: #4CAF50;
@@ -158,3 +142,14 @@ input[type="submit"] {
         align-items: center;
         
       }
+#logo{
+    width: 100px;
+    height: 75px;
+    display: flex;
+    justify-content: flex-start;
+}
+#btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
