@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-body{background-color: #53c1e9;
-=======
 body{
     background-color: #53c1e9;
->>>>>>> 2e6f2534ddcb3c30b9537faa95d106c5beaeb36f
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: #333;
     margin: 0;
     padding: 0;
-<<<<<<< HEAD
     justify-content: center;
     align-items: center;}
 #entete{
@@ -27,9 +22,6 @@ body{
     justify-content: space-around;
     border-radius: 25px;
     display: flex;
-}
-=======
-    
 }
 .header{
     background-color: #056a92;
@@ -65,4 +57,3 @@ body{
         transform: scale(1.1);
         box-shadow: 0 0 10px #4CAF50;
       }
->>>>>>> 2e6f2534ddcb3c30b9537faa95d106c5beaeb36f
