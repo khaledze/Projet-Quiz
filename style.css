@@ -5,7 +5,7 @@ body{
     margin: 0;
     padding: 0;
     justify-content: center;
-    align-items: center;}
+}
 #entete{
     background-color: #15273f;
     height: 50px;
@@ -55,46 +55,47 @@ input[type="submit"]:hover {
         transform: scale(1.1);
         box-shadow: 0 0 10px #4CAF50;
 }
-button[type="login"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s;
+.conteneur1{
+    background-color: #469098;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    color: azure;
 }
-  
-button[type="login"]:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px #4CAF50;
+.conteneur2{
+    background-color: #469098;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    color: azure;
 }
-button[type="sign"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s;
+.conteneur3{
+    background-color: #469098;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    color: azure;
 }
-  
-button[type="sign"]:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px #4CAF50;
+.conteneur4{
+    background-color: #469098;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    color: azure;
 }
-    
-input[type="submit"] {
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: all 0.3s;
-    }
-      
-    input[type="submit"]:hover {
-        transform: scale(1.1);
-        box-shadow: 0 0 10px #4CAF50;
-    }
