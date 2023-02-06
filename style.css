@@ -27,8 +27,14 @@ body{
 .header{
     background-color:#4b50d0;
     padding: 20px;
-    text-align: start;
-     
+    color:#d6ed8b ;
+    
+}
+.titre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#d6ed8b ;
     
 }
 .conteneur{
