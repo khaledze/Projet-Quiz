@@ -1,5 +1,5 @@
 body{
-    
+    background-image: url(image.jpg);
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -25,7 +25,9 @@ body{
     background-color:#4b50d0;
     padding: 20px;
     text-align: start;
-     
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
     
 }
 .conteneur{
