@@ -163,10 +163,30 @@ input[type="submit"] {
     flex-direction: column;
     
   }
-  .btns {
+  .btn1 {
     display: inline-block;
     width: 500px;
-    height: 50px;
+    height: 90px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color:#bdac38;
+    color:black;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.2s ease-in-out;
+    margin: 0;
+    background-image: url(geo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .btn2 {
+    display: inline-block;
+    width: 500px;
+    height: 90px;
     padding: 15px 30px;
     font-size: 20px;
     font-weight: bold;
@@ -178,6 +198,50 @@ input[type="submit"] {
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     transition: all 0.2s ease-in-out;
     margin: 0;
+    background-image: url(sport.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .btn3 {
+    display: inline-block;
+    width: 500px;
+    height: 90px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color:#bdac38;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.2s ease-in-out;
+    margin: 0;
+    background-image: url(image.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .btn4 {
+    display: inline-block;
+    width: 500px;
+    height: 90px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color:#bdac38;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.2s ease-in-out;
+    margin: 0;
+    background-image: url(image.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   }
 
   
@@ -187,8 +251,27 @@ input[type="submit"] {
   }
   
   
-  .btns:hover {
+  .btn1:hover {
     transform: translateY(-2px);
     box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
   }
-  
+  .btn2:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  }
+  .btn3:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  }
+  .btn4:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  }
+  .message{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+  }
