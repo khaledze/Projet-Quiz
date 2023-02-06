@@ -40,7 +40,6 @@ body{
    justify-content: center;
     align-items: center;
     color: azure;
-<<<<<<< HEAD
 }
 input[type="submit"] {
     background-color: #4CAF50;
@@ -84,8 +83,7 @@ input[type="sign"]:hover {
     transform: scale(1.1);
     box-shadow: 0 0 10px #4CAF50;
 }
-=======
-    }
+    
 input[type="submit"] {
         background-color: #4CAF50;
         color: white;
@@ -100,4 +98,3 @@ input[type="submit"] {
         transform: scale(1.1);
         box-shadow: 0 0 10px #4CAF50;
     }
->>>>>>> 9b4a1a5ea1206888e1d568bf82a3b0fbc4003d4d
