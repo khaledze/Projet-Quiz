@@ -1,0 +1,24 @@
+body{background-color: #53c1e9;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;}
+#entete{
+    background-color: #15273f;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 25px;
+}
+#corp{
+    background-color: #469098;
+    height: 800px;
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 25px;
+    display: flex;
+}
