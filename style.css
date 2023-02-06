@@ -1,0 +1,28 @@
+body{
+    background-color: #53c1e9;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    background-color: #056a92;
+    padding: 20px;
+    text-align: start;
+    border-bottom: 1px solid #ddd;
+    
+}
+.conteneur{
+    
+   background-color: #15273f;
+   height: 700px;
+   width: 400px;
+   display: flex;
+   justify-content: center;
+   border-radius: 25px;
+   justify-content: center;
+    align-items: center;
+    }
