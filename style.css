@@ -28,12 +28,12 @@ body{
     background-color:#4b50d0;
     padding: 20px;
     text-align: start;
-    border-bottom: 1px solid #ddd;
+     
     
 }
 .conteneur{
     
-   background-color: #15273f;
+  
    height: 700px;
    width: 400px;
    display: flex;
