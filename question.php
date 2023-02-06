@@ -62,6 +62,6 @@
 
         );
         $numberQuestions = count($question);
-        
+        ?>
 </body>
 </html>
