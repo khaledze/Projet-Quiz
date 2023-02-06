@@ -7,34 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <div class="header">
-        <h1>Quizzeo</h1>
+        
+        <img src="logo2.jpg" alt="Logo" height="100px">
     </div>
 </head>
 <body>
-    
-    <div class="conteneur">
+    <div class ="container">
+        <div class="conteneur">
         
             <div class="inscription">
                 
                 <h1>Inscription</h1>
-    <form action="">
-      <label for="username">Nom d'utilisateur :</label>
-      <input type="text" id="username" name="username">
-      <br><br>
-      <label for="email">Adresse e-mail :</label>
-      <input type="email" id="email" name="email">
-      <br><br>
-      <label for="password">Mot de passe :</label>
-      <input type="password" id="password" name="password">
-      <br><br>
-      <label for="password-confirm">Confirmer le mot de passe :</label>
-      <input type="password" id="password-confirm" name="password-confirm">
-      <br><br>
-      <input type="submit" value="S'inscrire">
+                 <form action="">
+                <label for="username">Nom d'utilisateur :</label>
+                <input type="text" id="username" name="username">
+                <br><br>
+                <label for="email">Adresse e-mail :</label>
+                <input type="email" id="email" name="email">
+                <br><br>
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password">
+                <br><br>
+                <label for="password-confirm">Confirmer le mot de passe :</label>
+                <input type="password" id="password-confirm" name="password-confirm">
+                <br><br>
+                <label for="account-type">Type de compte :</label>
+                 <select id="account-type" name="account-type">
+                 <option value="user">Utilisateur</option>
+                <option value="quiz-creator">Quizzeur</option>
+                    </select>
+                    <br><br>
+                    <input type="submit" value="S'inscrire">
                 </form>
             
-        </div>
+            </div>
+         </div>
     </div>
-    
 </body>
 </html>
