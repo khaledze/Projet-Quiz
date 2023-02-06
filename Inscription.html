@@ -7,13 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <div class="header">
-        
         <img src="logo2.jpg" alt="Logo" height="100px">
     </div>
 </head>
 <body>
-    <div class="test">
-
+   
+    <div class="container">
         <div class="conteneur">
             <div class="contenu">
                 <div class="inscription">
@@ -32,8 +31,15 @@
                         <label for="password-confirm">Confirmer le mot de passe :</label>
                         <input type="password" id="password-confirm" name="password-confirm">
                         <br><br>
-                        <input type="submit" value="S'inscrire">
+                        <label for="account-type">Type de compte :</label>
+                         <select id="account-type" name="account-type">
+                          <option value="user">Utilisateur</option>
+                          <option value="quiz-creator">Quizzeur</option>
+                         </select>
+                         <br><br>
+                         <button id="submit"  onclick="window.location.href = 'Jeux.html';">Inscription</button>
                     </form>
+                    
                 </div>
             </div>
         </div>   

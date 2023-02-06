@@ -1,19 +1,16 @@
 body{
-
-    font-size: 16px;
     background-image: url(image.jpg);
+    font-size: 16px;
     margin: 0;
     padding: 0;
     justify-content: center;
-    align-items: center;
-    
-}
+}   
 #entete{
     background-color: #15273f;
-    height: 50px;
+    height: 75px;
     display: flex;
-    justify-content: space-around;
-    border-radius: 25px;
+    justify-content: flex-end; 
+    border-radius: 10px;
 }
 #corp{
     background-color: #469098;
@@ -28,12 +25,14 @@ body{
     background-color:#4b50d0;
     padding: 20px;
     text-align: start;
-    border-bottom: 1px solid #ddd;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    color:#d6ed8b ;
     
 }
+
 .conteneur{
-    
-   background-color: #15273f;
    height: 700px;
    width: 400px;
    display: flex;
@@ -45,6 +44,36 @@ body{
 
     align-items: center;
     color: azure;
+}
+#signup{
+    background-color: #09134f;
+        color: white;
+        padding: 14px 20px;
+        border: none;
+        margin :10px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+        margin-right: 3%;
+}
+#signup:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #09134f;
+}
+#login{
+    background-color: #09134f;
+        color: white;
+        padding: 14px 20px;
+        border: none;
+        margin :10px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+        margin-right: 1%;
+}
+#login:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #09134f;
 }
 input[type="submit"] {
     background-color: #4CAF50;
@@ -66,50 +95,7 @@ input[type="submit"]:hover {
         transform: scale(1.1);
         box-shadow: 0 0 10px #4CAF50;
 }
-.conteneur1{
-    background-color: #469098;
-    height: 300px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    border-radius: 25px;
-    justify-content: center;
-    align-items: center;
-    color: azure;
-}
-.conteneur2{
-    background-color: #469098;
-    height: 300px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    border-radius: 25px;
-    justify-content: center;
-    align-items: center;
-    color: azure;
-}
-.conteneur3{
-    background-color: #469098;
-    height: 300px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    border-radius: 25px;
-    justify-content: center;
-    align-items: center;
-    color: azure;
-}
-.conteneur4{
-    background-color: #469098;
-    height: 300px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    border-radius: 25px;
-    justify-content: center;
-    align-items: center;
-    color: azure;
-}
+
     
 input[type="submit"] {
         background-color: #4CAF50;
@@ -152,3 +138,144 @@ input[type="submit"] {
         align-items: center;
         
       }
+#logo{
+    width: 100px;
+    height: 75px;
+    display: flex;
+    justify-content: flex-start;
+}
+#btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#submit{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    
+  }
+  .btn1 {
+    display: inline-block;
+    width: 500px;
+    height: 90px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color:#bdac38;
+    color:black;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.2s ease-in-out;
+    margin: 0;
+    background-image: url(geo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .btn2 {
+    display: inline-block;
+    width: 500px;
+    height: 90px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color:#bdac38;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.2s ease-in-out;
+    margin: 0;
+    background-image: url(sport.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .btn3 {
+    display: inline-block;
+    width: 500px;
+    height: 90px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color:#bdac38;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.2s ease-in-out;
+    margin: 0;
+    background-image: url(image.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .btn4 {
+    display: inline-block;
+    width: 500px;
+    height: 90px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color:#bdac38;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.2s ease-in-out;
+    margin: 0;
+    background-image: url(image.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  
+  .btn1:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  }
+  .btn2:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  }
+  .btn3:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  }
+  .btn4:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  }
+  .message{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+  }
