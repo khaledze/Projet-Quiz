@@ -24,10 +24,9 @@ body{
    border-radius: 25px;
    justify-content: center;
     align-items: center;
-    margin-left : 750px;
     color: azure;
     }
-    input[type="submit"] {
+input[type="submit"] {
         background-color: #4CAF50;
         color: white;
         padding: 14px 20px;
@@ -35,9 +34,9 @@ body{
         border-radius: 4px;
         cursor: pointer;
         transition: all 0.3s;
-      }
+    }
       
-      input[type="submit"]:hover {
+    input[type="submit"]:hover {
         transform: scale(1.1);
         box-shadow: 0 0 10px #4CAF50;
-      }
+    }
