@@ -4,64 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capital du monde</title>
+    <title>Document</title>
 </head>
 <body>
     <?php
-    $question = array(
-        array(
-            "question"=>"Quelle est la capitale administrative du Maroc ?",
-            "option"=>"Casablanca","Rabat","Essaouira","Marrakech",
-            "answer"=>"Rabat"
-        ),
-        array(
-            "question"=>"Quelle est la capitale de l’Italie ?",
-            "option"=>"Rome","Milan","Naples","Florence",
-            "answer"=>"Rome"
-        ),
-        array(
-            "question"=>"Quelle est la capitale de Cuba ?",
-            "option"=>"Saint-Domingue","La Havane","Kingston","Santiago de Cuba",
-            "answer"=>"La Havane"
-        ),
-        array(
-            "question"=>"Quelle est la capitale du Nigeria ?",
-            "option"=>"Abuja","Kano","Accra","Libreville",
-            "answer"=>"Abuja"
-        ),
-        array(
-            "question"=>"Quelle est la capitale du Yémen ?",
-            "option"=>"Mascate","Abou Dabi","sanaa","Sakaka",
-            "answer"=>"Sanaa"
-        ),
-        array(
-            "question"=>"Quelle est la capitale d’Haïti ?",
-            "option"=>"Las Terrenas","Port-au-Prince","Nassau","Veracruz",
-            "answer"=>"Port-au-Prince"
-        ),
-        array(
-            "question"=>"Quelle est la capitale de l’Équateur ?",
-            "option"=>"Medellin","San José","La Paz","Quito",
-            "answer"=>"Quito"
-        ),
-        array(
-            "question"=>"Quelle est la capitale de l’Ukraine ?",
-            "option"=>"Mariaoupol","Odessa","Varsovie","Kiev",
-            "answer"=>"Kiev"
-        ),
-        array(
-            "question"=>"Quelle est la capitale de l’Irlande ?",
-            "option"=>"Cork","Belfast","Dublin","Glasgow",
-            "answer"=>"Belfast"
-        ),
-        array(
-            "question"=>"Quelle est la capitale du Ghana ?",
-            "option"=>"Tombouctou","Accra","Bangui","Djibouti",
-            "answer"=>"Accra"
-        ),
+        class capitale {
+            public $question;
+            public $options;
+            public $answer;
+                
+            public function __construct($question,$options,$answer) {
+                $this->question = $question;
+                $this->options = $options;
+                $this->answer = $answer;
+            }
+        }
+        $question = array(
+            new capitale(
+                "Quelle est la capitale administrative du Maroc ?",
+                array("Casablanca", "Rabat", "Essaouira", "Marrakech"),
+                "Rabat"),
+            new capitale(
+                "Quelle est la capitale de l’Italie ?",
+                array("Rome", "Milan", "Naples", "Florence"),
+                "Rome"),
+            new capitale(
+                "Quelle est la capitale de Cuba ?",
+                array("Saint-Domingue", "La Havane", "Kingston", "Santiago de Cuba"),
+                "La Havane"),
+            new capitale(
+                "Quelle est la capitale du Nigeria ?",
+                array("Abuja", "Kano", "Accra", "Libreville"),
+                "Abuja"),
+            new capitale(
+                "Quelle est la capitale du Yémen ?",
+                array("Mascate", "Abou Dabi", "Sanaa", "Sakaka"),
+                "Sanaa"),
+            new capitale(
+                "Quelle est la capitale d’Haïti ?",
+                array("Las Terrenas", "Port-au-Prince", "Nassau", "Veracruz"),
+                "Port-au-Prince"),
+            new capitale(
+                "Quelle est la capitale de l’Équateur ?",
+                array("Medellin", "San José", "La Paz", "Quito"),
+                "Quito"),
+            new capitale(
+                "Quelle est la capitale de l’Ukraine ?",
+                array("Mariaoupol", "Odessa", "Varsovie", "Kiev"),
+                "Kiev"),
+            new capitale(
+                "Quelle est la capitale de l’Irlande ?",
+                array("Cork", "Belfast", "Dublin", "Glasgow"),
+                "Dublin"),
+            new capitale(
+                "Quelle est la capitale du Ghana ?",
+                array("Tombouctou", "Accra", "Bangui", "Djibouti"),
+                "Accra"),
+        );  
+                $questionCount = count($question);
+                $playerScore = 0;
+                for ($i = 0; $i < $questionCount; $i++) {
+                    $currentQuestion = $question[$i];
+                    $userAnswer = $_POST["question ".$i];
+                    if ($userAnswer == $currentQuestion["answer"]) {
+                        $playerScore++;
+                    }
+                }
+                echo "votre score est de $playerScore";
+    ?>
 
-        );
-        $numberQuestions = count($question);
-        ?>
 </body>
 </html>
+
+
