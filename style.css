@@ -1,11 +1,26 @@
 body{
-    background-color: #53c1e9;
-    font-family: 'Roboto', sans-serif;
+
     font-size: 16px;
     color: #333;
     margin: 0;
     padding: 0;
-    
+    justify-content: center;
+    align-items: center;}
+#entete{
+    background-color: #15273f;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 25px;
+}
+#corp{
+    background-color: #469098;
+    height: 800px;
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 25px;
+    display: flex;
 }
 .header{
     background-color: #056a92;
@@ -31,6 +46,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+    color: azure;
 }
 input[type="submit"] {
     background-color: #4CAF50;
@@ -46,3 +62,52 @@ input[type="submit"]:hover {
     transform: scale(1.1);
     box-shadow: 0 0 10px #4CAF50;
       }
+
+      
+input[type="submit"]:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px #4CAF50;
+}
+input[type="login"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+  
+input[type="login"]:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #4CAF50;
+}
+input[type="sign"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+  
+input[type="sign"]:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #4CAF50;
+}
+    
+input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+      
+    input[type="submit"]:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px #4CAF50;
+    }
