@@ -406,3 +406,18 @@ input[type="submit"] {
     text-align: center;
     justify-content: space-around;
   }
+  .quiz-description {
+    color: #83d667;
+    text-align: center;
+    margin: 50px;
+  }
+  
+  .quiz-description h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .quiz-description p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
