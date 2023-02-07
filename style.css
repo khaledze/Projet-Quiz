@@ -421,3 +421,55 @@ input[type="submit"] {
     font-size: 18px;
     margin-bottom: 20px;
   }
+  .quiz-questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    font-style: italic;
+    
+  }
+  
+  .question {
+    background-color: #f3e9aa;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 25px;
+    border: 4px solid rgb(166, 203, 166);
+    border-radius: 5px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  label {
+    font-size: 18px;
+  }
+  #qsuivante {
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  #qsuivante:hover {
+    background-color: darkblue;
+    transform: translateY(-2px);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+  }
+  .theme{
+    color: #c3f3b3;
+  }
+  .ques1{
+    color: #c3f3b3;
+  }
