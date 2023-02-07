@@ -179,19 +179,29 @@ input[type="submit"] {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    
     height: 100vh;
-    flex-direction: column;
+    
     
   }
   .containers2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    
     height: 100vh;
-    flex-direction: column;
+  }
+  .containers3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 100px;
+    height: 100vh;
     
+    
+  }
+  .Boutons{
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
   }
   .btn1 {
     display: inline-block;
@@ -353,8 +363,6 @@ input[type="submit"] {
     background-position: center center;
     background-size: cover;
   }
-
-  
   .btn:hover {
     transform: translateY(-2px);
     box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
@@ -393,6 +401,7 @@ input[type="submit"] {
     transform: translateY(-2px);
     box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
   }
+ 
   .message{
     color: #fff;
     font-size: 20px;
@@ -401,8 +410,64 @@ input[type="submit"] {
     text-align: center;
     margin: 0;
   }
-  .Boutons{
+  
+  #button1{
     display: flex;
     text-align: center;
     justify-content: space-around;
+    height: 50px;
+    width: 100%;
   }
+  #button2{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    height: 50px;
+    width: 100%;
+  }
+  #button3{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    height: 50px;
+    width: 100%;
+  }
+  #button4{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    height: 50px;
+    width: 100%;
+  }
+  #button5{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    height: 50px;
+    width: 100%;
+  }
+  #button6{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    height: 50px;
+    width: 100%;
+  }
+  #button7{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    height: 50px;
+    width: 100%;
+  }
+  #button8{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    height: 50px;
+    width: 100%;
+  }
+ 
+  
+  
+  
