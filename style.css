@@ -203,7 +203,7 @@ input[type="submit"] {
     align-items: start;
     justify-content: space-around;
   }
-  .btn1 {
+  #btn1 {
     display: inline-block;
     width: 500px;
     height: 90px;
@@ -223,7 +223,7 @@ input[type="submit"] {
     background-position: center center;
     background-size: cover;
   }
-  .btn2 {
+  #btn2 {
     display: inline-block;
     width: 500px;
     height: 90px;
@@ -243,7 +243,7 @@ input[type="submit"] {
     background-position: center center;
     background-size: cover;
   }
-  .btn3 {
+  #btn3 {
     display: inline-block;
     width: 500px;
     height: 90px;
@@ -263,7 +263,7 @@ input[type="submit"] {
     background-position: center center;
     background-size: cover;
   }
-  .btn4 {
+  #btn4 {
     display: inline-block;
     width: 500px;
     height: 90px;
@@ -283,7 +283,7 @@ input[type="submit"] {
     background-position: center center;
     background-size: cover;
   }
-  .btn5 {
+  #btn5 {
     display: inline-block;
     width: 500px;
     height: 90px;
@@ -303,7 +303,7 @@ input[type="submit"] {
     background-position: center center;
     background-size: cover;
   }
-  .btn6 {
+  #btn6 {
     display: inline-block;
     width: 500px;
     height: 90px;
@@ -323,7 +323,7 @@ input[type="submit"] {
     background-position: center center;
     background-size: cover;
   }
-  .btn7 {
+  #btn7 {
     display: inline-block;
     width: 500px;
     height: 90px;
@@ -343,7 +343,7 @@ input[type="submit"] {
     background-position: center center;
     background-size: cover;
   }
-  .btn8 {
+  #btn8 {
     display: inline-block;
     width: 500px;
     height: 90px;
@@ -363,41 +363,36 @@ input[type="submit"] {
     background-position: center center;
     background-size: cover;
   }
-  .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
-  }
   
-  
-  .btn1:hover {
+  #btn1:hover {
     transform: translateY(-2px);
     box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
   }
-  .btn2:hover {
+  #btn2:hover {
     transform: translateY(-2px);
     box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
   }
-  .btn3:hover {
+  #btn3:hover {
     transform: translateY(-2px);
     box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
   }
-  .btn4:hover {
+  #btn4:hover {
     transform: translateY(-2px);
     box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
   }
-  .btn5:hover {
+  #btn5:hover {
     transform: translateY(-2px);
     box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
   }
-  .btn6:hover {
+  #btn6:hover {
     transform: translateY(-2px);
     box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
   }
-  .btn7:hover {
+  #btn7:hover {
     transform: translateY(-2px);
     box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
   }
-  .btn8:hover {
+  #btn8:hover {
     transform: translateY(-2px);
     box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
   }
