@@ -1,5 +1,5 @@
 body{
-    background-image: url(image.jpg);
+    background-image: url(/Projet-Quiz/photo/image.jpg);
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -218,7 +218,7 @@ input[type="submit"] {
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     transition: all 0.2s ease-in-out;
     margin: 0;
-    background-image: url(geo.jpg);
+    background-image: url(/Projet-Quiz/photo/geo.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -238,7 +238,7 @@ input[type="submit"] {
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     transition: all 0.2s ease-in-out;
     margin: 0;
-    background-image: url(sport.jpg);
+    background-image: url(/Projet-Quiz/photo/sport.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -258,7 +258,7 @@ input[type="submit"] {
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     transition: all 0.2s ease-in-out;
     margin: 0;
-    background-image: url(histoire.jpg);
+    background-image: url(/Projet-Quiz/photo/histoire.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -278,7 +278,7 @@ input[type="submit"] {
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     transition: all 0.2s ease-in-out;
     margin: 0;
-    background-image: url(musique.jpg);
+    background-image: url(/Projet-Quiz/photo/musique.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -298,7 +298,7 @@ input[type="submit"] {
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     transition: all 0.2s ease-in-out;
     margin: 0;
-    background-image: url(science.jpg);
+    background-image: url(/Projet-Quiz/photo/science.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -318,7 +318,7 @@ input[type="submit"] {
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     transition: all 0.2s ease-in-out;
     margin: 0;
-    background-image: url(politique.jpg);
+    background-image: url(/Projet-Quiz/photo/politique.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -338,7 +338,7 @@ input[type="submit"] {
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     transition: all 0.2s ease-in-out;
     margin: 0;
-    background-image: url(la-culture-livre.jpg);
+    background-image: url(/Projet-Quiz/photo/la-culture-livre.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -358,7 +358,7 @@ input[type="submit"] {
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     transition: all 0.2s ease-in-out;
     margin: 0;
-    background-image: url(animaux.jpg);
+    background-image: url(/Projet-Quiz/photo/animaux.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
