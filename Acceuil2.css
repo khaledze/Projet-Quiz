@@ -92,11 +92,11 @@ input {
 	width: 100%;
 }
 
-button.ghost {
+#button.ghost {
 	background-color: transparent;
 }
 
-button {
+#button {
 	background-color: #d1ee77;
 	color: #00203f;
 	border: 1px solid #4b50d0;
@@ -110,13 +110,13 @@ button {
 	transition: .2s ease-in;
 }
 
-button:hover {
+#button:hover {
 	cursor: pointer;
 	background-color: #00203f;
 	color: #4b50d0;
 }
 
-button:active {
+#button:active {
 	transform: scale(.95);
 }
 
@@ -221,4 +221,58 @@ p {
 	line-height: 20px;
 	letter-spacing: .5px;
 	margin: 20px 0 30px;
+}
+#login.ghost {
+	background-color: transparent;
+}
+
+#login {
+	background-color: #d1ee77;
+	color: #00203f;
+	border: 1px solid #4b50d0;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 16px 32px;
+	margin-top: 24px;
+	letter-spacing: 1px;
+	border-radius: 50px;
+	border-color: rgba(0, 32, 63, .45);
+	transition: .2s ease-in;
+}
+
+#login:hover {
+	cursor: pointer;
+	background-color: #00203f;
+	color: #4b50d0;
+}
+
+#login:active {
+	transform: scale(.95);
+}
+#signUp.ghost {
+	background-color: transparent;
+}
+
+#signUp {
+	background-color: #d1ee77;
+	color: #00203f;
+	border: 1px solid #4b50d0;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 16px 32px;
+	margin-top: 24px;
+	letter-spacing: 1px;
+	border-radius: 50px;
+	border-color: rgba(0, 32, 63, .45);
+	transition: .2s ease-in;
+}
+
+#signUp:hover {
+	cursor: pointer;
+	background-color: #00203f;
+	color: #4b50d0;
+}
+
+#signUp:active {
+	transform: scale(.95);
 }
