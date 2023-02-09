@@ -11,6 +11,12 @@ signUpButton.addEventListener('click', () => {
 loginButton.addEventListener('click', () => {
 	container.classList.remove('panel-active');
 })
-connectButton.addEventListener("click", function() {
-	window.location.replace("http://127.0.0.1:5500/Projet-Quiz/html/Jeux.html");
-  });
+// connectButton.addEventListener("click", function() {
+// 	window.location.replace("http://127.0.0.1:5500/Projet-Quiz/html/Jeux.html");
+//   });
+// registerButton.addEventListener("click", function() { 
+// 	window.location.href = "/Project-Quiz/html/Jeux.html"; 
+// }); 
+//   connectButton.addEventListener("click", function() { 
+// 	window.location.href = "/Project-Quiz/html/Jeux.html"; 
+// });
