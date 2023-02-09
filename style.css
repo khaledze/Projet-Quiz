@@ -534,3 +534,165 @@ input[type="submit"] {
   .ques1{
     color: #c3f3b3;
   }
+  #logout{
+    background-color: #09134f;
+        color: white;
+        padding: 14px 20px;
+        border: none;
+        margin :10px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+        margin-right: 1%;
+}
+#logout:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #09134f;
+}
+#linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#linkList li {
+  padding: 10px;
+  margin: 10px;
+  background-color: lightgray;
+  border-radius: 5px;
+}
+
+#linkList a {
+  text-decoration: none;
+  color: black;
+}
+  #linkList1 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #linkList1 li {
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+  }
+
+  #linkList1 a {
+    text-decoration: none;
+    color: black;
+  }
+  #linkList2 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #linkList2 li {
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+  }
+
+  #linkList2 a {
+    text-decoration: none;
+    color: black;
+  }
+  #linkList3 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #linkList3 li {
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+  }
+
+  #linkList3 a {
+    text-decoration: none;
+    color: black;
+  }
+  #linkList4 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #linkList4 li {
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+  }
+
+  #linkList4 a {
+    text-decoration: none;
+    color: black;
+  }
+  #linkList5 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #linkList5 li {
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+  }
+
+  #linkList5 a {
+    text-decoration: none;
+    color: black;
+  }
+  #linkList6 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #linkList6 li {
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+  }
+
+  #linkList6 a {
+    text-decoration: none;
+    color: black;
+  }
+  #linkList7 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #linkList7 li {
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+  }
+
+  #linkList7 a {
+    text-decoration: none;
+    color: black;
+  }
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  
