@@ -11,12 +11,24 @@ signUpButton.addEventListener('click', () => {
 loginButton.addEventListener('click', () => {
 	container.classList.remove('panel-active');
 })
-// connectButton.addEventListener("click", function() {
-// 	window.location.replace("http://127.0.0.1:5500/Projet-Quiz/html/Jeux.html");
-//   });
-// registerButton.addEventListener("click", function() { 
-// 	window.location.href = "/Project-Quiz/html/Jeux.html"; 
-// }); 
-//   connectButton.addEventListener("click", function() { 
-// 	window.location.href = "/Project-Quiz/html/Jeux.html"; 
-// });
+
+  const form = document.querySelector("form");
+  form.addEventListener("submit", event => {
+  event.preventDefault();
+  window.location.href = "Jeux.html";
+  });
+  document.getElementById("connect").addEventListener("click", function(){
+    window.location.href = "/Projet-Quiz/html/Jeux.html";
+    });
+const toggleSwitch = document.querySelector("#toggle-switch");
+const user = document.querySelector("#user");
+const quizzer = document.querySelector("#quizzer");
+  toggleSwitch.addEventListener("change", function() {
+    if (toggleSwitch.checked) {
+       user.classList.remove("animated");
+        quizzer.classList.add("animated");
+    } else {
+       user.classList.add("animated");
+       quizzer.classList.remove("animated");
+    }
+  });
