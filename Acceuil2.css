@@ -90,11 +90,11 @@ input {
 	width: 100%;
 }
 
-#button.ghost {
+#button1.ghost {
 	background-color: transparent;
 }
 
-#button {
+#button1 {
 	background-color: #d1ee77;
 	color: #00203f;
 	border: 1px solid #4b50d0;
@@ -108,13 +108,41 @@ input {
 	transition: .2s ease-in;
 }
 
-#button:hover {
+#button1:hover {
 	cursor: pointer;
 	background-color: #00203f;
 	color: #4b50d0;
 }
 
-#button:active {
+#button1:active {
+	transform: scale(.95);
+}
+
+#button2.ghost {
+	background-color: transparent;
+}
+
+#button2 {
+	background-color: #d1ee77;
+	color: #00203f;
+	border: 1px solid #4b50d0;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 16px 32px;
+	margin-top: 24px;
+	letter-spacing: 1px;
+	border-radius: 50px;
+	border-color: rgba(0, 32, 63, .45);
+	transition: .2s ease-in;
+}
+
+#button2:hover {
+	cursor: pointer;
+	background-color: #00203f;
+	color: #4b50d0;
+}
+
+#button2:active {
 	transform: scale(.95);
 }
 
