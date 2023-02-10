@@ -103,6 +103,7 @@ body{
 }
 
 .img {
+  background-image: url("/Projet-Quiz/photo/geo.png");
   width: 50px;
   height: 50px;
   margin-left: 10px;
@@ -111,8 +112,9 @@ body{
 }
 
 .card:hover > .img {
+  background-image: url("/Projet-Quiz/photo/geo.png");
   transition: 0.5s ease-in-out;
-  background: linear-gradient(#9198e5, #712020);
+  
 }
 
 .textBox {
@@ -142,5 +144,7 @@ body{
   font-weight: lighter;
 }
 .img{
-  background-image: url("/Projet-Quiz/photo/geo.jpeg");
+  width: 115px;
+  height: 115px;
+  background-image: url("/Projet-Quiz/photo/geo.png");
 }
