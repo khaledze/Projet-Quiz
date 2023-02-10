@@ -3,8 +3,15 @@ body{
     font-size: 16px;
     margin: 0;
     padding: 0;
-    justify-content: center;
-}   
+  }
+.cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    margin-top: 40px;
+}
+
 
 .header{
     background-color:#4b50d0;
@@ -74,7 +81,6 @@ body{
 .card:hover > .img {
   background-image: url("/Projet-Quiz/photo/geo.png");
   transition: 0.5s ease-in-out;
-  
 }
 
 .textBox {
@@ -108,4 +114,323 @@ body{
   height: 115px;
   background-image: url("/Projet-Quiz/photo/geo.png");
 }
+
+
+.card2 {
+  width: 100%;
+  max-width: 290px;
+  height: 70px;
+  background: #353535;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  backdrop-filter: blur(10px);
+  transition: 0.5s ease-in-out;
+}
+
+.card2:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.img2 {
+  background-image: url("/Projet-Quiz/photo/geo.png");
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background: linear-gradient(#d7cfcf, #9198e5);
+}
+
+.card2:hover > .img {
+  background-image: url("/Projet-Quiz/photo/geo.png");
+  transition: 0.5s ease-in-out;
+}
+
+.textBox2 {
+  width: calc(100% - 90px);
+  margin-left: 10px;
+  color: white;
+  font-family: 'Poppins' sans-serif;
+}
+
+.textContent2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.span2 {
+  font-size: 10px;
+}
+
+.h12 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.p2 {
+  font-size: 12px;
+  font-weight: lighter;
+}
+.img2{
+  width: 115px;
+  height: 115px;
+  background-image: url("/Projet-Quiz/photo/geo.png");
+}
+
+.card3 {
+  width: 100%;
+  max-width: 290px;
+  height: 70px;
+  background: #353535;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  backdrop-filter: blur(10px);
+  transition: 0.5s ease-in-out;
+}
+
+.card3:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.img3 {
+  background-image: url("/Projet-Quiz/photo/histoire.png");
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background: linear-gradient(#d7cfcf, #9198e5);
+}
+
+.card3:hover > .img {
+  background-image: url("/Projet-Quiz/photo/histoire.png");
+  transition: 0.5s ease-in-out;
+}
+
+.textBox3 {
+  width: calc(100% - 90px);
+  margin-left: 10px;
+  color: white;
+  font-family: 'Poppins' sans-serif;
+}
+
+.textContent3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.span3 {
+  font-size: 10px;
+}
+
+.h13 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.p3 {
+  font-size: 12px;
+  font-weight: lighter;
+}
+.img3{
+  width: 115px;
+  height: 115px;
+  background-image: url("/Projet-Quiz/photo/histoire.png");
+}
+
+.card4 {
+  width: 100%;
+  max-width: 290px;
+  height: 70px;
+  background: #353535;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  backdrop-filter: blur(10px);
+  transition: 0.5s ease-in-out;
+}
+
+.card4:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.img4 {
+  background-image: url("/Projet-Quiz/photo/chanson.png");
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background: linear-gradient(#d7cfcf, #9198e5);
+}
+
+.card4:hover > .img {
+  background-image: url("/Projet-Quiz/photo/chanson.png");
+  transition: 0.5s ease-in-out;
+}
+
+.textBox4 {
+  width: calc(100% - 90px);
+  margin-left: 10px;
+  color: white;
+  font-family: 'Poppins' sans-serif;
+}
+
+.textContent4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.span4 {
+  font-size: 10px;
+}
+
+.h14 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.p4 {
+  font-size: 12px;
+  font-weight: lighter;
+}
+.img4{
+  width: 115px;
+  height: 115px;
+  background-image: url("/Projet-Quiz/photo/chanson.png");
+}
+
+
+.card5 {
+  width: 100%;
+  max-width: 290px;
+  height: 70px;
+  background: #353535;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  backdrop-filter: blur(10px);
+  transition: 0.5s ease-in-out;
+}
+
+.card5:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.img5 {
+  background-image: url("/Projet-Quiz/photo/chanson.png");
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background: linear-gradient(#d7cfcf, #9198e5);
+}
+
+.card5:hover > .img {
+  background-image: url("/Projet-Quiz/photo/chanson.png");
+  transition: 0.5s ease-in-out;
+}
+
+.textBox5 {
+  width: calc(100% - 90px);
+  margin-left: 10px;
+  color: white;
+  font-family: 'Poppins' sans-serif;
+}
+
+.textContent5 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.span5 {
+  font-size: 10px;
+}
+
+.h15 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.p5 {
+  font-size: 12px;
+  font-weight: lighter;
+}
+.img5{
+  width: 115px;
+  height: 115px;
+  background-image: url("/Projet-Quiz/photo/chanson.png");
+}
+
+
+.card6 {
+  width: 100%;
+  max-width: 290px;
+  height: 70px;
+  background: #353535;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  backdrop-filter: blur(10px);
+  transition: 0.5s ease-in-out;
+}
+.card6:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.img6 {
+  background-image: url("/Projet-Quiz/photo/chanson.png");
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background: linear-gradient(#d7cfcf, #9198e5);
+}
+.card6:hover > .img {
+  background-image: url("/Projet-Quiz/photo/chanson.png");
+  transition: 0.5s ease-in-out;
+}
+.textBox6 {
+  width: calc(100% - 90px);
+  margin-left: 10px;
+  color: white;
+  font-family: 'Poppins' sans-serif;
+}
+.textContent6 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.span6 {
+  font-size: 10px;
+}
+.h16 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.p6 {
+  font-size: 12px;
+  font-weight: lighter;
+}
+.img6{
+  width: 115px;
+  height: 115px;
+  background-image: url("/Projet-Quiz/photo/chanson.png");
+}
+
+
+
+
 
