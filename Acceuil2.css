@@ -427,3 +427,39 @@ p {
 	transform: translateX(20px);
 	opacity: 0;
   }
+ 
+  h1 {
+	margin-bottom: 30px;
+  }
+  .radio-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+  }
+  input[type="radio"] {
+	margin-right: 20px;
+  }
+  input[type="submit"] {
+	padding: 10px 20px;
+	background-color: green;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  .radio-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+  }
+  input[type="radio"] {
+	margin-right: 20px;
+  }
+  input[type="submit"] {
+	padding: 10px 20px;
+	background-color: green;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }

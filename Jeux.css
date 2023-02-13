@@ -25,7 +25,6 @@ body{
     padding: 20px;
 }
 .wrapper {
- /* put everything on the bottom left */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -50,7 +49,13 @@ body{
 #btn {
   display: flex;
 }
-
+.quiz-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
 .card {
   width: 100%;
   max-width: 290px;
@@ -429,7 +434,26 @@ body{
   height: 115px;
   background-image: url("/Projet-Quiz/photo/chanson.png");
 }
+.deco {
+  min-width: 120px;
+  background: #353535;
+  color: #EEEEEE;
+  height: 40px;
+  margin: 10px;
+  border: none;
+  border-radius: 0 !important;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
 
+.deco:hover {
+  box-shadow: #00203f 0px 0px 0px 6px, #161616 0px 0px 0px 5px;
+  background: #000;
+  color: #EEEEEE;
+}
 
 
 
