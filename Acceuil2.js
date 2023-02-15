@@ -15,34 +15,41 @@ loginButton.addEventListener('click', () => {
 	container.classList.remove('panel-active');
 })
 
-document.getElementById("button1").addEventListener("click", function(){
-  window.location.href = "/Projet-Quiz/html/Jeux.html";
-});
-document.getElementById("button2").addEventListener("click", function(){
-  window.location.href = "/Projet-Quiz/html/Jeux.html";
-});
-
-// document.getElementById("button2").addEventListener("click", function(e) {
-//   e.preventDefault();
-//   var username = document.getElementById("username").value;
-//   var password = document.getElementById("password").value;
-//   // Vérifier les entrées de l'utilisateur ici
-//   fetch("connexion.php", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/x-www-form-urlencoded"
-//     },
-//     body: `username=${username}&password=${password}&email=${email}`
-//   })
-//     .then(response => response.json())
-//     .then(data => {
-//       if (data.success){ 
-//           window.location.href = "/Projet-Quiz/html/Jeux.html";
-//       } else {
-//         print("error");
-//       }
-//     });
+// document.getElementById("button1").addEventListener("click", function(){
+//   window.location.href = "/Projet-Quiz/html/Jeux.html";
 // });
+// document.getElementById("button2").addEventListener("click", function(){
+//   window.location.href = "/Projet-Quiz/html/Jeux.html";
+// });
+
+
+
+
+
+// Récupération du bouton "Créer un compte"
+var bouton2 = document.getElementById("button2");
+
+// Ajout d'un événement "click" au bouton "Créer un compte"
+bouton2.addEventListener("click", function(event) {
+    event.preventDefault(); // Empêcher la soumission du formulaire par défaut
+
+    // Récupération des données du formulaire
+    var pseudo = document.getElementsByName("pseudo")[0].value;
+    var email = document.getElementsByName("email")[0].value;
+    var motdepasse = document.getElementsByName("pswd")[0].value;
+    var role = document.getElementsByName("role")[0].value;
+
+    // Création d'une requête HTTP POST vers le script PHP
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/Projet-Quiz/html/connexion.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    // Envoi des données du formulaire au script PHP
+    xhr.send("pseudo=" + pseudo + "&email=" + email + "&pswd=" + motdepasse + "&role=" + role)});
+
+
+
+
 
 
 // document.getElementById("button2").addEventListener("click", function(){
@@ -55,29 +62,6 @@ document.getElementById("button2").addEventListener("click", function(){
 //     }
 //   });
 // });
-// document.getElementById("button2").addEventListener("click", function(e) {
-//   e.preventDefault();
-//   var selectedValue = document.getElementById("userType").value;
-//   var username = document.getElementById("username").value;
-//   var email = document.getElementById("email").value;
-//   var password = document.getElementById("password").value;
-//   fetch("register.php", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/x-www-form-urlencoded"
-//     },
-//     body: `username=${username}&password=${password}&email=${email}&userType=${selectedValue}`
-//   })
-//   .then(response => response.json())
-//   .then(data => {
-//     if (data.success) {
-//       if (selectedValue === "utilisateur") {
-//         window.location.href = "/Projet-Quiz/html/Jeux.html";
-//       } else if (selectedValue === "quizzeur") {
-//         window.location.href = "/Projet-Quiz/html/Jeux2.html";
-//       }}
-// });
-
 
 // toggleSwitch.addEventListener("change", function() {
 //   if (toggleSwitch.checked) {
@@ -88,29 +72,3 @@ document.getElementById("button2").addEventListener("click", function(){
 //     quizzer.classList.remove("animated");
 //   }
 // });});
-document.querySelector("#button2").addEventListener("click", function(event) {
-  event.preventDefault();
-  const username = document.querySelector("#username").value;
-  const email = document.querySelector("#email").value;
-  const password = document.querySelector("#password").value;
-  const userType = document.querySelector("#userType").value;
-  const formData = new FormData();
-  formData.append("username", username);
-  formData.append("email", email);
-  formData.append("password", password);
-  formData.append("userType", userType);
-
-  fetch("connexion.php", {
-      method: "POST",
-      body: formData
-  })
-      .then(response => response.json())
-      .then(data => {
-          console.log(data);
-      })
-      .catch(error => {
-          console.error("Error:", error);
-      });
-});
-
-
