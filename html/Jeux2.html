@@ -3,7 +3,8 @@
 <head>
     <link rel="stylesheet" href="/Projet-Quiz/Jeux.css">
     <link rel="stylesheet" href="/Projet-Quiz/animation.css">
-    <script src="animation.js"></script>
+    <link rel="stylesheet" href="/Projet-Quiz/lien.css">
+    <script src="/Projet-Quiz/animation.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +15,128 @@
             <button type="button" class="deco" onclick="window.location.href = '/Projet-Quiz/html/Acceuil2.html';">
                 Se déconnecter
               </button>
-        </div>
+        </div>  
     </div>
     <style>
        
       </style>
 </head>
 <body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/Projet-Quiz/photo/logot.png" alt="logo" >
+                </span>
+    
+                <div class="text logo-text">
+                    <span class="name">Quizzeo</span>
+                    <span class="profession">Jeu de quiz</span>
+                </div>
+            </div>
+    
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+    
+        <div class="menu-bar">
+            <div class="menu">
+    
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+    
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home-alt icon' >
+                                <img src="/Projet-Quiz/photo/fleche.png" alt="fleche" width="35px" height="35px">
+                            </i>
+                            <span class="text nav-text">Page precedante</span>
+                        </a>
+                    </li>
+    
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bar-chart-alt-2 icon' >
+                                <img src="/Projet-Quiz/photo/contact.png" alt="contact" width="40px" height="35px">
+                            </i>
+                            <span class="text nav-text">Contact</span>
+                        </a>
+                    </li>
+    
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'>
+                                <img src="/Projet-Quiz/photo/+.png" alt="+" width="35px" height="35px">
+                            </i>
+                            <span class="text nav-text">Créer votre Quiz</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+    
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+    
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+    
+    </nav>
+    
+    <section class="home">
+        <div class="text">Quizzeo</div>
+    </section>
+    
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+    
+    
+    toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+    })
+    
+    searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+    })
+    
+    modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+    });
+    </script>
+    <div class="text">
+        <h1>Testez vos competances </h1>
+
+    </div>
         <div class="cards">
             <div>
                 <div class="card">
@@ -207,11 +323,7 @@
             </div>
         
         </div>
-
-
-
-
-
       <script src="/Projet-Quiz/nvx.js"></script>
+      <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 </body>
 </html>
