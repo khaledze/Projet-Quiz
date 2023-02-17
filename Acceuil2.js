@@ -19,7 +19,7 @@ loginButton.addEventListener('click', () => {
 //   window.location.href = "/Projet-Quiz/html/Jeux.html";
 // });
 // document.getElementById("button2").addEventListener("click", function(){
-//   window.location.href = "/Projet-Quiz/html/Jeux.html";
+//   window.location.href = "/Projet-Quiz/html/Jeux2.html";
 // });
 
 
