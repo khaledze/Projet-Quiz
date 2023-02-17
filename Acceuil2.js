@@ -15,12 +15,12 @@ loginButton.addEventListener('click', () => {
 	container.classList.remove('panel-active');
 })
 
-document.getElementById("button1").addEventListener("click", function(){
-  window.location.href = "/Projet-Quiz/html/Jeux.html";
-});
-document.getElementById("button2").addEventListener("click", function(){
-  window.location.href = "/Projet-Quiz/html/Jeux.html";
-});
+// document.getElementById("button1").addEventListener("click", function(){
+//   window.location.href = "/Projet-Quiz/html/Jeux.html";
+// });
+// document.getElementById("button2").addEventListener("click", function(){
+//   window.location.href = "/Projet-Quiz/html/Jeux.html";
+// });
 
 
 
