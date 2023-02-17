@@ -1,16 +1,49 @@
+<?php
+    // la connexion à la base de données
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "data";
+
+    try {
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // echo "connexion réussie";
+    } catch(PDOException $e) {
+        echo "connexion échouée : " . $e->getMessage();
+    }
+
+    if(isset($_POST['envoyer'])){
+        $pseudo = htmlspecialchars($_POST['pseudo']);
+        $email = htmlspecialchars($_POST['email']);
+        $pswd = htmlspecialchars($_POST['pswd']);
+
+        $sql = "INSERT INTO player (pseudo, email, password) VALUES (:pseudo, :email, :pswd)";
+		$stmt = $conn->prepare($sql);
+			
+		$stmt->bindParam(':pseudo', $pseudo);
+		$stmt->bindParam(':email', $email);
+		$stmt->bindParam(':pswd', $pswd);
+		$stmt->execute();
+
+    }
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
 	<meta charset="utf-8" />
 	<title>formulaire</title>
-	<link rel="stylesheet" href="/animation.css" />
-    <link rel="stylesheet" href="/Acceuil2.css" />
+	<link rel="stylesheet" href="animation.css" />
+    <link rel="stylesheet" href="Acceuil2.css" />
 <body>
 	
 	<div class="container" id="container">
 		<div class="form-container sign-up-container">		
-			<form action="/Projet-Quiz/html/connexion.php" methode="post">
+			<form action="" method="POST">
 				<h1>Creer un compte</h1>
 					
 				<input type="text" placeholder="Pseudo" name="pseudo">
@@ -22,11 +55,11 @@
 				  <option value="utilisateur">Utilisateur</option>
 				  <option value="quizzeur">Quizzeur</option>
 				</select>
-				<li id="button2">Creer un compte</li>				
+				<button type="submit" name="envoyer">Créer un compte</button> 				
 			</form>
 		</div>
 		<div class="form-container login-container">
-			<form action="/Projet-Quiz/html/connexion.php" methode="post">
+			<form action="" method="POST">
 				<h1>Se connecter</h1>	
 				<input type="email" placeholder="Email">
 				<input type="password" placeholder="Mot de passe">

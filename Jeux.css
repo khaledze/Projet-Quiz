@@ -787,6 +787,9 @@ body{
   color: #EEEEEE;
 }
 
+.sidebar.active ~ .cards .card {
+  transform: translateX(250px);
+}
 
 
 

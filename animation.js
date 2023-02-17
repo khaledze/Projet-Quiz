@@ -15,7 +15,12 @@ for (let i = 0; i < mainButtons.length; i++) {
     let subButtonToShow = subButtons[i];
     subButtonToShow.style.display = "flex";
     subButtonToShow.classList.add("show");
+    cards.forEach(cards => {
+      card.style.transform = `translateX(${sidebar.classList.contains('active') ? '250px' : '0'})`;
+    });
   });
 }
+
+
 
 
