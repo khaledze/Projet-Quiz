@@ -10,7 +10,7 @@
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         // echo "connexion réussie";
     } catch(PDOException $e) {
-        echo "connexion échouée : " . $e->getMessage();
+        echo "<script>alert('connexion echoué !');</script>" . $e->getMessage();
     }
 
     if(isset($_POST['envoyer'])){
@@ -27,8 +27,11 @@
 		$stmt->bindParam(':pswd', $pswd);
 		$stmt->bindParam(':role', $role);
 		$stmt->execute();
-		header('Location: /Projet-Quiz/html/Jeux.html');
-
+		if($role == "utilisateur") {
+			header("Location: /Projet-Quiz/html/Jeux.html");
+		} else {
+			header("Location: /Projet-Quiz/html/Jeux2.html");
+		}
     }
 
 	if(isset($_POST['connecter'])){
@@ -53,7 +56,7 @@
 			}
 		} else {
 			// si les informations de connexion sont incorrectes, afficher un message d'erreur
-			echo "Adresse email ou mot de passe incorrect";
+			echo "<script>alert('Connexion pas réussie !');</script>";
 		}
 	}
 	
