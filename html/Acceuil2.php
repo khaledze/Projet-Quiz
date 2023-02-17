@@ -27,8 +27,6 @@
 		$stmt->bindParam(':pswd', $pswd);
 		$stmt->bindParam(':role', $role);
 		$stmt->execute();
-		header('Location: /Projet-Quiz/html/Jeux.html');
-
     }
 
 	if(isset($_POST['connecter'])){
