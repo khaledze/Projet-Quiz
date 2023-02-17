@@ -3,14 +3,14 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "data";
+    $dbname = "quizz";
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         // echo "connexion réussie";
     } catch(PDOException $e) {
-        echo "connexion échouée : " . $e->getMessage();
+        echo "<script>alert('connexion echoué !');</script>" . $e->getMessage();
     }
 
     if(isset($_POST['envoyer'])){
@@ -53,7 +53,7 @@
 			}
 		} else {
 			// si les informations de connexion sont incorrectes, afficher un message d'erreur
-			echo "Adresse email ou mot de passe incorrect";
+			echo "<script>alert('Connexion pas réussie !');</script>";
 		}
 	}
 	
