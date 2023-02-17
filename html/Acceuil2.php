@@ -17,6 +17,7 @@
         $pseudo = htmlspecialchars($_POST['pseudo']);
         $email = htmlspecialchars($_POST['email']);
         $pswd = htmlspecialchars($_POST['pswd']);
+		$role = htmlspecialchars($_POST['role']);
 
         $sql = "INSERT INTO player (pseudo, email, password, role) VALUES (:pseudo, :email, :pswd, :role)";
 		$stmt = $conn->prepare($sql);
@@ -24,10 +25,39 @@
 		$stmt->bindParam(':pseudo', $pseudo);
 		$stmt->bindParam(':email', $email);
 		$stmt->bindParam(':pswd', $pswd);
-		$stmt->bindParam(':role', $_POST['role']);
+		$stmt->bindParam(':role', $role);
 		$stmt->execute();
+		header('Location: /Projet-Quiz/html/Jeux.html');
 
     }
+
+	if(isset($_POST['connecter'])){
+		$email = htmlspecialchars($_POST['email']);
+		$pswd = htmlspecialchars($_POST['pswd']);
+	
+		$sql = "SELECT role FROM player WHERE email=:email AND password=:pswd";
+		$stmt = $conn->prepare($sql);
+		$stmt->bindParam(':email', $email);
+		$stmt->bindParam(':pswd', $pswd);
+		$stmt->execute();
+		$result = $stmt->fetch();
+	
+		if($result) {
+			// si les informations de connexion sont correctes, on redirige vers la page correspondante
+			if ($result['role'] == 'utilisateur') {
+				header("Location: /Projet-Quiz/html/Jeux.html");
+				exit();
+			} elseif ($result['role'] == 'quizzeur') {
+				header("Location: /Projet-Quiz/html/Jeux2.html");
+				exit();
+			}
+		} else {
+			// si les informations de connexion sont incorrectes, afficher un message d'erreur
+			echo "Adresse email ou mot de passe incorrect";
+		}
+	}
+	
+	
 ?>
 
 
@@ -62,9 +92,9 @@
 		<div class="form-container login-container">
 			<form action="" method="POST">
 				<h1>Se connecter</h1>	
-				<input type="email" placeholder="Email">
-				<input type="password" placeholder="Mot de passe">
-				<li id="button1">Se connecter</li>
+				<input type="email" placeholder="Email" name="email">
+				<input type="password" placeholder="Mot de passe" name="pswd">
+				<button id="button1" type="submit" name="connecter">Se connecter</button>
 			</form>
 		</div>
 		<div class="overlay-container">
