@@ -14,18 +14,13 @@ body{
   /* transform: translateX(-20px); */
   color: white;
   padding: 25px;
+  flex: 1;
 }
   
-.header{
-    background-color:#4b50d0;
-    padding: 20px;
-    text-align: start;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    color:#d6ed8b ;
-    align-items: center;
-    padding: 20px;
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
 }
 .wrapper {
   position: absolute;
