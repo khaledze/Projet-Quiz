@@ -18,12 +18,13 @@
         $email = htmlspecialchars($_POST['email']);
         $pswd = htmlspecialchars($_POST['pswd']);
 
-        $sql = "INSERT INTO player (pseudo, email, password) VALUES (:pseudo, :email, :pswd)";
+        $sql = "INSERT INTO player (pseudo, email, password, role) VALUES (:pseudo, :email, :pswd, :role)";
 		$stmt = $conn->prepare($sql);
 			
 		$stmt->bindParam(':pseudo', $pseudo);
 		$stmt->bindParam(':email', $email);
 		$stmt->bindParam(':pswd', $pswd);
+		$stmt->bindParam(':role', $_POST['role']);
 		$stmt->execute();
 
     }
