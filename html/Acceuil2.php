@@ -37,8 +37,8 @@
 <head>
 	<meta charset="utf-8" />
 	<title>formulaire</title>
-	<link rel="stylesheet" href="animation.css" />
-    <link rel="stylesheet" href="Acceuil2.css" />
+	<link rel="stylesheet" href="/Projet-Quiz/animation.css" />
+    <link rel="stylesheet" href="/Projet-Quiz/Acceuil2.css" />
 <body>
 	
 	<div class="container" id="container">
@@ -55,7 +55,7 @@
 				  <option value="utilisateur">Utilisateur</option>
 				  <option value="quizzeur">Quizzeur</option>
 				</select>
-				<button type="submit" name="envoyer">Créer un compte</button> 				
+				<button id="button2" type="submit" name="envoyer">Créer un compte</button> 				
 			</form>
 		</div>
 		<div class="form-container login-container">
@@ -69,28 +69,28 @@
 		<div class="overlay-container">
 			<div class="overlay">
 				<div class="overlay-panel overlay-left">
-						<img src="/photo/logo2.jpg" alt="Logo" height="100px">
+						<img src="/Projet-Quiz/photo/logo2.jpg" alt="Logo" height="100px">
 						<button class="ghost" id="login">Se connecter</button>
 				</div>
 					<div class="overlay-panel overlay-right">
-						<img src="/photo/logo2.jpg" alt="Logo" height="100px">
+						<img src="/Projet-Quiz/photo/logo2.jpg" alt="Logo" height="100px">
 						<button class="ghost" id="signUp">Creer un compte</button>
 					</div>
 			</div>
 		</div>
 	</div>
 	<div class="test">
-		<img src="/photo/icone.png" alt="">
-		<img src="/photo/icone.png" alt="">
-		<img src="/photo/icone.png" alt="">
-		<img src="/photo/icone.png" alt="">
-		<img src="/photo/icone.png" alt="">
-		<img src="/photo/icone.png" alt="">
-		<img src="/photo/icone.png" alt="">
+		<img src="/Projet-Quiz/photo/icone.png" alt="">
+		<img src="/Projet-Quiz/photo/icone.png" alt="">
+		<img src="/Projet-Quiz/photo/icone.png" alt="">
+		<img src="/Projet-Quiz/photo/icone.png" alt="">
+		<img src="/Projet-Quiz/photo/icone.png" alt="">
+		<img src="/Projet-Quiz/photo/icone.png" alt="">
+		<img src="/Projet-Quiz/photo/icone.png" alt="">
 	</div>
 	
 
-	<script src="/Acceuil2.js"></script>
+	<script src="/Projet-Quiz/Acceuil2.js"></script>
 </body>
 
 </html>
