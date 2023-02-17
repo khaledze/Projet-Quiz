@@ -3,7 +3,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "quiz";
+    $dbname = "data";
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -38,14 +38,14 @@
 		$email = htmlspecialchars($_POST['email']);
 		$pswd = htmlspecialchars($_POST['pswd']);
 	
-		$sql = "SELECT role FROM player WHERE email=:email AND password=:pswd";
+		$sql = "SELECT role FROM player WHERE email= '$email' AND password='$pswd'";
 		$stmt = $conn->prepare($sql);
 		$stmt->bindParam(':email', $email);
 		$stmt->bindParam(':pswd', $pswd);
 		$stmt->execute();
 		$result = $stmt->fetch();
 	
-		if($result) {
+		if($result)  {
 			// si les informations de connexion sont correctes, on redirige vers la page correspondante
 			if ($result['role'] == 'utilisateur') {
 				header("Location: /Projet-Quiz/html/Jeux.html");
