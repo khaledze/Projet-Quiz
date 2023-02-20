@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="/Projet-Quiz/Jeux.css">
-    <script src="/Projet-Quiz/animation.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,34 +91,7 @@
         <div class="text">Quizzeo</div>
     </section>
     
-    <script>
-        const body = document.querySelector('body'),
-      sidebar = body.querySelector('nav'),
-      toggle = body.querySelector(".toggle"),
-      searchBtn = body.querySelector(".search-box"),
-      modeSwitch = body.querySelector(".toggle-switch"),
-      modeText = body.querySelector(".mode-text");
-    
-    
-    toggle.addEventListener("click" , () =>{
-    sidebar.classList.toggle("close");
-    })
-    
-    searchBtn.addEventListener("click" , () =>{
-    sidebar.classList.remove("close");
-    })
-    
-    modeSwitch.addEventListener("click" , () =>{
-    body.classList.toggle("dark");
-    
-    if(body.classList.contains("dark")){
-        modeText.innerText = "Light mode";
-    }else{
-        modeText.innerText = "Dark mode";
-        
-    }
-    });
-    </script>
+   
     <div class="text">
         <h1>Testez vos competances </h1>
 
@@ -311,7 +283,7 @@
         
         </div>
     </div>
-      <script src="/Projet-Quiz/nvx.js"></script>
+      <script src="/Projet-Quiz/Jeux.js"></script>
       <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 </body>
 </html>
