@@ -19,8 +19,17 @@ if (!$conn) {
 }
 
 // Requête pour récupérer les questions
-$sql = "SELECT question, reponse FROM questions";
+$sql = "SELECT intituleQuestion FROM question";
 $result = mysqli_query($conn, $sql);
+// Vérifier si la requête a réussi
+if ($result && mysqli_num_rows($result) > 0) {
+  while ($row = mysqli_fetch_assoc($result)) {
+    // Afficher les données de chaque ligne
+  }
+} else {
+  // Afficher un message d'erreur si la requête a échoué
+  echo "Erreur : " . mysqli_error($conn);
+}
 ?>
 
   <div class="container">
@@ -29,7 +38,6 @@ $result = mysqli_query($conn, $sql);
       <?php while ($row = mysqli_fetch_assoc($result)) ?>
         <div class="slide">
           <h2><?php echo $row['question']; ?></h2>
-          <p><?php echo $row['reponse']; ?></p>
         </div>
     </div>
 
