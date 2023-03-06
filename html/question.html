@@ -8,120 +8,6 @@
   <script src="/Projet-Quiz/nvx.js"></script>
 </head>
 <body>
-  <nav class="sidebar close">
-    <header>  
-                <span class="image">
-                  <img src="/Projet-Quiz/photo/logot.png" alt="logo" >
-               </span>
-         <i class='bx bx-chevron-right toggle'></i>
-     </header>
-
-<div class="menu-bar">
-    <div class="menu">
-
-        <li class="search-box">
-            <i class='bx bx-search icon'></i>
-            <input type="text" placeholder="Search...">
-        </li>
-
-        <ul class="menu-links">
-            <li class="nav-link">
-                <a href="#">
-                    <i class='bx bx-bar-chart-alt-2 icon' >
-                        <img src="/Projet-Quiz/photo/contact.png" alt="contact" width="40px" height="35px">
-                    </i>
-                    <span class="text nav-text">Contact</span>
-                </a>
-            </li>
-
-            <li class="nav-link">
-                <a href="#">
-                    <i class='bx bx-bell icon'>
-                        <img src="/Projet-Quiz/photo/+.png" alt="+" width="35px" height="35px">
-                    </i>
-                    <span class="text nav-text">Créer votre Quiz</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="bottom-content">
-        <li class="">
-            <a href="/Projet-Quiz/html/Acceuil2.php">
-                <i class='bx bx-log-out icon' ></i>
-                <span class="text nav-text" >Logout</span>
-            </a>
-        </li>
-
-        <li class="mode">
-            <div class="sun-moon">
-                <i class='bx bx-moon icon moon'></i>
-                <i class='bx bx-sun icon sun'></i>
-            </div>
-            <span class="mode-text text">Dark mode</span>
-
-            <div class="toggle-switch">
-                <span class="switch"></span>
-            </div>
-        </li>
-        
-    </div>
-</div>
-
-</nav>
-<script>
-        
-  const body = document.querySelector('body');
- const sidebar = body.querySelector('nav');
- const toggle = body.querySelector(".toggle");
- const searchBtn = body.querySelector(".search-box");
- const modeSwitch = body.querySelector(".toggle-switch");
- const modeText = body.querySelector(".mode-text");
- const images = document.querySelectorAll('.test img');
- const imageSwitch = document.querySelector('.toggle-switch-image');
-
- toggle.addEventListener("click", () => {
- sidebar.classList.toggle("close");
- });
-
- searchBtn.addEventListener("click", () => {
- sidebar.classList.remove("close");
- });
-
- modeSwitch.addEventListener("click", () => {
- body.classList.toggle("dark");
- if (body.classList.contains("dark")) {
-     modeText.innerText = "Light mode";
-     images.forEach(function(img) {
-     img.src = '/Projet-Quiz/photo/quiz2.png';
-     });
- } else {
-     modeText.innerText = "Dark mode";
-     images.forEach(function(img) {
-     img.src = '/Projet-Quiz/photo/icone.png';
-     });
- }
- });
-
- imageSwitch.addEventListener('click', function() {
- images.forEach(function(img) {
-     if (document.body.classList.contains('dark')) {
-     img.src = '/Projet-Quiz/photo/quiz2.png';
-     } else {
-     img.src = '/Projet-Quiz/photo/icone.png';
-     }
- });
- });
-
-     
- </script>
- <div class="ensemble">
-
- </div>
-
-</head>
-<body>
-      
   <div class="container">
 
     <div class="slider">
@@ -129,13 +15,21 @@
       <img src="https://images.unsplash.com/photo-1590634875887-a6a516622e2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80">
       <img src="https://images.unsplash.com/photo-1590664216212-62e763768cae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
     </div>
-
+  
     <div class="cont-btn">
       <div class="btn-nav left">←</div>
       <div class="btn-nav right">→</div>
     </div>
-
+  
   </div>
+  
+
+
+
   <script src="/Project-Quiz/slider.js"></script>
-</body>
-</html>
+
+
+  </head>
+<body>
+
+  

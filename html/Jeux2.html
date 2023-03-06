@@ -3,27 +3,32 @@
 <head>
     <link rel="stylesheet" href="/Projet-Quiz/Jeux.css">
     <link rel="stylesheet" href="/Projet-Quiz/lien.css">
-    <script src="/Projet-Quiz/animation.js"></script>
+    <link rel="stylesheet" href="/Projet-Quiz/animation2.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeux</title>
-
+   <div class="header">
+        <img src="/Projet-Quiz/photo/logo2.jpg" alt="Logo" height="100px">
+        <div id="btn">
+            <button type="button" class="deco" onclick="window.location.href = '/Projet-Quiz/html/Acceuil2.php';">
+                Se décontracter
+              </button>
+        </div>  
+    </div>
+    <style>
+       
+      </style>
 </head>
 <body>
     <div class="container">
-    <nav class="sidebar close">
-        <header>
-            
-            <span class="image">
-                <img src="/Projet-Quiz/photo/logot.png" alt="logo" >
-            </span>
-
-            
-       
-
-        <i class='bx bx-chevron-right toggle'></i>
-        </header>
+        <nav class="sidebar close">
+            <header>  
+                        <span class="image">
+                          <img src="/Projet-Quiz/photo/logot.png" alt="logo" >
+                       </span>
+                 <i class='bx bx-chevron-right toggle'></i>
+             </header>
     
         <div class="menu-bar">
             <div class="menu">
@@ -84,32 +89,50 @@
     </section>
     
     <script>
-        const body = document.querySelector('body'),
-      sidebar = body.querySelector('nav'),
-      toggle = body.querySelector(".toggle"),
-      searchBtn = body.querySelector(".search-box"),
-      modeSwitch = body.querySelector(".toggle-switch"),
-      modeText = body.querySelector(".mode-text");
-    
-    
-    toggle.addEventListener("click" , () =>{
-    sidebar.classList.toggle("close");
-    })
-    
-    searchBtn.addEventListener("click" , () =>{
-    sidebar.classList.remove("close");
-    })
-    
-    modeSwitch.addEventListener("click" , () =>{
-    body.classList.toggle("dark");
-    
-    if(body.classList.contains("dark")){
-        modeText.innerText = "Light mode";
-    }else{
-        modeText.innerText = "Dark mode";
         
+     const body = document.querySelector('body');
+    const sidebar = body.querySelector('nav');
+    const toggle = body.querySelector(".toggle");
+    const searchBtn = body.querySelector(".search-box");
+    const modeSwitch = body.querySelector(".toggle-switch");
+    const modeText = body.querySelector(".mode-text");
+    const images = document.querySelectorAll('.test img');
+    const imageSwitch = document.querySelector('.toggle-switch-image');
+
+    toggle.addEventListener("click", () => {
+    sidebar.classList.toggle("close");
+    });
+
+    searchBtn.addEventListener("click", () => {
+    sidebar.classList.remove("close");
+    });
+
+    modeSwitch.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    if (body.classList.contains("dark")) {
+        modeText.innerText = "Light mode";
+        images.forEach(function(img) {
+        img.src = '/Projet-Quiz/photo/quiz2.png';
+        });
+    } else {
+        modeText.innerText = "Dark mode";
+        images.forEach(function(img) {
+        img.src = '/Projet-Quiz/photo/icone.png';
+        });
     }
     });
+
+    imageSwitch.addEventListener('click', function() {
+    images.forEach(function(img) {
+        if (document.body.classList.contains('dark')) {
+        img.src = '/Projet-Quiz/photo/quiz2.png';
+        } else {
+        img.src = '/Projet-Quiz/photo/icone.png';
+        }
+    });
+    });
+
+        
     </script>
     <div class="text">
         <h1>Testez vos competances </h1>
@@ -302,7 +325,27 @@
         
         </div>
     </div>
+    <main>   
+        <div class="white">
+            <img src="/Projet-Quiz/photo/icone.png" alt="">
+            <img src="/Projet-Quiz/photo/icone.png" alt="">
+            <img src="/Projet-Quiz/photo/icone.png" alt="">
+            <img src="/Projet-Quiz/photo/icone.png" alt="">
+            <img src="/Projet-Quiz/photo/icone.png" alt="">
+            <img src="/Projet-Quiz/photo/icone.png" alt="">
+            <img src="/Projet-Quiz/photo/icone.png" alt="">
+        </div>
+        <div class="test-dark">
+            <img src="/Projet-Quiz/photo/quiz2.png" alt="">
+            <img src="/Projet-Quiz/photo/quiz2.png" alt="">
+            <img src="/Projet-Quiz/photo/quiz2.png" alt="">
+            <img src="/Projet-Quiz/photo/quiz2.png" alt="">
+            <img src="/Projet-Quiz/photo/quiz2.png" alt="">
+            <img src="/Projet-Quiz/photo/quiz2.png" alt="">
+            <img src="/Projet-Quiz/photo/quiz2.png" alt="">
+        </div>
+    </main>
       <script src="/Projet-Quiz/nvx.js"></script>
-     
+      
 </body>
 </html>
