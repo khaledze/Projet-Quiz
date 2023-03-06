@@ -13,7 +13,6 @@ $user ="root";
 $password ="";
 $database ="quiz";
 $connect = mysqli_connect($host,$user,$password,$database);
-
 ?>
 </body>
 </html>
