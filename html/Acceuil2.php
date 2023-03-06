@@ -56,7 +56,7 @@
 			}
 		} else {
 			// si les informations de connexion sont incorrectes, afficher un message d'erreur
-			echo "<script>alert('Connexion pas réussie !');</script>";
+			echo "<script>alert('erreur de connexion !');</script>";
 		}
 	}
 ?>
