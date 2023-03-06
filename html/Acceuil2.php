@@ -59,8 +59,6 @@
 			echo "<script>alert('Connexion pas réussie !');</script>";
 		}
 	}
-	
-	
 ?>
 
 
