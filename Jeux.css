@@ -10,6 +10,7 @@
   background-color: red;
   padding: 25px;
   flex: 1;
+  z-index: 5;
 }
   
 .container {
@@ -60,6 +61,7 @@
   justify-content: left;
   backdrop-filter: blur(10px);
   transition: 0.5s ease-in-out;
+  z-index: 4;
 }
 
 .card:hover {

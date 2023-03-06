@@ -1,79 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <?php
-        class capitale {
-            public $question;
-            public $options;
-            public $answer;
-                
-            public function __construct($question,$options,$answer) {
-                $this->question = $question;
-                $this->options = $options;
-                $this->answer = $answer;
-            }
-        }
-        $question = array(
-            new capitale(
-                "Quelle est la capitale administrative du Maroc ?",
-                array("Casablanca", "Rabat", "Essaouira", "Marrakech"),
-                "Rabat"),
-            new capitale(
-                "Quelle est la capitale de l’Italie ?",
-                array("Rome", "Milan", "Naples", "Florence"),
-                "Rome"),
-            new capitale(
-                "Quelle est la capitale de Cuba ?",
-                array("Saint-Domingue", "La Havane", "Kingston", "Santiago de Cuba"),
-                "La Havane"),
-            new capitale(
-                "Quelle est la capitale du Nigeria ?",
-                array("Abuja", "Kano", "Accra", "Libreville"),
-                "Abuja"),
-            new capitale(
-                "Quelle est la capitale du Yémen ?",
-                array("Mascate", "Abou Dabi", "Sanaa", "Sakaka"),
-                "Sanaa"),
-            new capitale(
-                "Quelle est la capitale d’Haïti ?",
-                array("Las Terrenas", "Port-au-Prince", "Nassau", "Veracruz"),
-                "Port-au-Prince"),
-            new capitale(
-                "Quelle est la capitale de l’Équateur ?",
-                array("Medellin", "San José", "La Paz", "Quito"),
-                "Quito"),
-            new capitale(
-                "Quelle est la capitale de l’Ukraine ?",
-                array("Mariaoupol", "Odessa", "Varsovie", "Kiev"),
-                "Kiev"),
-            new capitale(
-                "Quelle est la capitale de l’Irlande ?",
-                array("Cork", "Belfast", "Dublin", "Glasgow"),
-                "Dublin"),
-            new capitale(
-                "Quelle est la capitale du Ghana ?",
-                array("Tombouctou", "Accra", "Bangui", "Djibouti"),
-                "Accra"),
-        );  
-                $questionCount = count($question);
-                $playerScore = 0;
-                for ($i = 0; $i < $questionCount; $i++) {
-                    $currentQuestion = $question[$i];
-                    $userAnswer = $_POST["question ".$i];
-                    if ($userAnswer == $currentQuestion["answer"]) {
-                        $playerScore++;
-                    }
-                }
-                echo "votre score est de $playerScore";
-    ?>
+<?php
 
-</body>
-</html>
+session_start(); // Démarrage de la session
+
+$host = "localhost";
+$username = "root";
+$password = "";
+$dbname = "quizz";
+
+$conn = mysqli_connect($host, $username, $password, $dbname);
+
+if (!$conn) {
+    echo("La connexion a échoué: " . mysqli_connect_error());
+} else {
+    if (!isset($_SESSION["question_index"])) {
+        $_SESSION["question_index"] = 0; // Initialisation de l'indice de la question
+    }
+
+    // Récupération des questions et de leurs réponses associées depuis la base de données
+    $questions_query = "SELECT * FROM question LIMIT " . $_SESSION["question_index"] . ", 1";
+    $questions_result = mysqli_query($conn, $questions_query);
+
+    // Affichage de la question courante avec les réponses associées
+    while ($row = mysqli_fetch_assoc($questions_result)) {
+        echo "<p>" . $row["Question"] . "</p>";
+
+        // Récupération des réponses associées à la question courante depuis la base de données
+        $reponses_query = "SELECT * FROM choix WHERE id_question = " . $row["id_question"];
+        $reponses_result = mysqli_query($conn, $reponses_query);
+
+        // Affichage des réponses sous forme de QCM
+        echo "<form>";
+        while ($reponse = mysqli_fetch_assoc($reponses_result)) {
+            echo "<div>";
+            echo "<input type='radio' id='reponse-" . $reponse["id"] . "' name='reponse-" . $row["id_question"] . "' value='" . $reponse["id"] . "'>";
+            echo "<label for='reponse-" . $reponse["id"] . "'>" . $reponse["reponse1"] . "</label>";
+            echo "<input type='radio' id='reponse-" . $reponse["id"] . "' name='reponse-" . $row["id_question"] . "' value='" . $reponse["id"] . "'>";
+            echo "<label for='reponse-" . $reponse["id"] . "'>" . $reponse["reponse2"] . "</label>";
+            echo "<input type='radio' id='reponse-" . $reponse["id"] . "' name='reponse-" . $row["id_question"] . "' value='" . $reponse["id"] . "'>";
+            echo "<label for='reponse-" . $reponse["id"] . "'>" . $reponse["reponse3"] . "</label>";
+            echo "</div>";
+        }
+        echo "</form>";
+
+        // Ajout d'un bouton pour passer à la question suivante
+        echo "<button onclick='this.parentElement.nextElementSibling.classList.remove(\"hidden\")'>Question suivante</button>";
+
+    }
+
+    mysqli_close($conn);
+}
+?>
+
+
+
+
+
+
 
 
