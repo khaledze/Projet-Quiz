@@ -5,7 +5,7 @@ session_start(); // Démarrage de la session
 $host = "localhost";
 $username = "root";
 $password = "";
-$dbname = "quizz";
+$dbname = "quiz";
 
 $conn = mysqli_connect($host, $username, $password, $dbname);
 

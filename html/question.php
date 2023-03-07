@@ -19,7 +19,7 @@ if (!$conn) {
 }
 
 // Requête pour récupérer les questions
-$sql = "SELECT intituleQuestion FROM question";
+$sql = "SELECT intituléQuestion FROM question";
 $result = mysqli_query($conn, $sql);
 // Vérifier si la requête a réussi
 if ($result && mysqli_num_rows($result) > 0) {
@@ -38,6 +38,7 @@ if ($result && mysqli_num_rows($result) > 0) {
       <?php while ($row = mysqli_fetch_assoc($result)) ?>
         <div class="slide">
           <h2><?php echo $row['question']; ?></h2>
+          <p><?php echo $row['reponse']; ?></p>
         </div>
     </div>
 
