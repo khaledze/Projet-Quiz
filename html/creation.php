@@ -100,7 +100,7 @@ $conn->close();
     </div>
   </div>
 
-  <input type="button" value="Ajouter une question" onclick="ajouterQuestion()"><br><br>
+  <!-- <input type="button" value="Ajouter une question" onclick="ajouterQuestion()"><br><br> -->
 
   <input type="submit" value="Créer le quiz">
 </form>
