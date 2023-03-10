@@ -101,11 +101,11 @@
 		<div class="overlay-container">
 			<div class="overlay">
 				<div class="overlay-panel overlay-left">
-						<img src="/Projet-Quiz/photo/logo2.jpg" alt="Logo" height="100px">
+						<img src="/Projet-Quiz/photo/logo5.png" alt="Logo" height="150px">
 						<button class="ghost" id="login">Se connecter</button>
 				</div>
 					<div class="overlay-panel overlay-right">
-						<img src="/Projet-Quiz/photo/logo2.jpg" alt="Logo" height="100px">
+						<img src="/Projet-Quiz/photo/logo5.png" alt="Logo" height="150px">
 						<button class="ghost" id="signUp">Creer un compte</button>
 					</div>
 			</div>

@@ -1,16 +1,16 @@
-const search = document.getElementById("container-search");
+const searchBox = document.getElementById("searchBox");
 
 searchBox.addEventListener("input", function () {
   const query = searchBox.value.toLowerCase();
-  const allCategories = document.querySelectorAll(".Categorie");
+  const allCategories = document.querySelectorAll(".textBox");
 
   allCategories.forEach(function (category) {
-    const title = category.getAttribute("data-name").toLowerCase();
+    const title = category.querySelector(".h1").textContent.toLowerCase();
 
     if (title.includes(query)) {
-      category.style.display = "block";
+      category.parentElement.style.display = "block";
     } else {
-      category.style.display = "none";
+      category.parentElement.style.display = "none";
     }
   });
 });
