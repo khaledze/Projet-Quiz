@@ -21,3 +21,4 @@ const typewriter = new Typewriter(AnimText, {
 .typeString("Bienvenue dans notre Jeu Quizzeo")
 .pauseFor(300)
 .start()
+

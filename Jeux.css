@@ -777,4 +777,7 @@
   background: #000;
   color: #EEEEEE;
 }
-
+.ajout {
+  display: flex;
+  justify-content: center;
+}
