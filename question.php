@@ -1,6 +1,11 @@
-<?php
-
-session_start(); // Démarrage de la session
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questions</title>
+</head>
+<body>
+	<?php
+	session_start(); // Démarrage de la session
 
 $host = "localhost";
 $username = "root";
@@ -8,53 +13,66 @@ $password = "";
 $dbname = "quizz";
 
 $conn = mysqli_connect($host, $username, $password, $dbname);
-
 if (!$conn) {
-    echo("La connexion a échoué: " . mysqli_connect_error());
-} else {
-    if (!isset($_SESSION["question_index"])) {
-        $_SESSION["question_index"] = 0; // Initialisation de l'indice de la question
-    }
-
-    // Récupération des questions et de leurs réponses associées depuis la base de données
-    $questions_query = "SELECT * FROM question LIMIT " . $_SESSION["question_index"] . ", 1";
-    $questions_result = mysqli_query($conn, $questions_query);
-
-    // Affichage de la question courante avec les réponses associées
-    while ($row = mysqli_fetch_assoc($questions_result)) {
-        echo "<p>" . $row["Question"] . "</p>";
-
-        // Récupération des réponses associées à la question courante depuis la base de données
-        $reponses_query = "SELECT * FROM choix WHERE id_question = " . $row["id_question"];
-        $reponses_result = mysqli_query($conn, $reponses_query);
-
-        // Affichage des réponses sous forme de QCM
-        echo "<form>";
-        while ($reponse = mysqli_fetch_assoc($reponses_result)) {
-            echo "<div>";
-            echo "<input type='radio' id='reponse-" . $reponse["id"] . "' name='reponse-" . $row["id_question"] . "' value='" . $reponse["id"] . "'>";
-            echo "<label for='reponse-" . $reponse["id"] . "'>" . $reponse["reponse1"] . "</label>";
-            echo "<input type='radio' id='reponse-" . $reponse["id"] . "' name='reponse-" . $row["id_question"] . "' value='" . $reponse["id"] . "'>";
-            echo "<label for='reponse-" . $reponse["id"] . "'>" . $reponse["reponse2"] . "</label>";
-            echo "<input type='radio' id='reponse-" . $reponse["id"] . "' name='reponse-" . $row["id_question"] . "' value='" . $reponse["id"] . "'>";
-            echo "<label for='reponse-" . $reponse["id"] . "'>" . $reponse["reponse3"] . "</label>";
-            echo "</div>";
-        }
-        echo "</form>";
-
-        // Ajout d'un bouton pour passer à la question suivante
-        echo "<button onclick='this.parentElement.nextElementSibling.classList.remove(\"hidden\")'>Question suivante</button>";
-
-    }
-
-    mysqli_close($conn);
+	die("Connection failed: " . mysqli_connect_error());
 }
+
+// Récupérer le thème choisi
+if (isset($_GET['theme'])) {
+	$theme = htmlspecialchars($_GET['theme']);
+} else {
+	echo "Aucun thème sélectionné.";
+	exit;
+}
+
+// Récupération des questions
+if ($theme != "") {
+	$query = "SELECT q.id_question, q.Question, c.reponse1, c.reponse2, c.reponse3, c.bonneReponse 
+			  FROM question q 
+			  INNER JOIN choix c ON q.id_question = c.id_question 
+			  WHERE c.theme = '$theme'";
+} else {
+	$query = "SELECT q.id_question, q.Question, c.reponse1, c.reponse2, c.reponse3, c.bonneReponse 
+			  FROM question q 
+			  INNER JOIN choix c ON q.id_question = c.id_question";
+}
+$result = mysqli_query($conn, $query);
+if (!$result) {
+	die('Erreur de récupération des questions : ' . mysqli_error($conn));
+}
+
+// Affichage des questions et des réponses
+while ($row = mysqli_fetch_assoc($result)) {
+    echo "<p>" . $row['Question'] . "</p>";
+    echo "<label><input type='radio' name='reponse_" . $row['id_question'] . "' value='" . $row['reponse1'] . "'> " . $row['reponse1'] . "</label><br>";
+    echo "<label><input type='radio' name='reponse_" . $row['id_question'] . "' value='" . $row['reponse2'] . "'> " . $row['reponse2'] . "</label><br>";
+    echo "<label><input type='radio' name='reponse_" . $row['id_question'] . "' value='" . $row['reponse3'] . "'> " . $row['reponse3'] . "</label><br>";   
+}
+
+// Vérification des réponses et calcul du score
+if (isset($_POST['submit'])) {
+    $score = 0;
+    mysqli_data_seek($result, 0); // Retour au début du résultat
+    while ($row = mysqli_fetch_assoc($result)) {
+        if (isset($_POST['reponse_' . $row['id_question']])) {
+            $user_answer = $_POST['reponse_' . $row['id_question']];
+            $correct_answer = $row['bonneReponse'];
+            if ($user_answer == $correct_answer) {
+                $score++;
+            }
+        }
+    }
+    $percent_score = ($score / mysqli_num_rows($result)) * 100;
+    echo "<p>Votre score est de : " . $percent_score . "%</p>";
+}
+
 ?>
 
-
-
-
-
+<form method="POST" action="">
+	<br><input type='submit' name='submit' value='Valider'>
+</form>
+</body>
+</html>
 
 
 
