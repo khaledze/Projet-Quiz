@@ -42,20 +42,29 @@
 
     echo "<form method='post' action='save.php'>";
     while ($row = mysqli_fetch_assoc($result)) {
-      echo "<label>Question:</label>";
-      echo "<input type='text' name='question[]' value='" . htmlspecialchars(mysqli_real_escape_string($conn, $row['Question'])) . "'><br>";
-      echo "<label>Reponse 1:</label>";
-      echo "<input type='text' name='reponse1[]' value='" . htmlspecialchars($row['reponse1']) . "'><br>";
-      echo "<label>Reponse 2:</label>";
-      echo "<input type='text' name='reponse2[]' value='" . htmlspecialchars($row['reponse2']) . "'><br>";
-      echo "<label>Reponse 3:</label>";
-      echo "<input type='text' name='reponse3[]' value='" . htmlspecialchars($row['reponse3']) . "'><br>";
-      echo "<label>Bonne réponse:</label>";
-      echo "<input type='text' name='bonneReponse[]' value='" . htmlspecialchars($row['bonneReponse']) . "'><br>";
-      echo "<input type='hidden' name='id[]' value='" . htmlspecialchars($row['id']) . "'>";
-      echo "<input type='hidden' name='theme' value='" . htmlspecialchars($theme) . "'>";
-      echo "<hr>";
-    }
+        // Afficher la question et les réponses
+        echo "<label>Question:</label>";
+        echo "<input type='text' name='question[]' value='" . htmlspecialchars(mysqli_real_escape_string($conn, $row['Question'])) . "'><br>";
+        echo "<label>Reponse 1:</label>";
+        echo "<input type='text' name='reponse1[]' value='" . htmlspecialchars($row['reponse1']) . "'><br>";
+        echo "<label>Reponse 2:</label>";
+        echo "<input type='text' name='reponse2[]' value='" . htmlspecialchars($row['reponse2']) . "'><br>";
+        echo "<label>Reponse 3:</label>";
+        echo "<input type='text' name='reponse3[]' value='" . htmlspecialchars($row['reponse3']) . "'><br>";
+        echo "<label>Bonne réponse:</label>";
+        echo "<input type='text' name='bonneReponse[]' value='" . htmlspecialchars($row['bonneReponse']) . "'><br>";
+        echo "<input type='hidden' name='id[]' value='" . htmlspecialchars($row['id']) . "'>";
+        echo "<input type='hidden' name='theme' value='" . htmlspecialchars($theme) . "'>";
+      
+        // Ajouter un bouton de suppression
+        echo "<form method='post' action='delete.php'>";
+        echo "<input type='hidden' name='id' value='" . htmlspecialchars($row['id_question']) . "'>";
+        echo "<input type='hidden' name='theme' value='" . htmlspecialchars($theme) . "'>";
+        echo "<input type='submit' value='Supprimer cette question'>";
+        echo "</form>";
+      
+        echo "<hr>";
+      }
     echo "<input type='submit' value='Enregistrer les modifications'>";
     echo "</form>";
 ?>

@@ -115,7 +115,7 @@
 var currentQuestion = <?php echo $minQuestionId; ?>;
 var numQuestions = <?php echo $maxQuestionId; ?>;
 
-    function nextQuestion() {
+function nextQuestion() {
   // Vérifier que l'utilisateur a sélectionné une réponse
   var radios = document.getElementsByName("reponse_" + currentQuestion);
   var answerSelected = false;
@@ -132,13 +132,20 @@ var numQuestions = <?php echo $maxQuestionId; ?>;
   // Passer à la question suivante
   var currentQuestionDiv = document.getElementById("question_" + currentQuestion);
   currentQuestionDiv.style.display = "none";
-  currentQuestion++;
 
-  if (currentQuestion <= numQuestions) {
-    var nextQuestionDiv = document.getElementById("question_" + currentQuestion);
-    nextQuestionDiv.style.display = "block";
-  }
+  var nextQuestionId = currentQuestion + 1;
+  while (nextQuestionId <= numQuestions) {
+    var nextQuestionDiv = document.getElementById("question_" + nextQuestionId);
+    if (nextQuestionDiv) {
+      nextQuestionDiv.style.display = "block";
+      break;
     }
+    nextQuestionId++;
+  }
+
+  currentQuestion = nextQuestionId;
+}
+
 
 
 </script>
