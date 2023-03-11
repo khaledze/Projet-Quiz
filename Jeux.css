@@ -6,8 +6,8 @@
   grid-gap: 20px;
   height: 700px;
   width: 100%;
-  color: rgb(252, 252, 252);
-  background-color: rgb(255, 255, 255);
+  /* color: rgb(252, 252, 252); */
+  /* background-color: rgb(255, 255, 255); */
   padding: 25px;
   flex: 1;
   z-index: 5;

@@ -25,7 +25,7 @@
         <nav class="sidebar close">
             <header>  
                         <span class="image">
-                          <img src="/Projet-Quiz/photo/logot.png" alt="logo" >
+                         
                        </span>
                  <i class='bx bx-chevron-right toggle'></i>
              </header>
@@ -35,7 +35,7 @@
     
                 <li class="search-box">
                     <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search...">
+                    <input type="text" placeholder="Search..." id="searchBox">
                 </li>
     
                 <ul class="menu-links">
@@ -48,21 +48,16 @@
                         </a>
                     </li>
     
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-bell icon'>
-                                <img src="/Projet-Quiz/photo/+.png" alt="+" width="35px" height="35px">
-                            </i>
-                            <span class="text nav-text">Créer votre Quiz</span>
-                        </a>
-                    </li>
+                    
                 </ul>
             </div>
     
             <div class="bottom-content">
                 <li class="">
                     <a href="/Projet-Quiz/html/Acceuil2.php">
-                        <i class='bx bx-log-out icon' ></i>
+                        <i class='bx bx-log-out icon' >
+                            <img src="/Projet-Quiz/photo/deco.png" alt="deco" width="35px" height="35px">
+                        </i>
                         <span class="text nav-text" >Logout</span>
                     </a>
                 </li>
@@ -153,7 +148,7 @@
 
 
             <div>
-                <div class="card">
+                <div class="card" data-name="chanson">
                     <div class="img2"></div>
                     <div class="textBox2">
                         <div class="textContent2">
@@ -165,7 +160,7 @@
             </div>
 
             <div>
-                <div class="card">
+                <div class="card" data-name="cinema">
                     <div class="img3"></div>
                     <div class="textBox3">
                         <div class="textContent3">
@@ -177,7 +172,7 @@
             </div>
 
             <div>
-                <div class="card">
+                <div class="card" data-name="economie">
                     <div class="img4"></div>
                     <div class="textBox4">
                         <div class="textContent4">
@@ -190,7 +185,7 @@
 
 
             <div>
-                <div class="card">
+                <div class="card" data-name="faune">
                     <div class="img5"></div>
                     <div class="textBox5">
                         <div class="textContent5">
@@ -203,10 +198,10 @@
 
 
             <div>
-                <div class="card">
+                <div class="card" data-name="flore">
                     <div class="img6"></div>
                     <div class="textBox6">
-                        <div class="textContent6">
+                        <div class="textContent6" data-category="flore">
                             <p class="h16">Flore</p>
                         </div>
                         <p class="p6">Quiz Flore</p>
@@ -216,10 +211,10 @@
         
 
             <div>
-                <div class="card">
+                <div class="card" data-name="gastro">
                     <div class="img7"></div>
                     <div class="textBox7">
-                        <div class="textContent7">
+                        <div class="textContent7" data-category="gastro">
                             <p class="h17">Gastro</p>
                         </div>
                         <p class="p7">Quiz Gastro</p>
@@ -228,10 +223,10 @@
             </div>
 
             <div>
-                <div class="card">
+                <div class="card" data-name="geographie">
                     <div class="img8"></div>
                     <div class="textBox8">
-                        <div class="textContent8">
+                        <div class="textContent8" data-category="geographie">
                             <p class="h18">Geographie</p>
                         </div>
                         <p class="p8">Quiz Geographie</p>
@@ -240,10 +235,10 @@
             </div>
 
             <div>
-                <div class="card">
+                <div class="card" data-name="histoire">
                     <div class="img9"></div>
                     <div class="textBox9">
-                        <div class="textContent9">
+                        <div class="textContent9" data-category="histoire">
                             <p class="h19">Histoire</p>
                         </div>
                         <p class="p9">Quiz Histoire</p>
@@ -252,10 +247,10 @@
             </div>
 
             <div>
-                <div class="card">
+                <div class="card" data-name="institution">
                     <div class="img10"></div>
                     <div class="textBox10">
-                        <div class="textContent10">
+                        <div class="textContent10" data-category="institution">
                             <p class="h110">Institutions</p>
                         </div>
                         <p class="p10">Quiz Institutions</p>
@@ -264,10 +259,10 @@
             </div>
 
             <div>
-                <div class="card">
+                <div class="card" data-name="langue">
                     <div class="img11"></div>
                     <div class="textBox11">
-                        <div class="textContent11">
+                        <div class="textContent11" data-category="langue">
                             <p class="h111">Langue</p>
                         </div>
                         <p class="p11">Quiz Langue</p>
@@ -276,10 +271,10 @@
             </div>
 
             <div>
-                <div class="card">
+                <div class="card" data-name="litterature">
                     <div class="img12"></div>
                     <div class="textBox12">
-                        <div class="textContent12">
+                        <div class="textContent12" data-category="litterature">
                             <p class="h112">Litterature</p>
                         </div>
                         <p class="p12">Quiz Litterature</p>
@@ -288,10 +283,10 @@
             </div>
 
             <div>
-                <div class="card">
+                <div class="card" data-name="mode">
                     <div class="img13"></div>
                     <div class="textBox13">
-                        <div class="textContent13">
+                        <div class="textContent13" data-category="mode">
                             <p class="h113">Mode</p>
                         </div>
                         <p class="p13">Quiz Mode</p>
@@ -300,10 +295,10 @@
             </div>
 
             <div>
-                <div class="card">
+                <div class="card" data-name="quotidien">
                     <div class="img14"></div>
                     <div class="textBox14">
-                        <div class="textContent14">
+                        <div class="textContent14" data-category="quotidien">
                             <p class="h114">Quotidien</p>
                         </div>
                         <p class="p14">Quiz Quotidien</p>
@@ -312,10 +307,10 @@
             </div>
 
             <div>
-                <div class="card">
+                <div class="card" data-name="sports">
                     <div class="img15"></div>
                     <div class="textBox15">
-                        <div class="textContent15">
+                        <div class="textContent15" data-category="sports">
                             <p class="h115">Sports</p>
                         </div>
                         <p class="p15">Quiz Sports</p>
@@ -346,6 +341,7 @@
         </div>
     </main>
       <script src="/Projet-Quiz/nvx.js"></script>
+      <script src="/Projet-Quiz/recherche.js"></script>
       
 </body>
 </html>

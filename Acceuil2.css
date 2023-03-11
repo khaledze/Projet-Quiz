@@ -7,7 +7,7 @@
 }
 
 body {
-	background: white;
+	background: #f3eee3;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -83,7 +83,7 @@ form {
 }
 
 input {
-	background-color:#d1ee77 ;
+	background-color:#faf3a0 ;
 	border: none;
 	padding: 12px 15px;
 	margin: 8px 0;
@@ -95,9 +95,9 @@ input {
 }
 
 #button1 {
-	background-color: #d1ee77;
-	color: #00203f;
-	border: 1px solid #4b50d0;
+	background-color: #faf3a0;
+	color: black;
+	border: 1px solid #181818;
 	font-size: 16px;
 	font-weight: bold;
 	padding: 16px 32px;
@@ -110,8 +110,8 @@ input {
 
 #button1:hover {
 	cursor: pointer;
-	background-color: #00203f;
-	color: #4b50d0;
+	background-color: #a1773a;
+	color: #faf3a0;
 }
 
 #button1:active {
@@ -123,9 +123,9 @@ input {
 }
 
 #button2 {
-	background-color: #d1ee77;
-	color: #00203f;
-	border: 1px solid #4b50d0;
+	background-color: #faf3a0;
+	color: black;
+	border: 1px solid #181818;
 	font-size: 16px;
 	font-weight: bold;
 	padding: 16px 32px;
@@ -138,8 +138,8 @@ input {
 
 #button2:hover {
 	cursor: pointer;
-	background-color: #00203f;
-	color: #4b50d0;
+	background-color: #a1773a;
+	color: #faf3a0;
 }
 
 #button2:active {
@@ -158,7 +158,7 @@ input {
 	height: 40px;
 	width: 40px;
 	border-radius: 50%;
-	background-color: #d1ee77;
+	background-color: #a1773a;
 	border: 1px solid rgba(0, 32, 63, .45);
 }
 
@@ -194,9 +194,9 @@ a {
 }
 
 .overlay {
-	background: linear-gradient(to right, #4b50d0, #e7f0fd);
-	background: #4b50d0;
-	color: #00203f;
+	background: linear-gradient(to right, #181818, #e7f0fd);
+	background: #181818;
+	color: #a1773a;
 	position: relative;
 	left: -100%;
 	height: 100%;
@@ -253,8 +253,8 @@ p {
 }
 
 #login {
-	background-color: #d1ee77;
-	color: #00203f;
+	background-color: #a1773a;
+	color: #faf3a0;
 	border: 1px solid #4b50d0;
 	font-size: 16px;
 	font-weight: bold;
@@ -268,8 +268,8 @@ p {
 
 #login:hover {
 	cursor: pointer;
-	background-color: #00203f;
-	color: #4b50d0;
+	background-color: #a1773a;
+	color: #faf3a0;
 }
 
 #login:active {
@@ -280,9 +280,9 @@ p {
 }
 
 #signUp {
-	background-color: #d1ee77;
-	color: #00203f;
-	border: 1px solid #4b50d0;
+	background-color: #a1773a;
+	color: #faf3a0;
+	border: 1px solid #a1773a;
 	font-size: 16px;
 	font-weight: bold;
 	padding: 16px 32px;
@@ -295,8 +295,8 @@ p {
 
 #signUp:hover {
 	cursor: pointer;
-	background-color: #00203f;
-	color: #4b50d0;
+	background-color: #a1773a;
+	color: #faf3a0;
 }
 
 #signUp:active {
@@ -463,3 +463,46 @@ p {
 	border-radius: 5px;
 	cursor: pointer;
   }
+  /* Style de base pour la liste déroulante */
+select {
+	font-size: 16px;
+	padding: 10px;
+	border: none;
+	background-color: #f2f2f2;
+	border-radius: 5px;
+	width: 200px;
+	color: #333;
+  }
+  
+  /* Style pour les options de la liste déroulante */
+  select option {
+	font-size: 16px;
+	padding: 10px;
+	color: #333;
+  }
+  
+  /* Style pour la flèche de la liste déroulante */
+  select::-ms-expand {
+	display: none;
+  }
+  
+  select:after {
+	content: "\25BC";
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #333;
+  }
+  
+  /* Style pour le survol de la liste déroulante */
+  select:hover {
+	cursor: pointer;
+  }
+  
+  /* Style pour la sélection de la liste déroulante */
+  select:focus {
+	outline: none;
+	box-shadow: 0 0 5px #4a6fb1;
+	background-color: #e9ecef;
+  }
+  
