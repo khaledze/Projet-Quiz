@@ -43,7 +43,7 @@
     echo "<form method='post' action='save.php'>";
     while ($row = mysqli_fetch_assoc($result)) {
       echo "<label>Question:</label>";
-      echo "<input type='text' name='question[]' value='" . htmlspecialchars($row['Question']) . "'><br>";
+      echo "<input type='text' name='question[]' value='" . htmlspecialchars(mysqli_real_escape_string($conn, $row['Question'])) . "'><br>";
       echo "<label>Reponse 1:</label>";
       echo "<input type='text' name='reponse1[]' value='" . htmlspecialchars($row['reponse1']) . "'><br>";
       echo "<label>Reponse 2:</label>";

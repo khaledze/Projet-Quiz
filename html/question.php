@@ -52,6 +52,16 @@
 	if (!$result) {
 		die('Erreur de récupération des questions : ' . mysqli_error($conn));
 	}
+
+  $minQuery = "SELECT MIN(q.id_question) AS min_id FROM question q INNER JOIN choix c ON q.id_question = c.id_question WHERE c.theme = '$theme'";
+  $minResult = mysqli_query($conn, $minQuery);
+  $minRow = mysqli_fetch_assoc($minResult);
+  $minQuestionId = $minRow["min_id"];
+
+  $maxQuery = "SELECT MAX(q.id_question) AS max_id FROM question q INNER JOIN choix c ON q.id_question = c.id_question WHERE c.theme = '$theme'";
+  $maxResult = mysqli_query($conn, $maxQuery);
+  $maxRow = mysqli_fetch_assoc($maxResult);
+  $maxQuestionId = $maxRow["max_id"];
 	?>
 
 	<form method="POST" action="">
@@ -98,13 +108,12 @@
 	    $percent_score = ($score / mysqli_num_rows($result)) * 100;
 	    echo "<p>Votre score est de : " . $percent_score . "%</p>";
 	}
-
     ?>
 	</form>
 
 	<script>
-    var currentQuestion = 1;
-    var numQuestions = <?php echo mysqli_num_rows($result); ?>;
+var currentQuestion = <?php echo $minQuestionId; ?>;
+var numQuestions = <?php echo $maxQuestionId; ?>;
 
     function nextQuestion() {
   // Vérifier que l'utilisateur a sélectionné une réponse
@@ -129,38 +138,11 @@
     var nextQuestionDiv = document.getElementById("question_" + currentQuestion);
     nextQuestionDiv.style.display = "block";
   }
-}
-function nextQuestion() {
-  // Vérifier que l'utilisateur a sélectionné une réponse
-  var radios = document.getElementsByName("reponse_" + currentQuestion);
-  var answerSelected = false;
-  for (var i = 0; i < radios.length; i++) {
-    if (radios[i].checked) {
-      answerSelected = true;
-      break;
     }
-  }
-  if (!answerSelected) {
-    alert("Veuillez sélectionner une réponse.");
-    return;
-  }
-  // Passer à la question suivante
-  var currentQuestionDiv = document.getElementById("question_" + currentQuestion);
-  currentQuestionDiv.style.display = "none";
-  currentQuestion++;
-
-  if (currentQuestion <= numQuestions) {
-    var nextQuestionDiv = document.getElementById("question_" + currentQuestion);
-    nextQuestionDiv.style.display = "block";
-  } else{
-    var scoreContainer = document.getElementById("score-container");
-    scoreContainer.innerHTML = "<p>Votre score est de : <span id='percent_score'>" + percentScore + "</span>%</p>";
-    let recommencerBtn = document.getElementById("recommencer");
-let quitterBtn = document.getElementById("quitter");
-}
-}
 
 
 </script>
 </body>
 </html>
+
+
