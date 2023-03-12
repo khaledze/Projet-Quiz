@@ -25,7 +25,7 @@
         <nav class="sidebar close">
             <header>  
                         <span class="image">
-                         
+                          <img src="/Projet-Quiz/photo/logot.png" alt="logo" >
                        </span>
                  <i class='bx bx-chevron-right toggle'></i>
              </header>
@@ -35,7 +35,7 @@
     
                 <li class="search-box">
                     <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search..." id="searchBox">
+                    <input type="text" placeholder="Search...">
                 </li>
     
                 <ul class="menu-links">
@@ -48,16 +48,21 @@
                         </a>
                     </li>
     
-                    
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'>
+                                <img src="/Projet-Quiz/photo/+.png" alt="+" width="35px" height="35px">
+                            </i>
+                            <span class="text nav-text">Créer votre Quiz</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
     
             <div class="bottom-content">
                 <li class="">
                     <a href="/Projet-Quiz/html/Acceuil2.php">
-                        <i class='bx bx-log-out icon' >
-                            <img src="/Projet-Quiz/photo/deco.png" alt="deco" width="35px" height="35px">
-                        </i>
+                        <i class='bx bx-log-out icon' ></i>
                         <span class="text nav-text" >Logout</span>
                     </a>
                 </li>
@@ -134,189 +139,203 @@
 
     </div>
         <div class="cards">
-            <div>
-                <div class="card" >
+        
+                <div class="card">
                     <div class="img"></div>
                     <div class="textBox">
                         <div class="textContent">
                             <p class="h1"><a href="question.php?theme=art" style="color: white; text-decoration: none;">Arts</a></p>
+                            <button class="modifier" onclick="location.href='quizz.php?theme=art'">modifier</button>
                         </div>
                         <p class="p">Quiz Arts</p>
                     </div>
                 </div>
-            </div>
+            
 
 
-            <div>
-                <div class="card" data-name="chanson"data-category="chanson">
+        
+                <div class="card">
                     <div class="img2"></div>
                     <div class="textBox2">
                         <div class="textContent2">
                             <p class="h1"><a href="question.php?theme=chanson" style="color: white; text-decoration: none;">Chanson</a></p>
+                            <button class="modifier" onclick="location.href='quizz.php?theme=chanson'">modifier</button>
                         </div>
                         <p class="p2">Quiz Chanson</p>
                     </div>
                 </div>
-            </div>
+            
 
-            <div>
-                <div class="card" data-name="cinema"data-category="cinema">
+        
+                <div class="card">
                     <div class="img3"></div>
                     <div class="textBox3">
                         <div class="textContent3">
                             <p class="h1"><a href="question.php?theme=cinema" style="color: white; text-decoration: none;">Cinema</a></p>
+                            <button class="modifier" onclick="location.href='quizz.php?theme=cinema'">modifier</button>
                         </div>
                         <p class="p3">Quiz Cinema</p>
                     </div>
                 </div>
-            </div>
+            
 
-            <div>
-                <div class="card" data-name="economie"data-category="economie">
+        
+                <div class="card">
                     <div class="img4"></div>
                     <div class="textBox4">
                         <div class="textContent4">
                             <p class="h1"><a href="question.php?theme=economie" style="color: white; text-decoration: none;">Economie</a></p>
+                            <button class="modifier" onclick="location.href='quizz.php?theme=economie'">modifier</button>
                         </div>
                         <p class="p4">Quiz Economie</p>
                     </div>
                 </div>
-            </div>
+            
 
 
-            <div>
-                <div class="card" data-name="faune"data-category="faune">
+        
+                <div class="card">
                     <div class="img5"></div>
                     <div class="textBox5">
                         <div class="textContent5">
                             <p class="h1"><a href="question.php?theme=faune" style="color: white; text-decoration: none;">Faune</a></p>
+                            <button class="modifier" onclick="location.href='quizz.php?theme=faune'">modifier</button>
                         </div>
                         <p class="p5">Quiz Faune</p>
                     </div>
                 </div>
-            </div>
+            
 
 
-            <div>
-                <div class="card" data-name="flore"data-category="flore">
+        
+                <div class="card">
                     <div class="img6"></div>
                     <div class="textBox6">
-                        <div class="textContent6" data-category="flore">
+                        <div class="textContent6">
                             <p class="h16">Flore</p>
+                            <button class="modifier" onclick="location.href='quizz.php?theme=flore'">modifier</button>
                         </div>
                         <p class="p6">Quiz Flore</p>
                     </div>
                 </div>
-            </div>
+            
         
 
-            <div>
-                <div class="card" data-name="gastro"data-category="gastro">
+        
+                <div class="card">
                     <div class="img7"></div>
                     <div class="textBox7">
-                        <div class="textContent7" data-category="gastro">
+                        <div class="textContent7">
                             <p class="h17">Gastro</p>
                         </div>
                         <p class="p7">Quiz Gastro</p>
                     </div>
                 </div>
-            </div>
+            
 
-            <div>
-                <div class="card" data-name="geographie"data-category="geographie">
+        
+                <div class="card">
                     <div class="img8"></div>
                     <div class="textBox8">
-                        <div class="textContent8" data-category="geographie">
+                        <div class="textContent8">
                             <p class="h18">Geographie</p>
                         </div>
                         <p class="p8">Quiz Geographie</p>
                     </div>
                 </div>
-            </div>
+            
 
-            <div>
-                <div class="card" data-name="histoire"data-category="histoire">
+        
+                <div class="card">
                     <div class="img9"></div>
                     <div class="textBox9">
-                        <div class="textContent9" data-category="histoire">
+                        <div class="textContent9">
                             <p class="h19">Histoire</p>
                         </div>
                         <p class="p9">Quiz Histoire</p>
                     </div>
                 </div>
-            </div>
+            
 
-            <div>
-                <div class="card" data-name="institution"data-category="institution">
+        
+                <div class="card">
                     <div class="img10"></div>
                     <div class="textBox10">
-                        <div class="textContent10" data-category="institution">
+                        <div class="textContent10">
                             <p class="h110">Institutions</p>
                         </div>
                         <p class="p10">Quiz Institutions</p>
                     </div>
                 </div>
-            </div>
+            
 
-            <div>
-                <div class="card" data-name="langue">
+        
+                <div class="card">
                     <div class="img11"></div>
                     <div class="textBox11">
-                        <div class="textContent11" data-category="langue">
+                        <div class="textContent11">
                             <p class="h111">Langue</p>
                         </div>
                         <p class="p11">Quiz Langue</p>
                     </div>
                 </div>
-            </div>
+            
 
-            <div>
-                <div class="card" data-name="litterature">
+        
+                <div class="card">
                     <div class="img12"></div>
                     <div class="textBox12">
-                        <div class="textContent12" data-category="litterature">
+                        <div class="textContent12">
                             <p class="h112">Litterature</p>
                         </div>
                         <p class="p12">Quiz Litterature</p>
                     </div>
                 </div>
-            </div>
+            
 
-            <div>
-                <div class="card" data-name="mode">
+        
+                <div class="card">
                     <div class="img13"></div>
                     <div class="textBox13">
-                        <div class="textContent13" data-category="mode">
+                        <div class="textContent13">
                             <p class="h113">Mode</p>
                         </div>
                         <p class="p13">Quiz Mode</p>
                     </div>
                 </div>
-            </div>
+            
 
-            <div>
-                <div class="card" data-name="quotidien">
+        
+                <div class="card">
                     <div class="img14"></div>
                     <div class="textBox14">
-                        <div class="textContent14" data-category="quotidien">
+                        <div class="textContent14">
                             <p class="h114">Quotidien</p>
                         </div>
                         <p class="p14">Quiz Quotidien</p>
                     </div>
                 </div>
-            </div>
+            
 
-            <div>
-                <div class="card" data-name="sports">
+        
+                <div class="card">
                     <div class="img15"></div>
                     <div class="textBox15">
-                        <div class="textContent15" data-category="sports">
+                        <div class="textContent15">
                             <p class="h115">Sports</p>
                         </div>
                         <p class="p15">Quiz Sports</p>
                     </div>
                 </div>
-            </div>
+            
+
+        
+                <div class="card" >
+                    <div class="ajout">
+                        <img src="/Projet-Quiz/photo/+.png" alt="+" width="80px" height="80px">
+                    </div>
+                </div>
+            
         
         </div>
     </div>
@@ -341,7 +360,5 @@
         </div>
     </main>
       <script src="/Projet-Quiz/nvx.js"></script>
-      <script src="/Projet-Quiz/recherche.js"></script>
-      
 </body>
 </html>
