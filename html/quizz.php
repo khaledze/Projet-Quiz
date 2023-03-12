@@ -66,6 +66,21 @@
         echo "<hr>";
       }
     echo "<input type='submit' value='Enregistrer les modifications'>";
+    echo "<h2>Créer une nouvelle question</h2>";
+    echo "<form method='post' action='nouvelle.php'>";
+    echo "<label>Question:</label>";
+    echo "<input type='text' name='new_question'><br>";
+    echo "<label>Reponse 1:</label>";
+    echo "<input type='text' name='new_reponse1'><br>";
+    echo "<label>Reponse 2:</label>";
+    echo "<input type='text' name='new_reponse2'><br>";
+    echo "<label>Reponse 3:</label>";
+    echo "<input type='text' name='new_reponse3'><br>";
+    echo "<label>Bonne réponse:</label>";
+    echo "<input type='text' name='new_bonneReponse'><br>";
+    echo "<input type='hidden' name='theme' value='" . htmlspecialchars($theme) . "'>";
+    echo "<input type='submit' value='Créer'>";
+    echo "</form>";
     echo "</form>";
 ?>
 

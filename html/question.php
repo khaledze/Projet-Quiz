@@ -110,8 +110,11 @@
 	}
     ?>
 	</form>
-
+  <button onclick="goBack()">Quitter</button>
 	<script>
+  function goBack() {
+  window.history.back();
+}
 var currentQuestion = <?php echo $minQuestionId; ?>;
 var numQuestions = <?php echo $maxQuestionId; ?>;
 
