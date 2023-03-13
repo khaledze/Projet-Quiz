@@ -3,7 +3,7 @@
     $host = "localhost"; 
     $user = "root";
     $password = ""; 
-    $dbname = "quizz"; 
+    $dbname = "data"; 
 
     $conn = mysqli_connect($host, $user, $password, $dbname);
 
@@ -18,12 +18,6 @@
     // Récupérer les titres des quiz avec un ID supérieur à 15
     $sql_quizz = "SELECT titre FROM quizz WHERE id > 149";
     $result_quizz = mysqli_query($conn, $sql_quizz);
-
-    // Récuperer theme a partir de la table choix
-    $sql_theme = "SELECT theme FROM choix";
-    $result_theme = mysqli_query($conn, $sql_theme);
-
-    
 
 ?>
 
