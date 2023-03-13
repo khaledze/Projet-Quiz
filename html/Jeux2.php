@@ -19,6 +19,12 @@
     $sql_quizz = "SELECT titre FROM quizz WHERE id > 149";
     $result_quizz = mysqli_query($conn, $sql_quizz);
 
+    // Récuperer theme a partir de la table choix
+    $sql_theme = "SELECT theme FROM choix";
+    $result_theme = mysqli_query($conn, $sql_theme);
+
+    
+
 ?>
 
 
@@ -84,7 +90,7 @@
                         
                         while ($row_quizz = mysqli_fetch_assoc($result_quizz)) {
                             echo ('<li class="nav-link">'.
-                            '<a href="#">' .
+                            '<a href="question.php?theme='.$row_quizz['titre']  .'"' .
                                 '<span class="text nav-text">'. $row_quizz['titre'] .'</span>'.
                             '</a>' .
                             '</li>');
