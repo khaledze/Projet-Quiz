@@ -3,7 +3,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "quizz";
+    $dbname = "data";
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -27,7 +27,7 @@
 		$stmt->bindParam(':pswd', $pswd);
 		$stmt->bindParam(':role', $role);
 		$stmt->execute();
-		if($role == "utilisateur") {
+		if($role == "utilisateur") {	
 			header("Location: /Projet-Quiz/html/Jeux.html");
 		} else {
 			header("Location: /Projet-Quiz/html/Jeux2.html");
