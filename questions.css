@@ -1,21 +1,92 @@
-button {
-    min-width: 120px;
-    background: #000;
-    color: #EEEEEE;
-    height: 40px;
-    margin: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+button.next-btn {
+    background-color: #4CAF50; /* couleur de fond */
+    color: white; /* couleur de texte */
     border: none;
-    border-radius: 0 !important;
+    border-radius: 4px; /* forme du bouton */
+    padding: 10px 20px; /* taille du bouton */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
     font-size: 16px;
-    font-weight: bold;
+    margin: 4px 2px;
     cursor: pointer;
-    outline: none;
-    transition: all 0.3s ease-in-out;
+    margin-left: 100px;
   }
-  
-  button:hover {
-    box-shadow: #EEEEEE 0px 0px 0px 11px, #161616 0px 0px 0px 10px;
-    background: #000;
-    color: #EEEEEE;
-  }
-  
+    button.next-btn:hover {
+        background-color: #45a049;
+    }
+    button.next-btn:active {
+        background-color: #45a049;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+    button.quit {
+        background-color: #4CAF50; /* couleur de fond */
+        color: white; /* couleur de texte */
+        border: none;
+        border-radius: 4px; /* forme du bouton */
+        padding: 10px 20px; /* taille du bouton */
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        margin-left: 100px;
+      }
+        button.quit:hover {
+            background-color: #45a049;
+        }
+        button.quit:active {
+            background-color: #45a049;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin-left: 100px;
+      }
+      
+      form p {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      
+      form label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      
+      form input[type="radio"] {
+        margin-right: 10px;
+      }
+      form label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #333;
+        background-color: #fff;
+        padding: 10px 20px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        margin-left: 100px;
+      }
+      .button-group {
+        display: flex;
+        align-items: center;
+      }
+      
+      .quit {
+        margin-left: 50%;
+      }
+      

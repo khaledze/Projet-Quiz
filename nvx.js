@@ -1,31 +1,41 @@
-// document.getElementById("quit").addEventListener("click", function()
-// { 
-//      window.location.href = "/Projet-Quiz/html/Jeux.html";
-// });
+const body = document.querySelector('body');
+const sidebar = body.querySelector('nav');
+const toggle = body.querySelector(".toggle");
+const searchBtn = body.querySelector(".search-box");
+const modeSwitch = body.querySelector(".toggle-switch");
+const modeText = body.querySelector(".mode-text");
+const images = document.querySelectorAll('.test img');
+const imageSwitch = document.querySelector('.toggle-switch-image');
 
-// document.getElementById("userType").addEventListener("change", function() {
-//      var selectedValue = this.value;
-//      if (selectedValue === "utilisateur") {
-//        window.location.href = "jouer.html";
-//      } else if (selectedValue === "quizzer") {
-//        window.location.href = "creer.html";
-//      }
-//    });
-// const AnimText = document.querySelector("h1");
+toggle.addEventListener("click", () => {
+sidebar.classList.toggle("close");
+});
 
-// const typewriter = new Typewriter(AnimText, {
-//      loop: true ,
-//      deleteSpeed:20
-// })
-// .changeDelay(50)
-// .typeString("Bienvenue dans notre Jeu Quizzeo")
-// .pauseFor(300)
-// .start()
+searchBtn.addEventListener("click", () => {
+sidebar.classList.remove("close");
+});
 
-// Récupérer le titre dans l'URL
-var params = new URLSearchParams(window.location.search);
-var theme = params.get('theme');
+modeSwitch.addEventListener("click", () => {
+body.classList.toggle("dark");
+if (body.classList.contains("dark")) {
+   modeText.innerText = "Light mode";
+   images.forEach(function(img) {
+   img.src = '/Projet-Quiz/photo/quiz2.png';
+   });
+} else {
+   modeText.innerText = "Dark mode";
+   images.forEach(function(img) {
+   img.src = '/Projet-Quiz/photo/icone.png';
+   });
+}
+});
 
-// Afficher le titre dans la div
-var divTheme = document.getElementById('theme-jeu');
-divTheme.innerHTML = theme;
+imageSwitch.addEventListener('click', function() {
+images.forEach(function(img) {
+   if (document.body.classList.contains('dark')) {
+   img.src = '/Projet-Quiz/photo/quiz2.png';
+   } else {
+   img.src = '/Projet-Quiz/photo/icone.png';
+   }
+});
+});

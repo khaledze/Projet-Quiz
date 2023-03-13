@@ -3,7 +3,7 @@
     $host = "localhost"; 
     $user = "root";
     $password = ""; 
-    $dbname = "data"; 
+    $dbname = "quizz"; 
 
     $conn = mysqli_connect($host, $user, $password, $dbname);
 
@@ -69,7 +69,7 @@
     
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="contact.html">
                             <i class='bx bx-bar-chart-alt-2 icon' >
                                 <img src="/Projet-Quiz/photo/contact.png" alt="contact" width="40px" height="35px">
                             </i>
@@ -106,6 +106,15 @@
             </div>
     
             <div class="bottom-content">
+            <li class="">
+                    <a onclick="goBack()">
+                        <i class='bx bx-log-out icon' >
+                            <img src="/Projet-Quiz/photo/back.png" alt="deco" width="35px" height="35px">
+                        </i>
+                        <span class="text nav-text" >Back</span>
+                    </a>
+                </li>
+    
                 <li class="">
                     <a href="/Projet-Quiz/html/Acceuil2.php">
                         <i class='bx bx-log-out icon' >
@@ -179,6 +188,9 @@
         }
     });
     });
+    function goBack() {
+    window.history.back();
+}
 
         
     </script>
@@ -369,16 +381,6 @@
                         <p class="p15">Quiz Sports</p>
                     </div>
                 </div>
-            
-
-        
-                <div class="card" >
-                    <div class="ajout">
-                        <img src="/Projet-Quiz/photo/+.png" alt="+" width="80px" height="80px">
-                    </div>
-                </div>
-            
-        
         </div>
     </div>
     <main>   
