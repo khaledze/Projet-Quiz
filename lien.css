@@ -308,16 +308,8 @@ body.dark .switch::before{
 body.dark .home .text{
     color: var(--text-color);
 }
-#theme-jeu{
-    list-style: none;
-    height: 100%;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
+.code{
+  display: flex;
+ justify-content: flex-start;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    border-radius: 6px;
-    text-decoration: none;
-    display: none;
 }

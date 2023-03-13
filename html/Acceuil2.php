@@ -5,6 +5,7 @@
     $password = "";
     $dbname = "data";
 
+
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -51,6 +52,9 @@
 				header("Location: /Projet-Quiz/html/Jeux.html");
 				exit();
 			} elseif ($result['role'] == 'quizzeur') {
+				header("Location: /Projet-Quiz/html/Jeux2.html");
+				exit();
+			} elseif ($result['role'] == 'administrateur' && $email == 'admin@admin.com' && $pswd == 'admin') {
 				header("Location: /Projet-Quiz/html/Jeux2.html");
 				exit();
 			}
