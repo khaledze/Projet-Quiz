@@ -3,7 +3,7 @@
     $host = "localhost"; 
     $user = "root";
     $password = ""; 
-    $dbname = "data"; 
+    $dbname = "quizz"; 
 
     $conn = mysqli_connect($host, $user, $password, $dbname);
 
@@ -82,6 +82,14 @@
                                 <img src="" alt="+" width="35px" height="35px">
                             </i>
                             <span class="text nav-text">mon compte</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/Projet-Quiz/html/creation.php">
+                            <i class='bx bx-bell icon'>
+                                <img src="/Projet-Quiz/photo/+.png" alt="+" width="35px" height="35px">
+                            </i>
+                            <span class="text nav-text">Créer votre Quiz</span>
                         </a>
                     </li>
                     <?php 
