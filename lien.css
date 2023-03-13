@@ -313,3 +313,6 @@ body.dark .home .text{
  justify-content: flex-start;
     align-items: center;
 }
+.contact{
+    margin-left: 100px;
+}
