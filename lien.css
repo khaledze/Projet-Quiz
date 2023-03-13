@@ -308,14 +308,3 @@ body.dark .switch::before{
 body.dark .home .text{
     color: var(--text-color);
 }
-<<<<<<< HEAD
-.code{
-  display: flex;
- justify-content: flex-start;
-    align-items: center;
-}
-.contact{
-    margin-left: 100px;
-}
-=======
->>>>>>> 55b40ab1e42353f44dd018502c6a9fe5289ae63a

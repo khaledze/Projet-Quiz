@@ -3,7 +3,7 @@
     $host = "localhost"; 
     $user = "root";
     $password = ""; 
-    $dbname = "data"; 
+    $dbname = "quizz"; 
 
     $conn = mysqli_connect($host, $user, $password, $dbname);
 
@@ -100,16 +100,16 @@
             </div>
     
             <div class="bottom-content">
+            <li class="">
+                    <a onclick="goBack()">
+                        <i class='bx bx-log-out icon' >
+                            <img src="/Projet-Quiz/photo/back.png" alt="deco" width="35px" height="35px">
+                        </i>
+                        <span class="text nav-text" >Back</span>
+                    </a>
+                </li>
+    
                 <li class="">
-                    <li class="">
-                        <a href="/Projet-Quiz/html/Acceuil2.php">
-                            <i class='bx bx-log-out icon' >
-                                <img src="/Projet-Quiz/photo/back.png" alt="deco" width="35px" height="35px">
-                            </i>
-                            <span class="text nav-text" >Back</span>
-                        </a>
-                    </li>
-                    
                     <a href="/Projet-Quiz/html/Acceuil2.php">
                         <i class='bx bx-log-out icon' >
                             <img src="/Projet-Quiz/photo/deco.png" alt="deco" width="35px" height="35px">
@@ -182,6 +182,9 @@
         }
     });
     });
+    function goBack() {
+    window.history.back();
+}
 
         
     </script>

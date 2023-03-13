@@ -48,17 +48,19 @@
     
             <div class="bottom-content">
             <li class="">
-                    <a href="/Projet-Quiz/html/Acceuil2.php">
+                    <a onclick="goBack()">
                         <i class='bx bx-log-out icon' >
                             <img src="/Projet-Quiz/photo/back.png" alt="deco" width="35px" height="35px">
                         </i>
                         <span class="text nav-text" >Back</span>
                     </a>
                 </li>
-
+    
                 <li class="">
                     <a href="/Projet-Quiz/html/Acceuil2.php">
-                        <i class='bx bx-log-out icon' ></i>
+                        <i class='bx bx-log-out icon' >
+                            <img src="/Projet-Quiz/photo/deco.png" alt="deco" width="35px" height="35px">
+                        </i>
                         <span class="text nav-text" >Logout</span>
                     </a>
                 </li>
@@ -122,6 +124,9 @@
            }
        });
        });
+       function goBack() {
+    window.history.back();
+}
    
            
     </script>
@@ -176,26 +181,6 @@
             $conn = null;
         ?>
     </div>
-    <main>   
-        <div class="white">
-            <img src="/Projet-Quiz/photo/icone.png" alt="">
-            <img src="/Projet-Quiz/photo/icone.png" alt="">
-            <img src="/Projet-Quiz/photo/icone.png" alt="">
-            <img src="/Projet-Quiz/photo/icone.png" alt="">
-            <img src="/Projet-Quiz/photo/icone.png" alt="">
-            <img src="/Projet-Quiz/photo/icone.png" alt="">
-            <img src="/Projet-Quiz/photo/icone.png" alt="">
-        </div>
-        <div class="test-dark">
-            <img src="/Projet-Quiz/photo/quiz2.png" alt="">
-            <img src="/Projet-Quiz/photo/quiz2.png" alt="">
-            <img src="/Projet-Quiz/photo/quiz2.png" alt="">
-            <img src="/Projet-Quiz/photo/quiz2.png" alt="">
-            <img src="/Projet-Quiz/photo/quiz2.png" alt="">
-            <img src="/Projet-Quiz/photo/quiz2.png" alt="">
-            <img src="/Projet-Quiz/photo/quiz2.png" alt="">
-        </div>
-    </main>
     </div>
  <script src="/Projet-Quiz/nvx.js"></script>
 </body>

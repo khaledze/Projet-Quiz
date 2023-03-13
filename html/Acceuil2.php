@@ -3,7 +3,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "data";
+    $dbname = "quizz";
 
 
     try {
@@ -31,7 +31,7 @@
 		if($role == "utilisateur") {	
 			header("Location: /Projet-Quiz/html/Jeux.html");
 		} else {
-			header("Location: /Projet-Quiz/html/Jeux2.html");
+			header("Location: /Projet-Quiz/html/Jeux2.php");
 		}
     }
 
@@ -52,7 +52,7 @@
 				header("Location: /Projet-Quiz/html/Jeux.html");
 				exit();
 			} elseif ($result['role'] == 'quizzeur') {
-				header("Location: /Projet-Quiz/html/Jeux2.html");
+				header("Location: /Projet-Quiz/html/Jeux2.php");
 				exit();
 			} elseif ($result['role'] == 'administrateur' && $email == 'admin@admin.com' && $pswd == 'admin') {
 				header("Location: /Projet-Quiz/html/Jeux3.html");

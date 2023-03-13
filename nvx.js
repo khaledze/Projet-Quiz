@@ -15,7 +15,6 @@ searchBtn.addEventListener("click", () => {
 sidebar.classList.remove("close");
 });
 
-<<<<<<< HEAD
 modeSwitch.addEventListener("click", () => {
 body.classList.toggle("dark");
 if (body.classList.contains("dark")) {
@@ -40,12 +39,3 @@ images.forEach(function(img) {
    }
 });
 });
-=======
-// Récupérer le titre dans l'URL
-var params = new URLSearchParams(window.location.search);
-var theme = params.get('theme');
-
-// Afficher le titre dans la div
-var divTheme = document.getElementById('theme-jeu');
-divTheme.innerHTML = theme;
->>>>>>> 55b40ab1e42353f44dd018502c6a9fe5289ae63a
