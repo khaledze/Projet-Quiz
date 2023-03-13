@@ -55,7 +55,7 @@
 				header("Location: /Projet-Quiz/html/Jeux2.html");
 				exit();
 			} elseif ($result['role'] == 'administrateur' && $email == 'admin@admin.com' && $pswd == 'admin') {
-				header("Location: /Projet-Quiz/html/Jeux2.html");
+				header("Location: /Projet-Quiz/html/Jeux3.html");
 				exit();
 			}
 		} else {

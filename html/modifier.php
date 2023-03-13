@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
 <?php
 // Connexion à la base de données
 $servername = "localhost";
@@ -48,26 +61,31 @@ $conn = null;
 ?>
 <html>
 <head>
+    <link rel="stylesheet" href="/Projet-Quiz/lien.css">
+    <link rel="stylesheet" href="/Projet-Quiz/joueur.css">
     <title>Modifier un joueur</title>
 </head>
 <body>
-    <h1>Modifier un joueur</h1>
-    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        <input type="hidden" name="old_pseudo" value="<?php echo $joueur['pseudo']; ?>">
-        <label for="pseudo">Pseudo :</label>
-        <input type="text" name="pseudo" value="<?php echo $joueur['pseudo']; ?>"><br>
-        <label for="email">Email :</label>
-        <input type="email" name="email" value="<?php echo $joueur['email']; ?>"><br>
-        <label for="role">Rôle :</label>
-        <select name="role">
-        <option value="utilisateur" <?php if($joueur['role'] == 'utilisateur') echo 'selected'; ?>>Utilisateur</option>
-        <option value="quizzeur" <?php if($joueur['role'] == 'quizzeur') echo 'selected'; ?>>Quizzeur</option>
-        </select><br>
-        <label for="password">Mot de passe :</label>
-        <input type="password" name="password" value="<?php echo $joueur['password']; ?>"><br>
-        <input type="submit" name="modifier" value="Modifier">
-    </form>
+    <div class="modifier">
+        <h1>Modifier un joueur</h1>
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+            <input type="hidden" name="old_pseudo" value="<?php echo $joueur['pseudo']; ?>">
+            <label for="pseudo">Pseudo :</label>
+            <input type="text" name="pseudo" value="<?php echo $joueur['pseudo']; ?>"><br>
+            <label for="email">Email :</label>
+            <input type="email" name="email" value="<?php echo $joueur['email']; ?>"><br>
+            <label for="role">Rôle :</label>
+            <select name="role">
+                <option value="utilisateur" <?php if($joueur['role'] == 'utilisateur') echo 'selected'; ?>>Utilisateur</option>
+                <option value="quizzeur" <?php if($joueur['role'] == 'quizzeur') echo 'selected'; ?>>Quizzeur</option>
+            </select><br>
+            <label for="password">Mot de passe :</label>
+            <input type="password" name="password" value="<?php echo $joueur['password']; ?>"><br>
+            <input type="submit" name="modifier" value="Modifier" class="button">
+        </form>
+    </div>
 </body>
+
 </html>
 
 

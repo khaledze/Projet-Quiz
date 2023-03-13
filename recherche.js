@@ -2,7 +2,7 @@ const searchBox = document.getElementById("searchBox");
 
 searchBox.addEventListener("input", function () {
   const query = searchBox.value.toLowerCase();
-  const allCategories = document.querySelectorAll(".textBox");
+  const allCategories = document.querySelectorAll(".card");
 
   allCategories.forEach(function (category) {
     const title = category.querySelector(".h1").textContent.toLowerCase();
