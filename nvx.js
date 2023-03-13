@@ -22,3 +22,10 @@
 // .pauseFor(300)
 // .start()
 
+// Récupérer le titre dans l'URL
+var params = new URLSearchParams(window.location.search);
+var theme = params.get('theme');
+
+// Afficher le titre dans la div
+var divTheme = document.getElementById('theme-jeu');
+divTheme.innerHTML = theme;
