@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/Projet-Quiz/lien.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>modifier les questions</h1>
+</body>
+</html>
 <?php
 	session_start(); // Démarrage de la session
 
@@ -56,16 +69,14 @@
         echo "<input type='hidden' name='id[]' value='" . htmlspecialchars($row['id']) . "'>";
         echo "<input type='hidden' name='theme' value='" . htmlspecialchars($theme) . "'>";
       
-        // Ajouter un bouton de suppression
-        echo "<form method='post' action='delete.php'>";
-        echo "<input type='hidden' name='id' value='" . htmlspecialchars($row['id_question']) . "'>";
-        echo "<input type='hidden' name='theme' value='" . htmlspecialchars($theme) . "'>";
-        echo "<input type='submit' value='Supprimer cette question'>";
-        echo "</form>";
+         // Ajouter un bouton de suppression
+         echo "<a href='delete.php?id=" . htmlspecialchars($row['id']) . "&theme=" . htmlspecialchars($theme) . "'><img src='/Projet-Quiz/photo/delete.png' alt='Supprimer' width='20' height='20'></a>";
+
       
         echo "<hr>";
       }
-    echo "<input type='submit' value='Enregistrer les modifications'>";
+    echo "<input type='submit' value='Enregistrer'>";
+    echo "</form>";
     echo "<h2>Créer une nouvelle question</h2>";
     echo "<form method='post' action='nouvelle.php'>";
     echo "<label>Question:</label>";
@@ -80,7 +91,6 @@
     echo "<input type='text' name='new_bonneReponse'><br>";
     echo "<input type='hidden' name='theme' value='" . htmlspecialchars($theme) . "'>";
     echo "<input type='submit' value='Créer'>";
-    echo "</form>";
     echo "</form>";
 ?>
 

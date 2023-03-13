@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="/Projet-Quiz/lien.css">
+    <link rel="stylesheet" href="/Projet-Quiz/joueur.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -124,6 +125,7 @@
    
            
     </script>
+    <div class="list">
     <div class="code">
         <?php
             // Connexion à la base de données
@@ -157,15 +159,18 @@
                 echo "<input type='hidden' name='email' value='" . $joueur['email'] . "'>";
                 echo "<input type='hidden' name='role' value='" . $joueur['role'] . "'>";
                 echo "<input type='hidden' name='password' value='" . $joueur['password'] . "'>";
-                echo "<input type='submit' value='Modifier'>";
+                echo "<input type='image' src='/Projet-Quiz/photo/modifier.png' alt='Modifier' width='30' height='30'>";
                 echo "</form></td>";
+                echo "<td></td>";
                 echo "<td><form method='post' action='supprimer.php'>";
                 echo "<input type='hidden' name='pseudo' value='" . $joueur['pseudo'] . "'>";
-                echo "<input type='submit' value='Supprimer'>";
+                echo "<input type='image' src='/Projet-Quiz/photo/delete.png' alt='Supprimer' width='30' height='30'>";
                 echo "</form></td>";
+
                 echo "</tr>";
             }
             echo "</table>";
+            echo "<button onclick=\"window.location.href='/Projet-Quiz/html/Jeux3.html'\" class=\"button\">Quitter</button>";
 
             // Fermeture de la connexion à la base de données
             $conn = null;
@@ -191,6 +196,7 @@
             <img src="/Projet-Quiz/photo/quiz2.png" alt="">
         </div>
     </main>
+    </div>
  <script src="/Projet-Quiz/nvx.js"></script>
 </body>
 </html>
