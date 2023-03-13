@@ -124,7 +124,7 @@
 	$host = "localhost";
 	$username = "root";
 	$password = "";
-	$dbname = "quizz";
+	$dbname = "data";
 
 	$conn = mysqli_connect($host, $username, $password, $dbname);
 	if (!$conn) {
