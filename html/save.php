@@ -40,7 +40,7 @@ for ($i = 0; $i < count($ids); $i++) {
 
 
 // Rediriger vers la page des questions avec le thème sélectionné
-header("Location: Jeux3.html");
+header("Location: Jeux3.php");
 exit;
 
 ?>

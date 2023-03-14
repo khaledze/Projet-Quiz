@@ -39,3 +39,7 @@ images.forEach(function(img) {
    }
 });
 });
+
+function goBack() {
+   window.history.back();
+}

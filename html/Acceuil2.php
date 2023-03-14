@@ -1,4 +1,5 @@
 <?php
+	session_start();
     // la connexion à la base de données
     $servername = "localhost";
     $username = "root";
@@ -29,9 +30,13 @@
 		$stmt->bindParam(':role', $role);
 		$stmt->execute();
 		if($role == "utilisateur") {	
-			header("Location: /Projet-Quiz/html/Jeux.html");
+			header("Location: /Projet-Quiz/html/Jeux.php");
+			session_start();
+			$_SESSION['email'] = $email;
 		} else {
 			header("Location: /Projet-Quiz/html/Jeux2.php");
+			session_start();
+			$_SESSION['email'] = $email;
 		}
     }
 
@@ -48,20 +53,25 @@
 	
 		if($result) {
 			// si les informations de connexion sont correctes, on redirige vers la page correspondante
+			$pseudo = $result['pseudo'];
 			if ($result['role'] == 'utilisateur') {
-				header("Location: /Projet-Quiz/html/Jeux.html");
+				header("Location: /Projet-Quiz/html/Jeux.php");
+				$_SESSION['email'] = $email;
 				exit();
 			} elseif ($result['role'] == 'quizzeur') {
 				header("Location: /Projet-Quiz/html/Jeux2.php");
+				$_SESSION['email'] = $email;
 				exit();
 			} elseif ($result['role'] == 'administrateur' && $email == 'admin@admin.com' && $pswd == 'admin') {
-				header("Location: /Projet-Quiz/html/Jeux3.html");
+				header("Location: /Projet-Quiz/html/Jeux3.php");
+				$_SESSION['email'] = $email;
 				exit();
 			}
 		} else {
 			// si les informations de connexion sont incorrectes, afficher un message d'erreur
 			echo "<script>alert('erreur de connexion !');</script>";
 		}
+		
 	}
 ?>
 
@@ -79,20 +89,32 @@
 	
 	<div class="container" id="container">
 		<div class="form-container sign-up-container">		
-			<form action="" method="POST">
-				<h1>Creer un compte</h1>
-					
-				<input type="text" placeholder="Pseudo" name="pseudo">
-				<input type="email" placeholder="Email" name="email">
-				<input type="password" placeholder="Mot de passe" name="pswd">
-				<label for="userType">Choisir le type de compte:</label>
-				<select id="userType" name="role">
-				  <option value="">--Choisir--</option>
-				  <option value="utilisateur">Utilisateur</option>
-				  <option value="quizzeur">Quizzeur</option>
-				</select>
-				<button id="button2" type="submit" name="envoyer">Créer un compte</button> 				
-			</form>
+		<script>
+    function validateForm() {
+        var pseudo = document.forms["myForm"]["pseudo"].value;
+        var email = document.forms["myForm"]["email"].value;
+        var pswd = document.forms["myForm"]["pswd"].value;
+        var role = document.forms["myForm"]["role"].value;
+        if (pseudo == "" || email == "" || pswd == "" || role == "") {
+            alert("Veuillez remplir tous les champs.");
+            return false;
+        }
+    }
+</script>
+
+<form name="myForm" action="" method="POST" onsubmit="return validateForm()">
+    <h1>Creer un compte</h1>
+    <input type="text" placeholder="Pseudo" name="pseudo">
+    <input type="email" placeholder="Email" name="email">
+    <input type="password" placeholder="Mot de passe" name="pswd">
+    <label for="userType">Choisir le type de compte:</label>
+    <select id="userType" name="role">
+        <option value="">--Choisir--</option>
+        <option value="utilisateur">Utilisateur</option>
+        <option value="quizzeur">Quizzeur</option>
+    </select>
+    <button id="button2" type="submit" name="envoyer">Créer un compte</button>
+</form>
 		</div>
 		<div class="form-container login-container">
 			<form action="" method="POST">

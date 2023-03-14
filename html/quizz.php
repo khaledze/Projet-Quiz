@@ -71,7 +71,7 @@
         echo "<input type='hidden' name='theme' value='" . htmlspecialchars($theme) . "'>";
       
          // Ajouter un bouton de suppression
-         echo "<a href='delete.php?id=" . htmlspecialchars($row['id']) . "&theme=" . htmlspecialchars($theme) . "'><img src='/Projet-Quiz/photo/delete.png' alt='Supprimer' width='20' height='20'></a>";
+         echo "<a href='delete.php?id=" . htmlspecialchars($row['id_question']) . "&theme=" . htmlspecialchars($theme) . "'><img src='/Projet-Quiz/photo/delete.png' alt='Supprimer' width='20' height='20'></a>";
 
       
         echo "<hr>";

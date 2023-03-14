@@ -3,7 +3,7 @@
     $host = "localhost"; 
     $user = "root";
     $password = ""; 
-    $dbname = "data"; 
+    $dbname = "quizz"; 
 
     $conn = mysqli_connect($host, $user, $password, $dbname);
 
@@ -31,8 +31,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeux</title>
-    
-   
+   <div class="header">
+        <img src="/Projet-Quiz/photo/logo2.jpg" alt="Logo" height="100px">
+        <div id="btn">
+            <button type="button" class="deco" onclick="window.location.href = '/Projet-Quiz/html/Acceuil2.php';">
+                Se déconnecter
+              </button>
+        </div>  
+    </div>
 </head>
 <body>
     <div class="container">
@@ -47,10 +53,14 @@
         <div class="menu-bar">
             <div class="menu">
     
-                <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search..." id="searchBox">
-                </li>
+            <li class="nav-link">
+                        <a href="player.php">
+                            <i class='bx bx-bell icon'>
+                                <img src="/Projet-Quiz/photo/utl.png" alt="+" width="35px" height="35px">
+                            </i>
+                            <span class="text nav-text">mon compte</span>
+                        </a>
+                    </li>
     
                 <ul class="menu-links">
                     <li class="nav-link">
@@ -62,20 +72,18 @@
                         </a>
                     </li>
                     <?php 
-                    if ($result_quizz && mysqli_num_rows($result_quizz) > 0) {
-                        
-                        while ($row_quizz = mysqli_fetch_assoc($result_quizz)) {
-                            echo ('<li class="nav-link">'.
-                            '<a href="question.php?theme='.$row_quizz['titre']  .'"' .
-                                '<span class="text nav-text">'. $row_quizz['titre'] .'</span>'.
-                            '</a>' .
-                            '</li>');
+                        if ($result_quizz && mysqli_num_rows($result_quizz) > 0) {
+                            while ($row_quizz = mysqli_fetch_assoc($result_quizz)) {
+                                echo ('<li class="nav-link">'.
+                                    '<a href="question.php?theme='.$row_quizz['titre']  .'"' .
+                                    '<span class="text nav-text">'. $row_quizz['titre'] .'</span>'.
+                                    '</a>' .
+                                    '</li>');
+                            }
+                        } else {
+                            // echo 'Aucun titre de quiz trouvé.';
                         }
-                        
-                    } else {
-                        // echo 'Aucun titre de quiz trouvé.';
-                    }
-                     ?>
+                        ?>
     
                     
                 </ul>
@@ -117,57 +125,54 @@
     
     </nav>
     
-    
-    
+    <section class="home">
+        <div class="text">Quizzeo</div>
+    </section>
     <script>
+            const body = document.querySelector('body');
+        const sidebar = body.querySelector('nav');
+        const toggle = body.querySelector(".toggle");
+        const modeSwitch = body.querySelector(".toggle-switch");
+        const modeText = body.querySelector(".mode-text");
+        const images = document.querySelectorAll('.test img');
+        const imageSwitch = document.querySelector('.toggle-switch-image');
+
+        toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+        });
+
+        modeSwitch.addEventListener("click", () => {
+        body.classList.toggle("dark");
         
-     const body = document.querySelector('body');
-    const sidebar = body.querySelector('nav');
-    const toggle = body.querySelector(".toggle");
-    const searchBtn = body.querySelector(".search-box");
-    const modeSwitch = body.querySelector(".toggle-switch");
-    const modeText = body.querySelector(".mode-text");
-    const images = document.querySelectorAll('.test img');
-    const imageSwitch = document.querySelector('.toggle-switch-image');
-
-    toggle.addEventListener("click", () => {
-    sidebar.classList.toggle("close");
-    });
-
-    searchBtn.addEventListener("click", () => {
-    sidebar.classList.remove("close");
-    });
-
-    modeSwitch.addEventListener("click", () => {
-    body.classList.toggle("dark");
-    if (body.classList.contains("dark")) {
+        if (body.classList.contains("dark")) {
         modeText.innerText = "Light mode";
         images.forEach(function(img) {
         img.src = '/Projet-Quiz/photo/quiz2.png';
         });
-    } else {
+        } else {
         modeText.innerText = "Dark mode";
         images.forEach(function(img) {
         img.src = '/Projet-Quiz/photo/icone.png';
         });
-    }
-    });
+        }
+        });
 
-    imageSwitch.addEventListener('click', function() {
-    images.forEach(function(img) {
+        imageSwitch.addEventListener('click', function() {
+        images.forEach(function(img) {
         if (document.body.classList.contains('dark')) {
         img.src = '/Projet-Quiz/photo/quiz2.png';
         } else {
         img.src = '/Projet-Quiz/photo/icone.png';
         }
-    });
-    });
-    function goBack() {
-    window.history.back();
-}
-        
-    </script>
-    
+        });
+        });
+
+        function goBack() {
+        window.history.back();
+        }
+        </script>
+    <div class="text">
+        <h1>Testez vos competances </h1>
 
     </div>
     <div class="container2">
