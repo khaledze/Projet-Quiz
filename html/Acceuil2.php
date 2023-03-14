@@ -56,7 +56,6 @@
 			$pseudo = $result['pseudo'];
 			if ($result['role'] == 'utilisateur') {
 				header("Location: /Projet-Quiz/html/Jeux.php");
-				$_SESSION['email'] = $email;
 				exit();
 			} elseif ($result['role'] == 'quizzeur') {
 				header("Location: /Projet-Quiz/html/Jeux2.php");
@@ -64,7 +63,6 @@
 				exit();
 			} elseif ($result['role'] == 'administrateur' && $email == 'admin@admin.com' && $pswd == 'admin') {
 				header("Location: /Projet-Quiz/html/Jeux3.php");
-				$_SESSION['email'] = $email;
 				exit();
 			}
 		} else {

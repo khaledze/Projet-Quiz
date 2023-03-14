@@ -56,14 +56,7 @@
         <div class="menu-bar">
             <div class="menu">
     
-            <li class="nav-link">
-                        <a href="player.php">
-                            <i class='bx bx-bell icon'>
-                                <img src="" alt="+" width="35px" height="35px">
-                            </i>
-                            <span class="text nav-text">mon compte</span>
-                        </a>
-                    </li>
+               
     
                 <ul class="menu-links">
                     <li class="nav-link">
@@ -83,7 +76,22 @@
                             <span class="text nav-text">Utilisateurs</span>
                         </a>
                     </li>
-                    
+                    <li class="nav-link">
+                        <a href="player.php">
+                            <i class='bx bx-bell icon'>
+                                <img src="" alt="+" width="35px" height="35px">
+                            </i>
+                            <span class="text nav-text">mon compte</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/Projet-Quiz/html/creation.php">
+                            <i class='bx bx-bell icon'>
+                                <img src="/Projet-Quiz/photo/+.png" alt="+" width="35px" height="35px">
+                            </i>
+                            <span class="text nav-text">Créer votre Quiz</span>
+                        </a>
+                    </li>
                     <?php 
                     if ($result_quizz && mysqli_num_rows($result_quizz) > 0) {
                         
