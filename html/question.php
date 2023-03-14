@@ -1,3 +1,4 @@
+
 <?php
 	session_start(); // Démarrage de la session
 
@@ -51,138 +52,16 @@
   $minResult = mysqli_query($conn, $minQuery);
   $minRow = mysqli_fetch_assoc($minResult);
   $minQuestionId = $minRow["min_id"];
+  echo $minQuestionId;
 
   $maxQuery = "SELECT MAX(q.id_question) AS max_id FROM question q INNER JOIN choix c ON q.id_question = c.id_question WHERE c.theme = '$theme'";
   $maxResult = mysqli_query($conn, $maxQuery);
   $maxRow = mysqli_fetch_assoc($maxResult);
   $maxQuestionId = $maxRow["max_id"];
+  echo $maxQuestionId;
 
 	?>
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="/Projet-Quiz/questions.css">
-<link rel="stylesheet" href="/Projet-Quiz/lien.css">
-	<title>Questions</title>
-</head>
-<body>
-<nav class="sidebar close">
-        <header>  
-                    <span class="image">
-                     
-                   </span>
-             <i class='bx bx-chevron-right toggle'></i>
-         </header>
-
-    <div class="menu-bar">
-        <div class="menu">
-
-            
-
-            <ul class="menu-links">
-                <li class="nav-link">
-                    <a href="contact.html">
-                        <i class='bx bx-bar-chart-alt-2 icon' >
-                            <img src="/Projet-Quiz/photo/contact.png" alt="contact" width="40px" height="35px">
-                        </i>
-                        <span class="text nav-text">Contact</span>
-                    </a>
-                </li>
-              
-
-                
-            </ul>
-        </div>
-
-        <div class="bottom-content">
-        <li class="">
-        <li class="">
-                    <a onclick="goBack()">
-                        <i class='bx bx-log-out icon' >
-                            <img src="/Projet-Quiz/photo/back.png" alt="deco" width="35px" height="35px">
-                        </i>
-                        <span class="text nav-text" >Back</span>
-                    </a>
-                </li>
-    
-                <li class="">
-                    <a href="/Projet-Quiz/html/Acceuil2.php">
-                        <i class='bx bx-log-out icon' >
-                            <img src="/Projet-Quiz/photo/deco.png" alt="deco" width="35px" height="35px">
-                        </i>
-                        <span class="text nav-text" >Logout</span>
-                    </a>
-                </li>
-
-            <li class="mode">
-                <div class="sun-moon">
-                    <i class='bx bx-moon icon moon'></i>
-                    <i class='bx bx-sun icon sun'></i>
-                </div>
-                <span class="mode-text text">Dark mode</span>
-
-                <div class="toggle-switch">
-                    <span class="switch"></span>
-                </div>
-            </li>
-            
-        </div>
-    </div>
-
-</nav>
-<script>
         
-     const body = document.querySelector('body');
-    const sidebar = body.querySelector('nav');
-    const toggle = body.querySelector(".toggle");
-    const searchBtn = body.querySelector(".search-box");
-    const modeSwitch = body.querySelector(".toggle-switch");
-    const modeText = body.querySelector(".mode-text");
-    const images = document.querySelectorAll('.test img');
-    const imageSwitch = document.querySelector('.toggle-switch-image');
-
-    toggle.addEventListener("click", () => {
-    sidebar.classList.toggle("close");
-    });
-
-    searchBtn.addEventListener("click", () => {
-    sidebar.classList.remove("close");
-    });
-
-    modeSwitch.addEventListener("click", () => {
-    body.classList.toggle("dark");
-    if (body.classList.contains("dark")) {
-        modeText.innerText = "Light mode";
-        images.forEach(function(img) {
-        img.src = '/Projet-Quiz/photo/quiz2.png';
-        });
-    } else {
-        modeText.innerText = "Dark mode";
-        images.forEach(function(img) {
-        img.src = '/Projet-Quiz/photo/icone.png';
-        });
-    }
-    });
-
-    imageSwitch.addEventListener('click', function() {
-    images.forEach(function(img) {
-        if (document.body.classList.contains('dark')) {
-        img.src = '/Projet-Quiz/photo/quiz2.png';
-        } else {
-        img.src = '/Projet-Quiz/photo/icone.png';
-        }
-    });
-    });
-    function goBack() {
-    window.history.back();
-}
-
-        
-    </script>
 	
 	<form method="POST" action="">
 		<?php
