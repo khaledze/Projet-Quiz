@@ -45,7 +45,7 @@
         <nav class="sidebar close">
             <header>  
                         <span class="image">
-                         
+                         Quizzeo
                        </span>
                  <i class='bx bx-chevron-right toggle'></i>
              </header>
