@@ -117,7 +117,7 @@
                         <i class='bx bx-log-out icon' >
                             <img src="/Projet-Quiz/photo/back.png" alt="deco" width="35px" height="35px">
                         </i>
-                        <span class="text nav-text" >Back</span>
+                        <span class="text nav-text" >Retour</span>
                     </a>
                 </li>
     
@@ -126,7 +126,7 @@
                         <i class='bx bx-log-out icon' >
                             <img src="/Projet-Quiz/photo/deco.png" alt="deco" width="35px" height="35px">
                         </i>
-                        <span class="text nav-text" >Logout</span>
+                        <span class="text nav-text" >Se déconnecter</span>
                     </a>
                 </li>
     
