@@ -1,14 +1,11 @@
 /* Google Font Import - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-.container2{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 :root{
@@ -291,12 +288,10 @@ body.dark .switch::before{
     top: 0;
     top: 0;
     left: 250px;
-    height: 100px;
+    height: 100vh;
     width: calc(100% - 250px);
     background-color: var(--body-color);
     transition: var(--tran-05);
-    position: relative;
-    z-index: 1;
 }
 .home .text{
     font-size: 30px;
@@ -313,4 +308,3 @@ body.dark .switch::before{
 body.dark .home .text{
     color: var(--text-color);
 }
-

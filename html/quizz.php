@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="/Projet-Quiz/quizz.css">
     <link rel="stylesheet" href="/Projet-Quiz/lien.css">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/Projet-Quiz/quizz.css">
 </head>
 <body>
     <h1>modifier les questions</h1>
@@ -18,7 +19,7 @@
 	$host = "localhost";
 	$username = "root";
 	$password = "";
-	$dbname = "data";
+	$dbname = "quizz";
 
 	$conn = mysqli_connect($host, $username, $password, $dbname);
 	if (!$conn) {

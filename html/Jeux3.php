@@ -399,17 +399,6 @@
                         <p class="p15">Quiz Sports</p>
                     </div>
                 </div>
-
-                <div class="card">
-                    <div class="img15"></div>
-                    <div class="textBox15">
-                        <div class="textContent15">
-                            <p class="h1"><a href="question.php?theme=sport" style="color: white; text-decoration: none;">Sports</a></p>
-                            <button class="modifier" onclick="location.href='quizz.php?theme=sport'">modifier</button>
-                        </div>
-                        <p class="p15">Quiz Sports</p>
-                    </div>
-                </div>
         </div>
     </div>
     <main>   

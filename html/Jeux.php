@@ -175,7 +175,6 @@
         <h1>Testez vos competances </h1>
 
     </div>
-    <div class="container2">
         <div class="cards">
             <div>
                 <div class="card" >
