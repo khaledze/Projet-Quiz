@@ -1,4 +1,5 @@
 <?php
+	session_start();
     // la connexion à la base de données
     $servername = "localhost";
     $username = "root";
@@ -30,8 +31,12 @@
 		$stmt->execute();
 		if($role == "utilisateur") {	
 			header("Location: /Projet-Quiz/html/Jeux.html");
+			session_start();
+			$_SESSION['email'] = $email;
 		} else {
 			header("Location: /Projet-Quiz/html/Jeux2.php");
+			session_start();
+			$_SESSION['email'] = $email;
 		}
     }
 
@@ -48,20 +53,25 @@
 	
 		if($result) {
 			// si les informations de connexion sont correctes, on redirige vers la page correspondante
+			$pseudo = $result['pseudo'];
 			if ($result['role'] == 'utilisateur') {
 				header("Location: /Projet-Quiz/html/Jeux.html");
+				$_SESSION['email'] = $email;
 				exit();
 			} elseif ($result['role'] == 'quizzeur') {
 				header("Location: /Projet-Quiz/html/Jeux2.php");
+				$_SESSION['email'] = $email;
 				exit();
 			} elseif ($result['role'] == 'administrateur' && $email == 'admin@admin.com' && $pswd == 'admin') {
 				header("Location: /Projet-Quiz/html/Jeux3.html");
+				$_SESSION['email'] = $email;
 				exit();
 			}
 		} else {
 			// si les informations de connexion sont incorrectes, afficher un message d'erreur
 			echo "<script>alert('erreur de connexion !');</script>";
 		}
+		
 	}
 ?>
 
