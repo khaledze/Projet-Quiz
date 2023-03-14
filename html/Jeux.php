@@ -3,7 +3,7 @@
     $host = "localhost"; 
     $user = "root";
     $password = ""; 
-    $dbname = "quizz"; 
+    $dbname = "data"; 
 
     $conn = mysqli_connect($host, $user, $password, $dbname);
 
@@ -176,9 +176,6 @@
 
     </div>
     <div class="container2">
-        <section class="home">
-            <div class="text">Quizzeo</div>
-        </section>
         <div class="cards">
             <div>
                 <div class="card" >
