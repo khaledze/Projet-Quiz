@@ -224,7 +224,7 @@
                     <div class="textBox2">
                         <div class="textContent2">
                             <p class="h1"><a href="question.php?theme=chanson" style="color: white; text-decoration: none;">Chanson</a></p>
-                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=art'">
+                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=chanson'">
                         </div>
                         <p class="p2">Quiz Chanson</p>
                     </div>
@@ -237,7 +237,7 @@
                     <div class="textBox3">
                         <div class="textContent3">
                             <p class="h1"><a href="question.php?theme=cinema" style="color: white; text-decoration: none;">Cinema</a></p>
-                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=art'">
+                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=cinema'">
                         </div>
                         <p class="p3">Quiz Cinema</p>
                     </div>
@@ -250,7 +250,7 @@
                     <div class="textBox4">
                         <div class="textContent4">
                             <p class="h1"><a href="question.php?theme=economie" style="color: white; text-decoration: none;">Economie</a></p>
-                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=art'">
+                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=economie'">
                         </div>
                         <p class="p4">Quiz Economie</p>
                     </div>
@@ -264,7 +264,7 @@
                     <div class="textBox5">
                         <div class="textContent5">
                             <p class="h1"><a href="question.php?theme=faune" style="color: white; text-decoration: none;">Faune</a></p>
-                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=art'">
+                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=faune'">
                         </div>
                         <p class="p5">Quiz Faune</p>
                     </div>
@@ -278,7 +278,7 @@
                     <div class="textBox6">
                         <div class="textContent6">
                             <p class="h1"><a href="question.php?theme=flore" style="color: white; text-decoration: none;">Flore</a></p>
-                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=art'">
+                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=flore'">
                         </div>
                         <p class="p6">Quiz Flore</p>
                     </div>
@@ -292,7 +292,7 @@
                     <div class="textBox7">
                         <div class="textContent7">
                             <p class="h1"><a href="question.php?theme=gastro" style="color: white; text-decoration: none;">Gastro</a></p>
-                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=art'">
+                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=gastro'">
                         </div>
                         <p class="p7">Quiz Gastro</p>
                     </div>
@@ -305,7 +305,7 @@
                     <div class="textBox8">
                         <div class="textContent8">
                             <p class="h1"><a href="question.php?theme=geographie" style="color: white; text-decoration: none;">Geographie</a></p>
-                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=art'">
+                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=geographie'">
                         </div>
                         <p class="p8">Quiz Geographie</p>
                     </div>
@@ -318,7 +318,7 @@
                     <div class="textBox9">
                         <div class="textContent9">
                             <p class="h1"><a href="question.php?theme=histoire" style="color: white; text-decoration: none;">Histoire</a></p>
-                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=art'">
+                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=histoire'">
                         </div>
                         <p class="p9">Quiz Histoire</p>
                     </div>
@@ -331,7 +331,7 @@
                     <div class="textBox10">
                         <div class="textContent10">
                             <p class="h1"><a href="question.php?theme=institution" style="color: white; text-decoration: none;">Institutions</a></p>
-                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=art'">
+                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=institution'">
                         </div>
                         <p class="p10">Quiz Institutions</p>
                     </div>
@@ -344,7 +344,7 @@
                     <div class="textBox11">
                         <div class="textContent11">
                             <p class="h1"><a href="question.php?theme=langue" style="color: white; text-decoration: none;">Langue</a></p>
-                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=art'">
+                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=langue'">
                         </div>
                         <p class="p11">Quiz Langue</p>
                     </div>
@@ -357,7 +357,7 @@
                     <div class="textBox12">
                         <div class="textContent12">
                             <p class="h1"><a href="question.php?theme=litterature" style="color: white; text-decoration: none;">Litterature</a></p>
-                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=art'">
+                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=litterature'">
                         </div>
                         <p class="p12">Quiz Litterature</p>
                     </div>
@@ -370,7 +370,7 @@
                     <div class="textBox13">
                         <div class="textContent13">
                             <p class="h1"><a href="question.php?theme=mode" style="color: white; text-decoration: none;">Mode</a></p>
-                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=art'">
+                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=mode'">
                         </div>
                         <p class="p13">Quiz Mode</p>
                     </div>
@@ -383,7 +383,7 @@
                     <div class="textBox14">
                         <div class="textContent14">
                             <p class="h1"><a href="question.php?theme=quotidien" style="color: white; text-decoration: none;">Quotidien</a></p>
-                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=art'">
+                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=quotidien'">
                         </div>
                         <p class="p14">Quiz Quotidien</p>
                     </div>
@@ -396,7 +396,7 @@
                     <div class="textBox15">
                         <div class="textContent15">
                             <p class="h1"><a href="question.php?theme=sport" style="color: white; text-decoration: none;">Sports</a></p>
-                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=art'">
+                            <input type='image' src='/Projet-Quiz/photo/modi.png' alt='modifier' width='30' height='30'onclick="location.href='quizz.php?theme=sport'">
                         </div>
                         <p class="p15">Quiz Sports</p>
                     </div>
