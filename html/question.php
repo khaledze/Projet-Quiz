@@ -1,3 +1,67 @@
+<?php
+	session_start(); // Démarrage de la session
+
+	$host = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "quizz";
+
+	$conn = mysqli_connect($host, $username, $password, $dbname);
+	if (!$conn) {
+		die("Connection failed: " . mysqli_connect_error());
+	}
+ 
+  mysqli_set_charset($conn, 'utf8');
+
+    if (isset($_GET['section'])) {
+        $newSection = $_GET['section'];
+        $query  = "SELECT choix ";
+        $query .= "FROM category ";
+        $query .= "WHERE id = {$newSection}";
+        $sectionInfo = mysqli_query($conn, $query);
+        $section = mysqli_fetch_assoc($sectionInfo);
+        $output = $section["choix"];
+        echo $output;
+    }
+	// Récupérer le thème choisi
+	if (isset($_GET['theme'])) {
+		$theme = htmlspecialchars($_GET['theme']);
+	} else {
+		echo "Aucun thème sélectionné.";
+		exit;
+	}
+
+	// Récupération des questions
+	if ($theme != "") {
+		$query = "SELECT q.id_question, q.Question, c.reponse1, c.reponse2, c.reponse3, c.bonneReponse 
+			  FROM question q 
+			  INNER JOIN choix c ON q.id_question = c.id_question 
+			  WHERE c.theme = '$theme'";
+	} else {
+		$query = "SELECT q.id_question, q.Question, c.reponse1, c.reponse2, c.reponse3, c.bonneReponse 
+			  FROM question q 
+			  INNER JOIN choix c ON q.id_question = c.id_question";
+	}
+	$result = mysqli_query($conn, $query);
+	if (!$result) {
+		die('Erreur de récupération des questions : ' . mysqli_error($conn));
+	}
+
+  $minQuery = "SELECT MIN(q.id_question) AS min_id FROM question q INNER JOIN choix c ON q.id_question = c.id_question WHERE c.theme = '$theme'";
+  $minResult = mysqli_query($conn, $minQuery);
+  $minRow = mysqli_fetch_assoc($minResult);
+  $minQuestionId = $minRow["min_id"];
+
+  $maxQuery = "SELECT MAX(q.id_question) AS max_id FROM question q INNER JOIN choix c ON q.id_question = c.id_question WHERE c.theme = '$theme'";
+  $maxResult = mysqli_query($conn, $maxQuery);
+  $maxRow = mysqli_fetch_assoc($maxResult);
+  $maxQuestionId = $maxRow["max_id"];
+
+	?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,6 +92,7 @@
                         <span class="text nav-text">Contact</span>
                     </a>
                 </li>
+              
 
                 
             </ul>
@@ -118,66 +183,7 @@
 
         
     </script>
-	<?php
-	session_start(); // Démarrage de la session
-
-	$host = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "quizz";
-
-	$conn = mysqli_connect($host, $username, $password, $dbname);
-	if (!$conn) {
-		die("Connection failed: " . mysqli_connect_error());
-	}
- 
-  mysqli_set_charset($conn, 'utf8');
-
-    if (isset($_GET['section'])) {
-        $newSection = $_GET['section'];
-        $query  = "SELECT choix ";
-        $query .= "FROM category ";
-        $query .= "WHERE id = {$newSection}";
-        $sectionInfo = mysqli_query($conn, $query);
-        $section = mysqli_fetch_assoc($sectionInfo);
-        $output = $section["choix"];
-        echo $output;
-    }
-	// Récupérer le thème choisi
-	if (isset($_GET['theme'])) {
-		$theme = htmlspecialchars($_GET['theme']);
-	} else {
-		echo "Aucun thème sélectionné.";
-		exit;
-	}
-
-	// Récupération des questions
-	if ($theme != "") {
-		$query = "SELECT q.id_question, q.Question, c.reponse1, c.reponse2, c.reponse3, c.bonneReponse 
-			  FROM question q 
-			  INNER JOIN choix c ON q.id_question = c.id_question 
-			  WHERE c.theme = '$theme'";
-	} else {
-		$query = "SELECT q.id_question, q.Question, c.reponse1, c.reponse2, c.reponse3, c.bonneReponse 
-			  FROM question q 
-			  INNER JOIN choix c ON q.id_question = c.id_question";
-	}
-	$result = mysqli_query($conn, $query);
-	if (!$result) {
-		die('Erreur de récupération des questions : ' . mysqli_error($conn));
-	}
-
-  $minQuery = "SELECT MIN(q.id_question) AS min_id FROM question q INNER JOIN choix c ON q.id_question = c.id_question WHERE c.theme = '$theme'";
-  $minResult = mysqli_query($conn, $minQuery);
-  $minRow = mysqli_fetch_assoc($minResult);
-  $minQuestionId = $minRow["min_id"];
-
-  $maxQuery = "SELECT MAX(q.id_question) AS max_id FROM question q INNER JOIN choix c ON q.id_question = c.id_question WHERE c.theme = '$theme'";
-  $maxResult = mysqli_query($conn, $maxQuery);
-  $maxRow = mysqli_fetch_assoc($maxResult);
-  $maxQuestionId = $maxRow["max_id"];
-	?>
-
+	
 	<form method="POST" action="">
 		<?php
 		$i = 1; // compteur pour les questions

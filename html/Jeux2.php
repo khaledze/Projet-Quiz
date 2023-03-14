@@ -38,7 +38,7 @@
         <img src="/Projet-Quiz/photo/logo2.jpg" alt="Logo" height="100px">
         <div id="btn">
             <button type="button" class="deco" onclick="window.location.href = '/Projet-Quiz/html/Acceuil2.php';">
-                Se décontracter
+                Se déconnecter
               </button>
         </div>  
     </div>
@@ -58,7 +58,7 @@
             <li class="nav-link">
                         <a href="player.php">
                             <i class='bx bx-bell icon'>
-                                <img src="" alt="+" width="35px" height="35px">
+                                <img src="/Projet-Quiz/photo/utl.png" alt="+" width="35px" height="35px">
                             </i>
                             <span class="text nav-text">mon compte</span>
                         </a>

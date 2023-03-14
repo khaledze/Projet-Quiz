@@ -10,6 +10,75 @@
     <title>player</title>
 </head>
 <body>
+<nav class="sidebar close">
+            <header>  
+                        <span class="image">
+                         
+                       </span>
+                 <i class='bx bx-chevron-right toggle'></i>
+             </header>
+    
+        <div class="menu-bar">
+            <div class="menu">
+    
+            <li class="nav-link">
+                        <a href="player.php">
+                            <i class='bx bx-bell icon'>
+                                <img src="/Projet-Quiz/photo/utl.png" alt="+" width="35px" height="35px">
+                            </i>
+                            <span class="text nav-text">mon compte</span>
+                        </a>
+                    </li>
+    
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="contact.html">
+                            <i class='bx bx-bar-chart-alt-2 icon' >
+                                <img src="/Projet-Quiz/photo/contact.png" alt="contact" width="40px" height="35px">
+                            </i>
+                            <span class="text nav-text">Contact</span>
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+    
+            <div class="bottom-content">
+                <li class="">
+                    <a onclick="goBack()">
+                        <i class='bx bx-log-out icon' >
+                            <img src="/Projet-Quiz/photo/back.png" alt="deco" width="35px" height="35px">
+                        </i>
+                        <span class="text nav-text" >Back</span>
+                    </a>
+                </li>
+    
+                <li class="">
+                    <a href="/Projet-Quiz/html/Acceuil2.php">
+                        <i class='bx bx-log-out icon' >
+                            <img src="/Projet-Quiz/photo/deco.png" alt="deco" width="35px" height="35px">
+                        </i>
+                        <span class="text nav-text" >Logout</span>
+                    </a>
+                </li>
+    
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+    
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+    
+    </nav>
     <div class="list">
         <div class="code">
             <h1>information sur le joueur</h1>

@@ -35,7 +35,7 @@
         <img src="/Projet-Quiz/photo/logo2.jpg" alt="Logo" height="100px">
         <div id="btn">
             <button type="button" class="deco" onclick="window.location.href = '/Projet-Quiz/html/Acceuil2.php';">
-                Se décontracter
+                Se déconnecter
               </button>
         </div>  
     </div>
@@ -59,7 +59,7 @@
             <li class="nav-link">
                         <a href="player.php">
                             <i class='bx bx-bell icon'>
-                                <img src="" alt="+" width="35px" height="35px">
+                                <img src="/Projet-Quiz/photo/utl.png" alt="+" width="35px" height="35px">
                             </i>
                             <span class="text nav-text">mon compte</span>
                         </a>
@@ -133,55 +133,49 @@
     <section class="home">
         <div class="text">Quizzeo</div>
     </section>
-    
     <script>
+            const body = document.querySelector('body');
+        const sidebar = body.querySelector('nav');
+        const toggle = body.querySelector(".toggle");
+        const modeSwitch = body.querySelector(".toggle-switch");
+        const modeText = body.querySelector(".mode-text");
+        const images = document.querySelectorAll('.test img');
+        const imageSwitch = document.querySelector('.toggle-switch-image');
+
+        toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+        });
+
+        modeSwitch.addEventListener("click", () => {
+        body.classList.toggle("dark");
         
-     const body = document.querySelector('body');
-    const sidebar = body.querySelector('nav');
-    const toggle = body.querySelector(".toggle");
-    const searchBtn = body.querySelector(".search-box");
-    const modeSwitch = body.querySelector(".toggle-switch");
-    const modeText = body.querySelector(".mode-text");
-    const images = document.querySelectorAll('.test img');
-    const imageSwitch = document.querySelector('.toggle-switch-image');
-
-    toggle.addEventListener("click", () => {
-    sidebar.classList.toggle("close");
-    });
-
-    searchBtn.addEventListener("click", () => {
-    sidebar.classList.remove("close");
-    });
-
-    modeSwitch.addEventListener("click", () => {
-    body.classList.toggle("dark");
-    if (body.classList.contains("dark")) {
+        if (body.classList.contains("dark")) {
         modeText.innerText = "Light mode";
         images.forEach(function(img) {
         img.src = '/Projet-Quiz/photo/quiz2.png';
         });
-    } else {
+        } else {
         modeText.innerText = "Dark mode";
         images.forEach(function(img) {
         img.src = '/Projet-Quiz/photo/icone.png';
         });
-    }
-    });
+        }
+        });
 
-    imageSwitch.addEventListener('click', function() {
-    images.forEach(function(img) {
+        imageSwitch.addEventListener('click', function() {
+        images.forEach(function(img) {
         if (document.body.classList.contains('dark')) {
         img.src = '/Projet-Quiz/photo/quiz2.png';
         } else {
         img.src = '/Projet-Quiz/photo/icone.png';
         }
-    });
-    });
-    function goBack() {
-    window.history.back();
-}
-        
-    </script>
+        });
+        });
+
+        function goBack() {
+        window.history.back();
+        }
+        </script>
     <div class="text">
         <h1>Testez vos competances </h1>
 
@@ -395,7 +389,6 @@
         </div>
     </main>
       <script src="/Projet-Quiz/nvx.js"></script>
-      <script src="/Projet-Quiz/recherche.js"></script>
       
 </body>
 </html>
