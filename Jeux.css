@@ -10,7 +10,9 @@
   /* background-color: rgb(255, 255, 255); */
   padding: 25px;
   flex: 1;
-  z-index: 5;
+  /* z-index: 5; */
+  position: relative;
+  z-index: 0;
 }
   
 .container {
@@ -782,3 +784,22 @@
   display: flex;
   justify-content: center;
 }
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+/* .container2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #161616;
+  color: #EEEEEE;
+  font-family: 'Poppins' sans-serif;
+} */

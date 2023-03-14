@@ -31,17 +31,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeux</title>
-   <div class="header">
-        <img src="/Projet-Quiz/photo/logo2.jpg" alt="Logo" height="100px">
-        <div id="btn">
-            <button type="button" class="deco" onclick="window.location.href = '/Projet-Quiz/html/Acceuil2.php';">
-                Se décontracter
-              </button>
-        </div>  
-    </div>
-    <style>
-       
-      </style>
+    
+   
 </head>
 <body>
     <div class="container">
@@ -126,9 +117,7 @@
     
     </nav>
     
-    <section class="home">
-        <div class="text">Quizzeo</div>
-    </section>
+    
     
     <script>
         
@@ -178,10 +167,13 @@
 }
         
     </script>
-    <div class="text">
-        <h1>Testez vos competances </h1>
+    
 
     </div>
+    <div class="container2">
+        <section class="home">
+            <div class="text">Quizzeo</div>
+        </section>
         <div class="cards">
             <div>
                 <div class="card" >
@@ -391,7 +383,6 @@
         </div>
     </main>
       <script src="/Projet-Quiz/nvx.js"></script>
-      <script src="/Projet-Quiz/recherche.js"></script>
       
 </body>
 </html>
