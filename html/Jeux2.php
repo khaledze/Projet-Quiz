@@ -3,7 +3,7 @@
     $host = "localhost"; 
     $user = "root";
     $password = ""; 
-    $dbname = "quizz"; 
+    $dbname = "data"; 
 
     $conn = mysqli_connect($host, $user, $password, $dbname);
 
@@ -84,7 +84,7 @@
                         
                         while ($row_quizz = mysqli_fetch_assoc($result_quizz)) {
                             echo ('<li class="nav-link">'.
-                            '<a href="#">' .
+                            '<a href="question.php?theme='.$row_quizz['titre']  .'"' .
                                 '<span class="text nav-text">'. $row_quizz['titre'] .'</span>'.
                             '</a>' .
                             '</li>');
