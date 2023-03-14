@@ -164,13 +164,11 @@
   $minResult = mysqli_query($conn, $minQuery);
   $minRow = mysqli_fetch_assoc($minResult);
   $minQuestionId = $minRow["min_id"];
-  echo "oui . $minQuestionId";
 
   $maxQuery = "SELECT MAX(q.id_question) AS max_id FROM question q INNER JOIN choix c ON q.id_question = c.id_question WHERE c.theme = '$theme'";
   $maxResult = mysqli_query($conn, $maxQuery);
   $maxRow = mysqli_fetch_assoc($maxResult);
   $maxQuestionId = $maxRow["max_id"];
-  echo "non . $maxQuestionId";
 
 	?>
         
