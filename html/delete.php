@@ -14,12 +14,19 @@ if (!$conn) {
 mysqli_set_charset($conn, 'utf8');
 
 if (isset($_GET['id']) && isset($_GET['theme'])) {
-    $id = $_GET['id'];
+    $id_question = $_GET['id'];
     $theme = htmlspecialchars($_GET['theme']);
 
-    $sql = "DELETE FROM choix WHERE id = ?";
+    // Supprimer les réponses associées à la question
+    $sql = "DELETE FROM choix WHERE id_question = ?";
     $stmt = mysqli_prepare($conn, $sql);
-    mysqli_stmt_bind_param($stmt, "i", $id);
+    mysqli_stmt_bind_param($stmt, "i", $id_question);
+    mysqli_stmt_execute($stmt);
+
+    // Supprimer la question de la base de données
+    $sql = "DELETE FROM question WHERE id_question = ?";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "i", $id_question);
     mysqli_stmt_execute($stmt);
 
     header("Location: quizz.php?theme=" . urlencode($theme));
@@ -28,4 +35,5 @@ if (isset($_GET['id']) && isset($_GET['theme'])) {
     echo "Erreur : paramètres manquants.";
     exit;
 }
+
 ?>
