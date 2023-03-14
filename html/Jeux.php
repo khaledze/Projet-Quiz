@@ -1,3 +1,26 @@
+<?php
+    // Se connecter à la base de données
+    $host = "localhost"; 
+    $user = "root";
+    $password = ""; 
+    $dbname = "data"; 
+
+    $conn = mysqli_connect($host, $user, $password, $dbname);
+
+    // Vérifier la connexion
+    if (!$conn) {
+      die("La connexion à la base de données a échoué : " . mysqli_connect_error());
+    }
+
+    // Définir l'encodage des caractères à UTF-8
+    mysqli_set_charset($conn, 'utf8');
+
+    // Récupérer les titres des quiz avec un ID supérieur à 15
+    $sql_quizz = "SELECT titre FROM quizz WHERE id > 149";
+    $result_quizz = mysqli_query($conn, $sql_quizz);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,6 +67,21 @@
                             <span class="text nav-text">Contact</span>
                         </a>
                     </li>
+                    <?php 
+                    if ($result_quizz && mysqli_num_rows($result_quizz) > 0) {
+                        
+                        while ($row_quizz = mysqli_fetch_assoc($result_quizz)) {
+                            echo ('<li class="nav-link">'.
+                            '<a href="question.php?theme='.$row_quizz['titre']  .'"' .
+                                '<span class="text nav-text">'. $row_quizz['titre'] .'</span>'.
+                            '</a>' .
+                            '</li>');
+                        }
+                        
+                    } else {
+                        // echo 'Aucun titre de quiz trouvé.';
+                    }
+                     ?>
     
                     
                 </ul>
