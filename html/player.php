@@ -85,59 +85,68 @@
         <div class="code">
             <h1>information sur le joueur</h1>
             <?php
-            session_start();
+session_start();
 
-            // la connexion à la base de données
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "quizz";
+// la connexion à la base de données
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "quizz";
 
-            try {
-                $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                // echo "connexion réussie";
-            } catch(PDOException $e) {
-                echo "<script>alert('connexion echoué !');</script>" . $e->getMessage();
-            }
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // echo "connexion réussie";
+} catch(PDOException $e) {
+    echo "<script>alert('connexion echoué !');</script>" . $e->getMessage();
+}
 
-            // récupérer l'email du joueur à partir de la variable de session
-            $email = $_SESSION['email'];
+// récupérer l'email du joueur à partir de la variable de session
+$email = $_SESSION['email'];
 
-            // exécuter une requête SQL SELECT pour récupérer les informations du joueur connecté
-            $sql = "SELECT pseudo, email, password FROM player WHERE email=:email";
-            $stmt = $conn->prepare($sql);
-            $stmt->bindParam(':email', $email);
-            if (!$stmt->execute()) {
-                echo "Errorexécuting SQL query: " . print_r($stmt->errorInfo(), true);
+// exécuter une requête SQL SELECT pour récupérer les informations du joueur connecté
+$sql = "SELECT pseudo, email, password FROM player WHERE email=:email";
+$stmt = $conn->prepare($sql);
+$stmt->bindParam(':email', $email);
+if (!$stmt->execute()) {
+    echo "Errorexécuting SQL query: " . print_r($stmt->errorInfo(), true);
+} else {
+    $result = $stmt->fetch();
+    // vérifier si le résultat est non vide avant d'afficher les informations
+    if ($result) {
+        echo "Pseudo : " . $result['pseudo'] . "<br>";
+        echo "Email : " . $email . "<br>";
+        echo "Password : " . str_repeat("*", strlen($result['password'])) . "<br>";
+        echo '<form method="POST">
+              <label for="old_password">Ancien mot de passe :</label>
+              <input type="password" name="old_password" id="old_password"><br>
+              <label for="new_password">Nouveau mot de passe :</label>
+              <input type="password" name="new_password" id="new_password"><br>
+              <input type="submit" value="Modifier">
+              </form>';
+        if (isset($_POST['old_password']) && isset($_POST['new_password']) &&
+            $_POST['old_password'] != "" && $_POST['new_password'] != "") {
+            $old_password = $_POST['old_password'];
+            $new_password = $_POST['new_password'];
+            if ($old_password != $result['password']) {
+                echo "Ancien mot de passe incorrect !";
             } else {
-            $result = $stmt->fetch();
-                        // vérifier si le résultat est non vide avant d'afficher les informations
-                        if ($result) {
-                            echo "Pseudo : " . $result['pseudo'] . "<br>";
-                            echo "Email : " . $email . "<br>";
-                            echo "Password : " . str_repeat("*", strlen($result['password'])) . "<br>";
-                            echo '<form method="POST">
-                                  <label for="new_password">Nouveau mot de passe :</label>
-                                  <input type="password" name="new_password" id="new_password">
-                                  <input type="submit" value="Modifier">
-                                  </form>';
-                                  if (isset($_POST['new_password']) && $_POST['new_password'] != "") {
-                                    $new_password = $_POST['new_password'];
-                                    $update_sql = "UPDATE player SET password=:new_password WHERE email=:email";
-                                    $update_stmt = $conn->prepare($update_sql);
-                                    $update_stmt->bindParam(':new_password', $new_password);
-                                    $update_stmt->bindParam(':email', $email);
-                                    if (!$update_stmt->execute()) {
-                                        echo "Error executing SQL query: " . print_r($update_stmt->errorInfo(), true);
-                                    } else {
-                                        echo "Mot de passe modifié avec succès !";
-                                        header("Location: player.php");
-                                    }
-                                }
-                    }
+                $update_sql = "UPDATE player SET password=:new_password WHERE email=:email";
+                $update_stmt = $conn->prepare($update_sql);
+                $update_stmt->bindParam(':new_password', $new_password);
+                $update_stmt->bindParam(':email', $email);
+                if (!$update_stmt->execute()) {
+                    echo "Error executing SQL query: " . print_r($update_stmt->errorInfo(), true);
+                } else {
+                    echo "Mot de passe modifié avec succès !";
+                    header("Location: player.php");
                 }
-            ?>
+            }
+        }
+    }
+}
+?>
+
                 </div>
             </div>
             <script>
