@@ -3,7 +3,7 @@
     $host = "localhost"; 
     $user = "root";
     $password = ""; 
-    $dbname = "data"; 
+    $dbname = "quizz"; 
 
     $conn = mysqli_connect($host, $user, $password, $dbname);
 
@@ -90,21 +90,23 @@
                     </li>
                     <?php 
                     if ($result_quizz && mysqli_num_rows($result_quizz) > 0) {
-                        
                         while ($row_quizz = mysqli_fetch_assoc($result_quizz)) {
                             echo ('<li class="nav-link">'.
                                 '<a href="question.php?theme='.$row_quizz['titre']  .'"' .
                                 '<span class="text nav-text">'. $row_quizz['titre'] .'</span>'.
                                 '</a>' .
                                 '<a href="quizz.php?theme='.$row_quizz['titre'].'">'.
-                                '<input class="mod" type="image" src="/Projet-Quiz/photo/crayon.png" alt="Modifier" width="30" height="30">'.
+                                '<input type="image" src="/Projet-Quiz/photo/crayon.png" alt="Modifier" width="30" height="30">'.
+                                '</a>'.
+                                '<a href="delete_quiz.php?theme='.$row_quizz['titre'].'">'.
+                                '<input type="image" src="/Projet-Quiz/photo/delete.png" alt="Supprimer" width="30" height="30">'.
                                 '</a>'.
                                 '</li>');
                         }
-                        
                     } else {
                         // echo 'Aucun titre de quiz trouvé.';
                     }
+                    
                      ?>
                 </ul>
             </div>

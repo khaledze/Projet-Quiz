@@ -43,3 +43,31 @@ images.forEach(function(img) {
 function goBack() {
    window.history.back();
 }
+
+
+const toggleSwitch = document.querySelector('.toggle-switch input[type="checkbox"]');
+    toggleSwitch.addEventListener('change', function() {
+        if (this.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            // Enregistrer l'état du mode sombre dans la variable de session
+            $.ajax({
+                url: 'save_dark_mode.php',
+                type: 'post',
+                data: { dark_mode: 'on' },
+                success: function(response) {
+                    console.log(response);
+                }
+            });
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            // Enregistrer l'état du mode sombre dans la variable de session
+            $.ajax({
+                url: 'save_dark_mode.php',
+                type: 'post',
+                data: { dark_mode: 'off' },
+                success: function(response) {
+                    console.log(response);
+                }
+            });
+        }    
+    });

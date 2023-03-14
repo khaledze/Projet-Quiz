@@ -4,9 +4,9 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "data";
+    $dbname = "quizz";
 
-
+	//ici on recupere les données du formulaire
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -14,7 +14,7 @@
     } catch(PDOException $e) {
         echo "<script>alert('connexion echoué !');</script>" . $e->getMessage();
     }
-
+	
     if(isset($_POST['envoyer'])){
         $pseudo = htmlspecialchars($_POST['pseudo']);
         $email = htmlspecialchars($_POST['email']);
