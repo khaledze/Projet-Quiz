@@ -396,5 +396,22 @@ body.dark .home .text{
     background: #E4405F;
     color: #fff;
   }
+  .titre{
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 12px 60px;
+    transition: transform 0.3s ease-in-out;
+    
+
+}
+.sidebar.close .titre {
+    /* display: none; */
+    transform: translateX(-200%);
+  }
   
+  .sidebar .titre {
+    /* display: block; */
+    transform: translateX(0);
+  }
   

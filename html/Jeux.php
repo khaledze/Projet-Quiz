@@ -44,9 +44,9 @@
     <div class="container">
         <nav class="sidebar close">
             <header>  
-                        <span class="image">
+                        <div class="titre">
                          Quizzeo
-                       </span>
+                        </div>
                  <i class='bx bx-chevron-right toggle'></i>
              </header>
     
@@ -122,9 +122,10 @@
     </nav>
     
     <section class="home">
-        <div class="text">Quizzeo</div>
+        <div class="text"></div>
     </section>
     <script>
+        const titre = document.querySelector('.titre');
             const body = document.querySelector('body');
         const sidebar = body.querySelector('nav');
         const toggle = body.querySelector(".toggle");
@@ -135,6 +136,9 @@
 
         toggle.addEventListener("click", () => {
         sidebar.classList.toggle("close");
+        });
+        titre.addEventListener('click', () => {
+        sidebar.classList.toggle('close');
         });
 
         modeSwitch.addEventListener("click", () => {

@@ -101,8 +101,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
   <div class="container">
     <nav class="sidebar close">
-            <header>  
-                 <span class="image"></span>
+    <header>  
+                        <div class="titre">
+                         Quizzeo
+                        </div>
                  <i class='bx bx-chevron-right toggle'></i>
              </header>
         <div class="menu-bar">
@@ -178,53 +180,53 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         <!-- <div class="home">Quizzeo</div> -->
     
     
-    <script>
+        <script>
+        const titre = document.querySelector('.titre');
+            const body = document.querySelector('body');
+        const sidebar = body.querySelector('nav');
+        const toggle = body.querySelector(".toggle");
+        const modeSwitch = body.querySelector(".toggle-switch");
+        const modeText = body.querySelector(".mode-text");
+        const images = document.querySelectorAll('.test img');
+        const imageSwitch = document.querySelector('.toggle-switch-image');
+
+        toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+        });
+        titre.addEventListener('click', () => {
+        sidebar.classList.toggle('close');
+        });
+
+        modeSwitch.addEventListener("click", () => {
+        body.classList.toggle("dark");
         
-     const body = document.querySelector('body');
-    const sidebar = body.querySelector('nav');
-    const toggle = body.querySelector(".toggle");
-    const searchBtn = body.querySelector(".search-box");
-    const modeSwitch = body.querySelector(".toggle-switch");
-    const modeText = body.querySelector(".mode-text");
-    const images = document.querySelectorAll('.test img');
-    const imageSwitch = document.querySelector('.toggle-switch-image');
-
-    toggle.addEventListener("click", () => {
-    sidebar.classList.toggle("close");
-    });
-
-    searchBtn.addEventListener("click", () => {
-    sidebar.classList.remove("close");
-    });
-
-    modeSwitch.addEventListener("click", () => {
-    body.classList.toggle("dark");
-    if (body.classList.contains("dark")) {
+        if (body.classList.contains("dark")) {
         modeText.innerText = "Light mode";
         images.forEach(function(img) {
         img.src = '/Projet-Quiz/photo/quiz2.png';
         });
-    } else {
+        } else {
         modeText.innerText = "Dark mode";
         images.forEach(function(img) {
         img.src = '/Projet-Quiz/photo/icone.png';
         });
-    }
-    });
+        }
+        });
 
-    imageSwitch.addEventListener('click', function() {
-    images.forEach(function(img) {
+        imageSwitch.addEventListener('click', function() {
+        images.forEach(function(img) {
         if (document.body.classList.contains('dark')) {
         img.src = '/Projet-Quiz/photo/quiz2.png';
         } else {
         img.src = '/Projet-Quiz/photo/icone.png';
         }
-    });
-    });
-    function goBack() {
-    window.history.back();
-     }
-    </script>
+        });
+        });
+
+        function goBack() {
+        window.history.back();
+        }
+        </script>
 
  <div class="bruh">
     <form method="post" action="">
