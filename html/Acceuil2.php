@@ -30,7 +30,7 @@
 		$stmt->bindParam(':role', $role);
 		$stmt->execute();
 		if($role == "utilisateur") {	
-			header("Location: /Projet-Quiz/html/Jeux.html");
+			header("Location: /Projet-Quiz/html/Jeux.php");
 			session_start();
 			$_SESSION['email'] = $email;
 		} else {
@@ -55,7 +55,7 @@
 			// si les informations de connexion sont correctes, on redirige vers la page correspondante
 			$pseudo = $result['pseudo'];
 			if ($result['role'] == 'utilisateur') {
-				header("Location: /Projet-Quiz/html/Jeux.html");
+				header("Location: /Projet-Quiz/html/Jeux.php");
 				$_SESSION['email'] = $email;
 				exit();
 			} elseif ($result['role'] == 'quizzeur') {
@@ -63,7 +63,7 @@
 				$_SESSION['email'] = $email;
 				exit();
 			} elseif ($result['role'] == 'administrateur' && $email == 'admin@admin.com' && $pswd == 'admin') {
-				header("Location: /Projet-Quiz/html/Jeux3.html");
+				header("Location: /Projet-Quiz/html/Jeux3.php");
 				$_SESSION['email'] = $email;
 				exit();
 			}
