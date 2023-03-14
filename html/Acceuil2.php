@@ -49,7 +49,7 @@
 		if($result) {
 			// si les informations de connexion sont correctes, on redirige vers la page correspondante
 			if ($result['role'] == 'utilisateur') {
-				header("Location: /Projet-Quiz/html/Jeux.html");
+				header("Location: /Projet-Quiz/html/Jeux.php");
 				exit();
 			} elseif ($result['role'] == 'quizzeur') {
 				header("Location: /Projet-Quiz/html/Jeux2.php");
