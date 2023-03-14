@@ -55,6 +55,10 @@
     
         <div class="menu-bar">
             <div class="menu">
+            <li class="search-box">
+                <i class='bx bx-search icon'></i>
+                
+            </li>
             <li class="nav-link">
                         <a href="player.php">
                             <i class='bx bx-bell icon'>
