@@ -39,9 +39,6 @@
               </button>
         </div>  
     </div>
-    <style>
-       
-      </style>
 </head>
 <body>
     <div class="container">
@@ -75,20 +72,18 @@
                         </a>
                     </li>
                     <?php 
-                    if ($result_quizz && mysqli_num_rows($result_quizz) > 0) {
-                        
-                        while ($row_quizz = mysqli_fetch_assoc($result_quizz)) {
-                            echo ('<li class="nav-link">'.
-                            '<a href="question.php?theme='.$row_quizz['titre']  .'"' .
-                                '<span class="text nav-text">'. $row_quizz['titre'] .'</span>'.
-                            '</a>' .
-                            '</li>');
+                        if ($result_quizz && mysqli_num_rows($result_quizz) > 0) {
+                            while ($row_quizz = mysqli_fetch_assoc($result_quizz)) {
+                                echo ('<li class="nav-link">'.
+                                    '<a href="question.php?theme='.$row_quizz['titre']  .'"' .
+                                    '<span class="text nav-text">'. $row_quizz['titre'] .'</span>'.
+                                    '</a>' .
+                                    '</li>');
+                            }
+                        } else {
+                            // echo 'Aucun titre de quiz trouvé.';
                         }
-                        
-                    } else {
-                        // echo 'Aucun titre de quiz trouvé.';
-                    }
-                     ?>
+                        ?>
     
                     
                 </ul>

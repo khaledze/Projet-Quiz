@@ -120,32 +120,23 @@
                                   <input type="password" name="new_password" id="new_password">
                                   <input type="submit" value="Modifier">
                                   </form>';
-                            if (isset($_POST['new_password']) && $_POST['new_password'] != "") {
-                                $new_password = password_hash($_POST['new_password'], PASSWORD_DEFAULT);
-                                $update_sql = "UPDATE player SET password=:new_password WHERE email=:email";
-                                $update_stmt = $conn->prepare($update_sql);
-                                $update_stmt->bindParam(':new_password', $new_password);
-                                $update_stmt->bindParam(':email', $email);
-                                if (!$update_stmt->execute()) {
-                                    echo "Error executing SQL query: " . print_r($update_stmt->errorInfo(), true);
-                                } else {
-                                    echo "Mot de passe modifié avec succès !";
+                                  if (isset($_POST['new_password']) && $_POST['new_password'] != "") {
+                                    $new_password = $_POST['new_password'];
+                                    $update_sql = "UPDATE player SET password=:new_password WHERE email=:email";
+                                    $update_stmt = $conn->prepare($update_sql);
+                                    $update_stmt->bindParam(':new_password', $new_password);
+                                    $update_stmt->bindParam(':email', $email);
+                                    if (!$update_stmt->execute()) {
+                                        echo "Error executing SQL query: " . print_r($update_stmt->errorInfo(), true);
+                                    } else {
+                                        echo "Mot de passe modifié avec succès !";
+                                        header("Location: player.php");
+                                    }
                                 }
-                            }
-                        } else {
-                            echo "Aucune information trouvée pour l'utilisateur avec l'email " . $email;
-                        }
-            
-                        // afficher un bouton pour retourner à la page de jeu
-                        echo "<a href='Jeux.html'><button>Retour au jeu</button></a>";
                     }
-                    ?>
+                }
+            ?>
                 </div>
             </div>
         </body>
-</html>            
-
-
-
-
-    
+</html>
