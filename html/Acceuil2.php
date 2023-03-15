@@ -88,19 +88,21 @@
 <body>
 	
 	<div class="container" id="container">
-		<div class="form-container sign-up-container">		
+		<div class="form-container sign-up-container">	
+				
 		<script>
-    function validateForm() {
-        var pseudo = document.forms["myForm"]["pseudo"].value;
-        var email = document.forms["myForm"]["email"].value;
-        var pswd = document.forms["myForm"]["pswd"].value;
-        var role = document.forms["myForm"]["role"].value;
-        if (pseudo == "" || email == "" || pswd == "" || role == "") {
-            alert("Veuillez remplir tous les champs.");
-            return false;
-        }
-    }
-</script>
+			
+    		function validateForm() {
+				var pseudo = document.forms["myForm"]["pseudo"].value;
+				var email = document.forms["myForm"]["email"].value;
+				var pswd = document.forms["myForm"]["pswd"].value;
+				var role = document.forms["myForm"]["role"].value;
+				if (pseudo == "" || email == "" || pswd == "" || role == "") {
+					alert("Veuillez remplir tous les champs.");
+					return false;
+				}
+			}
+		</script>
 
 <form name="myForm" action="" method="POST" onsubmit="return validateForm()">
     <h1>Creer un compte</h1>
