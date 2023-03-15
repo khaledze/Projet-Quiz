@@ -32,3 +32,21 @@
     background: #000;
     color: #EEEEEE;
   }
+  input[type="submit"] {
+    background-color: #89d7e3; /* couleur de fond du bouton */
+    border: none; /* pas de bordure */
+    color: white; /* couleur du texte */
+    padding: 10px 20px; /* espace de remplissage */
+    text-align: center; /* alignement du texte */
+    text-decoration: none; /* pas de décoration de texte */
+    display: inline-block; /* afficher en tant que bloc en ligne */
+    font-size: 16px; /* taille de la police de caractères */
+    border-radius: 5px; /* arrondir les coins du bouton */
+    cursor: pointer; /* curseur de souris en main pour indiquer qu'il est cliquable */
+    transition-duration: 0.3s; /* durée de la transition pour l'effet hover */
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #60bbd6; /* couleur de fond du bouton lorsqu'il est survolé */
+  }
+  
